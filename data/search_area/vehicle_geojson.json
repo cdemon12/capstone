@@ -1,0 +1,33 @@
+{
+  "type" : "FeatureCollection", 
+  "crs" : 
+  {
+    "type" : "name", 
+    "properties" : 
+    {
+      "name" : "EPSG:3857"
+    }
+  }, 
+  "features" : [
+    {
+      "type" : "Feature", 
+      "id" : 1, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          -12548985.3984657, 3973092.99064131
+        ]
+      }, 
+      "properties" : {
+        "OBJECTID" : 1, 
+        "Accuracy" : null, 
+        "GlobalID" : "a775ce32-7898-4770-a73e-5d8436bb385e", 
+        "CreationDate" : 1627047171467, 
+        "Creator" : "jjohnson_matrixneworld", 
+        "EditDate" : 1627068650694, 
+        "Editor" : "jjohnson_matrixneworld"
+      }
+    }
+  ]
+}
