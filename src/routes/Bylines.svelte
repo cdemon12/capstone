@@ -6,7 +6,7 @@
 <div class="helper">
 <ul class="bylines">
     {#each authors as author}
-    <li><img src={author.head} alt="{author.name}"><span>{author.name}</span></li>
+    <li><img src={author.head} alt="{author.name}"><p>{author.name}</p></li>
     {/each}
 </ul>
 </div>
@@ -35,9 +35,11 @@
                 max-width: 100%
                 max-height: 100%
                 border: 3px solid $primary-color
-            span 
+                aspect-ratio: 1/1
+            p 
                 font-weight: bold
-                padding: 20px 0 0 0
+                text-align: center
+                align-items: center
     hr
         background-color: black
         height: 0.25px

@@ -66,7 +66,9 @@
         iframe
             transition: transform 0.2s ease-in-out
             border-radius: 5%
-            max-width: 100%
+            width: 100%
+            height: 100%
+            aspect-ratio: 16/9
             &:hover
                 transform: scale(1.02)
         .left

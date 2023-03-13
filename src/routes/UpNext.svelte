@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
     import StoryButtons from "./StoryButtons.svelte";
 
-    export let story_peak;
+    export let story_peak: String;
+    export let story_peak_link: String;
 
 </script>
 
@@ -11,10 +12,12 @@
     </div>
     
 
-<h1>UP NEXT: {@html story_peak}</h1>
+<a href={story_peak_link}><h1>UP NEXT: {@html story_peak}</h1></a>
+
 <div class="scroll-cue-container">
+  <a href={story_peak_link}>
     <div class="scroll-cue">
-        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 227">
+        <svg id="chevron" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 227">
             <defs>
               <style>
                 .cls-1 {
@@ -24,6 +27,7 @@
                 .cls-2 {
                   fill: #fbb812;
                 }
+
               </style>
             </defs>
             <g>
@@ -44,28 +48,35 @@
             </g>
           </svg>
     </div>
+    </a>
   </div>
 
 <style lang="sass">
 
     $primary-color: #fbb812
-
-    .wrapper 
-        margin-top: 30px
-
+    
     h1 
         font-size: 60px
         color: $primary-color
         margin: 0 10% 20px 10%
+        text-decoration: none
+
+    a
+      text-decoration: none
+      h1
+        text-decoration: none
+        &:hover
+            color: black
 
     .read-next
         margin: 0 10% 20px 10%
 
     .scroll-cue-container
+        margin-tip: 100px
         position: relative
       
     .scroll-cue
-        bottom: 10px
+        bottom: 0px
         left: 50%
         transform: translateX(-50%)
         z-index: 999
@@ -73,6 +84,9 @@
         height: 100px
         position: relative
         animation: scrollCue 1.5s ease-in-out infinite
+
+    #chevron:hover path
+        fill: black
       
     @keyframes scrollCue
         0%

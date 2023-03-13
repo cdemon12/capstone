@@ -1,13 +1,14 @@
-<script>
+<script lang="ts">
 
-    let y = Number;
-    let windowheight = Number;
+    let y: number;
+    let windowheight: number;
 
-    let scrollprogress = Number;
+    let scrollprogress: number;
 
-    export let height = Number;
+    export let height: number;
+    export let storyy: number;
 
-    $:scrollprogress= 100*y/(height-windowheight);
+    $:scrollprogress= (100*storyy)/(height-windowheight);
 
 
 </script>
