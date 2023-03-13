@@ -33,9 +33,9 @@
                     transition: transform 0.2s ease-in-out
                     max-width: 100%
                     max-height: 100%
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.5)
                     &:hover 
                         transform: scale(1.1)
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.5)
     .buttons-container
         max-width: 100%
         position: relative

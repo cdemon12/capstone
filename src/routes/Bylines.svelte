@@ -21,7 +21,7 @@
         list-style: none
         display: flex
         padding: 0
-        margin: 0
+        margin: 10px 0 0 0
         align-items: center
         justify-content: left
         li  

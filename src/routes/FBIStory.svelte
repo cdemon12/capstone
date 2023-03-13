@@ -1,12 +1,13 @@
 <script>
 	import Bylines from "./Bylines.svelte";
+	import Photo from "./Photo.svelte";
 
 </script>
 <article>
 
     <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, iure?</h1>
     <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus itaque iusto praesentium commodi officia perspiciatis aspernatur ipsam? Possimus, id a!</h2>
-    <img src="https://picsum.photos/1000/700" alt="">
+    <Photo /> 
     <Bylines />
     <div class="story">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sint autem error, odit similique ratione possimus! Distinctio possimus nostrum quaerat odit nihil iusto dolorum, dignissimos quam soluta, delectus quo eos eligendi, suscipit ut beatae enim earum tempora culpa fugit! Nam incidunt ipsum velit aut atque quae magni iste mollitia laboriosam error dolorem maxime dignissimos rerum, enim delectus est? Nihil voluptates labore rem ab. Commodi laudantium dolor, ducimus ea consequuntur deleniti officia corporis, dicta id voluptatibus beatae alias exercitationem ab quisquam neque fugit aspernatur dolore eligendi sit laborum perferendis! Eius laborum adipisci iusto quo cupiditate temporibus neque quam unde vero quasi eaque, ullam, dolores consectetur voluptate! Ex optio qui blanditiis nisi architecto omnis, possimus repellat corrupti, veritatis a sunt aut culpa eos aspernatur, rem dicta ipsam quis sequi nemo? Explicabo sit voluptatibus, id consectetur placeat molestias eos amet, blanditiis voluptatem aliquam, ducimus magnam eveniet rem quas corrupti eum suscipit nisi asperiores dicta fugit vero illo in reprehenderit perspiciatis. Porro amet quisquam itaque ab deserunt totam repellat enim quo non ipsam nihil nam ratione, atque officia blanditiis voluptatibus quis optio quae quam ullam nemo vel delectus numquam corrupti! Sunt nam perferendis voluptatum, facilis omnis modi labore earum, vitae praesentium dolores, error officia.</p>
