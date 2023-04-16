@@ -1,0 +1,134 @@
+{
+  "nominal": [
+    {
+      "id": "white_female_minor",
+      "value": 319239
+    },
+    {
+      "id": "white_male_minor",
+      "value": 267488
+    },
+    {
+      "id": "black_female_minor",
+      "value": 216559
+    },
+    {
+      "id": "white_male_adult",
+      "value": 210712
+    },
+    {
+      "id": "black_male_minor",
+      "value": 184036
+    },
+    {
+      "id": "white_female_adult",
+      "value": 141752
+    },
+    {
+      "id": "black_male_adult",
+      "value": 91644
+    },
+    {
+      "id": "black_female_adult",
+      "value": 60596
+    },
+    {
+      "id": "indian_female_minor",
+      "value": 12096
+    },
+    {
+      "id": "asian_male_adult",
+      "value": 9917
+    },
+    {
+      "id": "asian_female_minor",
+      "value": 8868
+    },
+    {
+      "id": "indian_male_minor",
+      "value": 8499
+    },
+    {
+      "id": "asian_female_adult",
+      "value": 7149
+    },
+    {
+      "id": "asian_male_minor",
+      "value": 6978
+    },
+    {
+      "id": "indian_male_adult",
+      "value": 4755
+    },
+    {
+      "id": "indian_female_adult",
+      "value": 3886
+    }
+  ],
+  "per_capita": [
+    {
+      "id": "black_female_minor",
+      "value": 1113.5941
+    },
+    {
+      "id": "black_male_minor",
+      "value": 921.2415
+    },
+    {
+      "id": "indian_female_minor",
+      "value": 410.2013
+    },
+    {
+      "id": "white_female_minor",
+      "value": 386.0575
+    },
+    {
+      "id": "white_male_minor",
+      "value": 308.608
+    },
+    {
+      "id": "indian_male_minor",
+      "value": 277.9437
+    },
+    {
+      "id": "black_male_adult",
+      "value": 185.3127
+    },
+    {
+      "id": "asian_female_minor",
+      "value": 112.5696
+    },
+    {
+      "id": "black_female_adult",
+      "value": 108.6224
+    },
+    {
+      "id": "asian_male_minor",
+      "value": 85.0941
+    },
+    {
+      "id": "white_male_adult",
+      "value": 70.7086
+    },
+    {
+      "id": "indian_male_adult",
+      "value": 65.051
+    },
+    {
+      "id": "indian_female_adult",
+      "value": 51.6728
+    },
+    {
+      "id": "white_female_adult",
+      "value": 45.9382
+    },
+    {
+      "id": "asian_male_adult",
+      "value": 40.051
+    },
+    {
+      "id": "asian_female_adult",
+      "value": 25.765
+    }
+  ]
+}

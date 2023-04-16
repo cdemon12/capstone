@@ -6,13 +6,13 @@
 <footer>
     <div class="detour-info">
         <div>
-            <a href="detourxp.com"><img src="src\routes\assets\DETOUR_logo.png" alt="Detour Logo" width="300px" height="auto"></a>
+            <a href="detourxp.com"><img src="https://detourxp.com/wp-content/uploads/sites/2/2022/12/DETOUR_logo.png" alt="Detour Logo" width="300px" height="auto"></a>
             <p>Welcome to DETOUR, your multimedia travel brand that re-introduces you to the world you know – but through a uniquely Black storytelling lens that chronicles and celebrates the places we live and travel. DETOUR brings together journalists, writers, historians, photographers, illustrators and filmmakers to revisit – and, in many cases, revise – the Black cultural narrative worldwide.</p>
         </div>
         <div>
             <h1>AS SEEN ON:</h1>
-            <img src="src\routes\assets\miami-herald-logo.svg" alt="Miami Herald">
-            <img src="src\routes\assets\Charlotte-Observer-logo.svg" alt="Charlotte Observer">
+            <img src="https://detourxp.com/wp-content/uploads/sites/2/2022/06/miami-herald-logo.svg" alt="Miami Herald">
+            <img src="https://detourxp.com/wp-content/uploads/sites/2/2022/06/Charlotte-Observer-logo.svg" alt="Charlotte Observer">
         </div>
     </div>
     <ul>
@@ -32,10 +32,12 @@
     $detour-headline-font: Georgia
 
     footer
+        position: relative
         background-color: #f8f8f7
         height: 300px
         font-family: $detour-body-font
         padding-bottom: 100px
+        z-index: 9999
         .detour-info
             display: grid
             grid-template-columns: repeat(2, 1fr)

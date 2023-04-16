@@ -28,9 +28,9 @@
         width: 100%
         background-color: #eee
         padding: 10px 10px 0px 10px
-        border-radius: 1%
+        border-radius: 10px
         img
-            max-width: 100%
+            width: 100%
             max-height: 100%
             object-fit: cover
         .text

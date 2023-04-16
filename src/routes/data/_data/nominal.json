@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "id": "B_asian"
+    },
+    {
+      "id": "B_black"
+    },
+    {
+      "id": "B_indian"
+    },
+    {
+      "id": "B_white"
+    },
+    {
+      "id": "A"
+    },
+    {
+      "id": "C_asian_female"
+    },
+    {
+      "id": "C_asian_male"
+    },
+    {
+      "id": "C_black_female"
+    },
+    {
+      "id": "C_black_male"
+    },
+    {
+      "id": "C_indian_female"
+    },
+    {
+      "id": "C_indian_male"
+    },
+    {
+      "id": "C_white_female"
+    },
+    {
+      "id": "C_white_male"
+    },
+    {
+      "id": "D_asian_female_adult"
+    },
+    {
+      "id": "D_asian_female_minor"
+    },
+    {
+      "id": "D_asian_male_adult"
+    },
+    {
+      "id": "D_asian_male_minor"
+    },
+    {
+      "id": "D_black_female_adult"
+    },
+    {
+      "id": "D_black_female_minor"
+    },
+    {
+      "id": "D_black_male_adult"
+    },
+    {
+      "id": "D_black_male_minor"
+    },
+    {
+      "id": "D_indian_female_adult"
+    },
+    {
+      "id": "D_indian_female_minor"
+    },
+    {
+      "id": "D_indian_male_adult"
+    },
+    {
+      "id": "D_indian_male_minor"
+    },
+    {
+      "id": "D_white_female_adult"
+    },
+    {
+      "id": "D_white_female_minor"
+    },
+    {
+      "id": "D_white_male_adult"
+    },
+    {
+      "id": "D_white_male_minor"
+    }
+  ],
+  "links": [
+    {
+      "source": "A",
+      "target": "B_asian",
+      "value": 32912
+    },
+    {
+      "source": "A",
+      "target": "B_black",
+      "value": 552835
+    },
+    {
+      "source": "A",
+      "target": "B_indian",
+      "value": 29236
+    },
+    {
+      "source": "A",
+      "target": "B_white",
+      "value": 939191
+    },
+    {
+      "source": "B_asian",
+      "target": "C_asian_female",
+      "value": 16017
+    },
+    {
+      "source": "B_asian",
+      "target": "C_asian_male",
+      "value": 16895
+    },
+    {
+      "source": "B_black",
+      "target": "C_black_female",
+      "value": 277155
+    },
+    {
+      "source": "B_black",
+      "target": "C_black_male",
+      "value": 275680
+    },
+    {
+      "source": "B_indian",
+      "target": "C_indian_female",
+      "value": 15982
+    },
+    {
+      "source": "B_indian",
+      "target": "C_indian_male",
+      "value": 13254
+    },
+    {
+      "source": "B_white",
+      "target": "C_white_female",
+      "value": 460991
+    },
+    {
+      "source": "B_white",
+      "target": "C_white_male",
+      "value": 478200
+    },
+    {
+      "source": "C_asian_female",
+      "target": "D_asian_female_adult",
+      "value": 7149
+    },
+    {
+      "source": "C_asian_female",
+      "target": "D_asian_female_minor",
+      "value": 8868
+    },
+    {
+      "source": "C_asian_male",
+      "target": "D_asian_male_adult",
+      "value": 9917
+    },
+    {
+      "source": "C_asian_male",
+      "target": "D_asian_male_minor",
+      "value": 6978
+    },
+    {
+      "source": "C_black_female",
+      "target": "D_black_female_adult",
+      "value": 60596
+    },
+    {
+      "source": "C_black_female",
+      "target": "D_black_female_minor",
+      "value": 216559
+    },
+    {
+      "source": "C_black_male",
+      "target": "D_black_male_adult",
+      "value": 91644
+    },
+    {
+      "source": "C_black_male",
+      "target": "D_black_male_minor",
+      "value": 184036
+    },
+    {
+      "source": "C_indian_female",
+      "target": "D_indian_female_adult",
+      "value": 3886
+    },
+    {
+      "source": "C_indian_female",
+      "target": "D_indian_female_minor",
+      "value": 12096
+    },
+    {
+      "source": "C_indian_male",
+      "target": "D_indian_male_adult",
+      "value": 4755
+    },
+    {
+      "source": "C_indian_male",
+      "target": "D_indian_male_minor",
+      "value": 8499
+    },
+    {
+      "source": "C_white_female",
+      "target": "D_white_female_adult",
+      "value": 141752
+    },
+    {
+      "source": "C_white_female",
+      "target": "D_white_female_minor",
+      "value": 319239
+    },
+    {
+      "source": "C_white_male",
+      "target": "D_white_male_adult",
+      "value": 210712
+    },
+    {
+      "source": "C_white_male",
+      "target": "D_white_male_minor",
+      "value": 267488
+    }
+  ]
+}

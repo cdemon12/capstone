@@ -1,26 +1,30 @@
 <script lang="ts">
+	import { tweened } from "svelte/motion";
 
-    let y: number;
+
+    let scrollY: number;
+    let navAlpha = tweened(0)
+    $: (scrollY < 5113) ? navAlpha.set(0) : navAlpha.set(1)
     let windowheight: number;
 
     let scrollprogress: number;
 
-    export let height: number;
-    export let storyy: number;
+    export let height: number = 0;
+    export let storyy: number= 0;
 
     $:scrollprogress= (100*storyy)/(height-windowheight);
 
 
 </script>
 
-<svelte:window bind:scrollY={y} bind:outerHeight={windowheight}/>
+<svelte:window bind:scrollY bind:outerHeight={windowheight}/>
 
 
 <div class="top-bar">
 <div class="progress-bar" style="width:{scrollprogress}%"></div>
-<nav>
+<nav style="background-color: rgba(255, 255, 255, {$navAlpha})">
     <div class="menu"></div>
-    <div class="logo-container"><a href="https://detourxp.com/"><img src="src\routes\assets\DETOUR_logo.png" alt="Detour logo"></a></div>
+    <div class="logo-container"><a href="https://detourxp.com/"><img src="https://detourxp.com/wp-content/uploads/sites/2/2022/12/DETOUR_logo.png" alt="Detour logo"></a></div>
     <div class="socials"></div>
 </nav>
 </div>
@@ -43,12 +47,12 @@
         z-index: 9998
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        background-color: white
+        border-bottom: 2px solid rgba(0, 0, 0, 0)
         color: $primary-color
-        padding: 16px 40px 16px 40px
-        height: 46px
-        width: 95vw
+        height: 70px
+        width: 100%
         justify-items: center
+        align-items: center
         position: fixed
 
         img

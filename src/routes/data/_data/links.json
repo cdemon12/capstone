@@ -1,0 +1,282 @@
+[
+  {
+    "race": "asian",
+    "value": 65.8699,
+    "per_capita_1_year": 65.8699,
+    "pop": 22861985,
+    "source": "A",
+    "target": "B_asian",
+    "sex": "all",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 582.1927,
+    "per_capita_1_year": 582.1927,
+    "pop": 48221139,
+    "source": "A",
+    "target": "B_black",
+    "sex": "all",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 201.2172,
+    "per_capita_1_year": 201.2172,
+    "pop": 6945552,
+    "source": "A",
+    "target": "B_indian",
+    "sex": "all",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 202.8281,
+    "per_capita_1_year": 202.8281,
+    "pop": 258646488,
+    "source": "A",
+    "target": "B_white",
+    "sex": "all",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 69.1673,
+    "per_capita_1_year": 69.1673,
+    "pop": 11874906,
+    "source": "B_asian",
+    "target": "C_asian_female",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 62.5726,
+    "per_capita_1_year": 62.5726,
+    "pop": 10987079,
+    "source": "B_asian",
+    "target": "C_asian_male",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 611.1083,
+    "per_capita_1_year": 611.1083,
+    "pop": 25077581,
+    "source": "B_black",
+    "target": "C_black_female",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 553.2771,
+    "per_capita_1_year": 553.2771,
+    "pop": 23143558,
+    "source": "B_black",
+    "target": "C_black_male",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 230.9371,
+    "per_capita_1_year": 230.9371,
+    "pop": 3489730,
+    "source": "B_indian",
+    "target": "C_indian_female",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 171.4974,
+    "per_capita_1_year": 171.4974,
+    "pop": 3455822,
+    "source": "B_indian",
+    "target": "C_indian_male",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 215.9978,
+    "per_capita_1_year": 215.9978,
+    "pop": 130421046,
+    "source": "B_white",
+    "target": "C_white_female",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 189.6583,
+    "per_capita_1_year": 189.6583,
+    "pop": 128225442,
+    "source": "B_white",
+    "target": "C_white_male",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 25.765,
+    "per_capita_1_year": 25.765,
+    "pop": 9248975,
+    "source": "C_asian_female",
+    "target": "D_asian_female_adult",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 112.5696,
+    "per_capita_1_year": 112.5696,
+    "pop": 2625931,
+    "source": "C_asian_female",
+    "target": "D_asian_female_minor",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 40.051,
+    "per_capita_1_year": 40.051,
+    "pop": 8253633,
+    "source": "C_asian_male",
+    "target": "D_asian_male_adult",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "asian",
+    "value": 85.0941,
+    "per_capita_1_year": 85.0941,
+    "pop": 2733446,
+    "source": "C_asian_male",
+    "target": "D_asian_male_minor",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 108.6224,
+    "per_capita_1_year": 108.6224,
+    "pop": 18595297,
+    "source": "C_black_female",
+    "target": "D_black_female_adult",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 1113.5941,
+    "per_capita_1_year": 1113.5941,
+    "pop": 6482284,
+    "source": "C_black_female",
+    "target": "D_black_female_minor",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 185.3127,
+    "per_capita_1_year": 185.3127,
+    "pop": 16484573,
+    "source": "C_black_male",
+    "target": "D_black_male_adult",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "black",
+    "value": 921.2415,
+    "per_capita_1_year": 921.2415,
+    "pop": 6658985,
+    "source": "C_black_male",
+    "target": "D_black_male_minor",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 51.6728,
+    "per_capita_1_year": 51.6728,
+    "pop": 2506798,
+    "source": "C_indian_female",
+    "target": "D_indian_female_adult",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 410.2013,
+    "per_capita_1_year": 410.2013,
+    "pop": 982932,
+    "source": "C_indian_female",
+    "target": "D_indian_female_minor",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 65.051,
+    "per_capita_1_year": 65.051,
+    "pop": 2436551,
+    "source": "C_indian_male",
+    "target": "D_indian_male_adult",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "indian",
+    "value": 277.9437,
+    "per_capita_1_year": 277.9437,
+    "pop": 1019271,
+    "source": "C_indian_male",
+    "target": "D_indian_male_minor",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 45.9382,
+    "per_capita_1_year": 45.9382,
+    "pop": 102857015,
+    "source": "C_white_female",
+    "target": "D_white_female_adult",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 386.0575,
+    "per_capita_1_year": 386.0575,
+    "pop": 27564031,
+    "source": "C_white_female",
+    "target": "D_white_female_minor",
+    "sex": "female",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 70.7086,
+    "per_capita_1_year": 70.7086,
+    "pop": 99333562,
+    "source": "C_white_male",
+    "target": "D_white_male_adult",
+    "sex": "male",
+    "age": "all"
+  },
+  {
+    "race": "white",
+    "value": 308.608,
+    "per_capita_1_year": 308.608,
+    "pop": 28891880,
+    "source": "C_white_male",
+    "target": "D_white_male_minor",
+    "sex": "male",
+    "age": "all"
+  }
+]
