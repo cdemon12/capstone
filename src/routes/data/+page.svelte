@@ -29,8 +29,10 @@
 
   let value;
 
-  $: scrollY > 844 ? active = 'per_capita': active = 'nominal';
+  $: scrollY > 1200 ? active = 'per_capita': active = 'nominal';
   $: scrollY > 488 && scrollY < 2246 ? labels = true: labels = false;
+
+  $: console.log(scrollY)
 
   let age = "minor";
   let sex = "female";
@@ -54,8 +56,6 @@
     "age": age,
     "sex": sex
   }
-
-  $: console.log(value)
 
   let selectWidth;
 
@@ -83,7 +83,7 @@
 </div>
 {#if whiteTooltip}
 <div class="tooltip" style="top: {y + 5}px; left: {x + 5}px">
-  <p>The FBI includes Hispanic and non-Hispanic white Americans together in all missing persons statistics.</p>
+  <p>The FBI includes Hispanic and non-Hispanic White Americans together in all missing persons statistics.</p>
 </div>
 {/if}
 
@@ -117,8 +117,9 @@
 <div class="sticky-container-first" bind:clientHeight={windowHeight}>
   <div class="sankey sticky">
     <Sankey 
-      active={active}
-      labels={labels}
+      {active}
+      {labels}
+      {scrollY}
     />  
   </div>
   {#if labels}
@@ -290,7 +291,7 @@
         padding-bottom: 0
     
     .sankey
-        top: 30px
+        top: 70px
         width: 373px
         height: 519px
         padding-top: 50px
@@ -352,7 +353,7 @@
     .prob
       position: relative
       width: 80%
-      height: 100vh
+      height: 80vh
       top: 300px
       left: 10%
 

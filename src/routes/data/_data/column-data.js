@@ -63,12 +63,6 @@ export default {
       "per_capita": 553.2771
     },
     {
-      "race": "indian",
-      "sex": "female",
-      "nominal": 5327.3333,
-      "per_capita": 230.9371
-    },
-    {
       "race": "white",
       "sex": "female",
       "nominal": 153663.6667,
@@ -79,6 +73,12 @@ export default {
       "sex": "male",
       "nominal": 159400,
       "per_capita": 189.6583
+    },
+    {
+      "race": "indian",
+      "sex": "female",
+      "nominal": 5327.3333,
+      "per_capita": 230.9371
     },
     {
       "race": "indian",

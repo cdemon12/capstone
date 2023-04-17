@@ -8,6 +8,8 @@
     export let active = 'nominal';
     export let labels: boolean;
 
+    export let scrollY;
+
     let activeData = data.nominal
 
     $: (active == 'nominal') ? activeData = data.nominal : activeData = data.per_capita;
@@ -35,6 +37,7 @@
         <Sankey
           {active}
           {labels}
+          {scrollY}
         />
       </Svg>
     </LayerCake>

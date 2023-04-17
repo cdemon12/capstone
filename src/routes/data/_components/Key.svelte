@@ -125,7 +125,7 @@
         {/if}
       </div>
     {/each}
-    {#each nodes as d}
+    <!-- {#each nodes as d}
     <div class='key-item'>
       <div class="chip">
       <svg>
@@ -143,11 +143,11 @@
       </div>
       <div class='name'>{displayName(d)}</div>
     </div>
-    {/each}
+    {/each} -->
   </div>
 
 {#if whiteTooltip}
   <div class="tooltip" style="top: -130px; left: 0px">
-    <p>The FBI includes Hispanic and non-Hispanic white Americans together in all missing persons statistics.</p>
+    <p>The FBI includes Hispanic and non-Hispanic White Americans together in all missing persons statistics.</p>
   </div>
 {/if}

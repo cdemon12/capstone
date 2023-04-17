@@ -14,6 +14,7 @@
   import { precisionFixed } from 'd3';
 	import { tweened } from 'svelte/motion';
 	import { subscribe } from 'svelte/internal';
+	import { writable } from 'svelte/store';
 
   const { data, width, height } = getContext('LayerCake');
 
@@ -55,11 +56,11 @@
 
   let races = Object.keys(nominal)
 
-  let activeData = tweened(nominal, {duration: 1000});
+  let activeData = tweened(nominal, {delay: 1000, duration: 1000});
 
 
   let translateY = -642;
-  let activeSum = tweened(sum.nominal, {duration: 1000});
+  let activeSum = tweened(sum.nominal, {delay: 1000, duration: 1000});
 
   $: (active == 'nominal') && activeData.set(nominal);
   $: (active == 'per_capita') && activeData.set(per_capita);
@@ -84,13 +85,15 @@
     export let nodePadding = 10;
 
     /** @type {Function} [linkSort=null] - How to sort the links, passed to [`sankey.linkSort`](https://github.com/d3/d3-sankey#sankey_linkSort). */
-    export let linkSort = (a, b) => a.value - b.value;
+    export let linkSort = null //(a, b) => a.value - b.value;
+
+    export let nodeSort = (a, b) => a.value - b.value;
   
     /** @type {Function} [nodeId=d => d.id] - The ID field accessor, passed to [`sankey.nodeId`](https://github.com/d3/d3-sankey#sankey_nodeId). */
     export let nodeId = d => d.id;
   
     /** @type {Function} [nodeAlign=d3.sankeyLeft] - An alignment function to position the Sankey blocks. See the [d3-sankey documentation](https://github.com/d3/d3-sankey#alignments) for more. */
-    export let nodeAlign = Sankey.sankeyLeft;
+    export let nodeAlign = Sankey.sankeyCenter;
 
     function range(size:number, startAt:number = 0):ReadonlyArray<number> {
         return [...Array(size).keys()].map(i => i + startAt);
@@ -103,7 +106,8 @@
       .nodePadding(nodePadding)
       .nodeId(nodeId)
       .size([$width, $height])
-      .linkSort(linkSort);
+      .linkSort(linkSort)
+      .nodeSort(nodeSort);
   
     $: sankeyData = sankey($data);
   
@@ -120,10 +124,28 @@
     return returnValue
   };
 
+  let colorSex = {
+    male: "darkslateblue",
+    female: "tomato"
+  }
+
+  let colorAge = {
+    minor: "lightblue",
+    adult: "darkslategrey"
+  }
+
   $: color = function(d){
     let returnValue;
     try {
-      returnValue = (d.id.split("_")[0] == "A") ? "rgba(0,0,0,0)" : colorScheme[d.id.split("_")[1]];
+      if (d.id.split("_")[0] == "A") {
+        returnValue = "rgba(0,0,0,0)";
+      }
+      if (d.id.split("_")[0] == "C") {
+        returnValue = colorSex[d.id.split("_")[2]];
+      }
+      if (d.id.split("_")[0] == "D") {
+        returnValue = colorAge[d.id.split("_")[3]];
+      }
     } catch
     {
       returnValue = "green"
@@ -147,6 +169,18 @@
     return 0
   }
 
+  export let scrollY: number;
+
+  let hideWidth = tweened(0, {duration: 1000});
+  // $: scrollY < 1200 && hideWidth.set(0) 
+  // $: if(scrollY > 1200) {
+  //     if($hideWidth === 0){
+  //       hideWidth.set($width)
+  //     } else {
+  //       hideWidth.set(0, {delay: 1000})
+  //     }
+  // }
+
   </script>
   
   <style>
@@ -158,8 +192,8 @@
       font-size: 10px;
     }
   </style>
-  ()
-  <g class="sankey-layer" transform='rotate(90 150 200)'>
+
+<g class="sankey-layer" transform='rotate(90 150 200)'>
     <g class='link-group'>
       {#each sankeyData.links as d, n}
         {#each range(Math.round(d.width/2)) as i}
@@ -169,8 +203,7 @@
           stroke={colorLinks(d)}
           stroke-opacity='1'
           stroke-width={0.3} 
-          transform ='translate(0 {i*2 - d.width / 2})'
-          in:draw={{delay: 1000, duration: 2000}}
+          transform ='translate(0 {i*2 - d.width / 2 + 1})'
           />
         {/each}
       {/each}
@@ -182,7 +215,7 @@
           <rect
           x={d.x0}
           y={d.y0 + ($activeData[a].runner) * (d.y1 - d.y0)}
-          height={(($activeData[a].value)) * (d.y1 - d.y0)}
+          height={(($activeData[a].value)) * (d.y1 - d.y0) + 1}
           width={50}
           fill={colorScheme[a.split("_")[0]]}
           transform='scale(1, -1) translate(0, {translateY})'
@@ -220,10 +253,10 @@
         height={d.y1 - d.y0}
         width={50}
         fill={color(d)}
-        stroke= {d.id.split("_")[2] == "female" ? "Tomato" : "black"}
         stroke-width="2"
-        stroke-dasharray={d.id.split("_")[0] == "D" && d.id.split("_")[3] == "minor" ? ("3,3") : ("0,0")}
         />
+        <!-- stroke= {d.id.split("_")[2] == "female" ? "Tomato" : "black"} -->
+        <!-- stroke-dasharray={d.id.split("_")[0] == "D" && d.id.split("_")[3] == "minor" ? ("3,3") : ("0,0")} -->
       {:else}
         <rect
         x={d.x0}
@@ -248,4 +281,11 @@
       </g>
       {/each}
     </g>
+    <rect
+      x={sankeyData.nodes[24].x1 + $width - $hideWidth}
+      y={sankeyData.nodes[16].y0 - 60}
+      height={$height + 65}
+      width={$hideWidth}
+      fill = "white"
+    />
   </g>

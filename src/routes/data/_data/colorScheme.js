@@ -4,4 +4,8 @@ export default
     "black": "#185ABC",
     "asian": "#9683C9",
     "indian": "#FCE17E",
-}
+    "male": "darkslateblue",
+    "female": "tomato",
+    "minor": "lightblue",
+    "adult": "darkslategrey"
+  }
