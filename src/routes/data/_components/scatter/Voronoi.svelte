@@ -49,8 +49,6 @@
   
     $: voronoi = Delaunay.from(uniquePoints).voronoi([0, 0, $width, $height]);
 
-    $: console.log(uniquePoints)
-
 
 
     let colors = {

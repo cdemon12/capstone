@@ -76,7 +76,7 @@
           dx='{isBandwidth ? -9 : dxTick}'
           dy='{isBandwidth ? 4 : dyTick}'
           style="text-anchor:{isBandwidth ? 'end' : textAnchor};"
-        >{formatTick(tick)}{tick==1000 ? " cases per 100k": ""}</text>
+        >{formatTick(tick)}{tick==4 ? " cases per 1,000": ""}</text>
       </g>
     {/each}
   </g>
@@ -88,18 +88,19 @@
     }
   
     .tick line {
-      stroke: black;
+      stroke: white;
     }
     .tick .gridline {
       stroke-dasharray: 2;
     }
   
     .tick text {
-      fill: black;
+      fill: white;
       transform: rotate(-90deg);
       font-family: halyard-display, Segoe UI;
       font-weight: 700;
       opacity: 0.8;
+      color: white
     }
   
     .tick.tick-0 line {

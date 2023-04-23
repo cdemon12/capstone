@@ -40,8 +40,6 @@
         .x((d) => xScale(d.x))
         .y((d) => yScale(d.y))
 
-    console.log(data.black_female_minor[2 + 1].y)
-
 </script>
 <div class="chart-container" bind:clientHeight={height} bind:clientWidth={width}>
 <LayerCake>

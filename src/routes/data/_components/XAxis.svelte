@@ -4,6 +4,7 @@
  -->
  <script>
     import { getContext } from 'svelte';
+	import { start_hydrating } from 'svelte/internal';
     const { width, height, xScale, yRange } = getContext('LayerCake');
   
     /** @type {Boolean} [gridlines=true] - Extend lines from the ticks into the chart space */
@@ -25,7 +26,7 @@
     export let ticks = undefined;
   
     /** @type {Number} [xTick=0] - How far over to position the text marker. */
-    export let xTick = 0;
+    export let xTick = -3
   
     /** @type {Number} [yTick=16] - The distance from the baseline to place each tick value. */
     export let yTick = 16;
@@ -72,8 +73,10 @@
           y={yTick}
           dx=""
           dy=""
-          text-anchor={textAnchor(i)}>{formatTick(tick)}</text
-        >
+          text-anchor={tick === 11 ? "middle" : "start"}
+          >
+          {tick === 1 ? "1 = same as the average U.S. resident" : tick === 7 ? "7 times more reported missing than the average U.S. resident" : tick === 2 || tick === 3 || tick === 8 || tick === 9 || tick === 10 ? "" : formatTick(tick)}
+          </text>
       </g>
     {/each}
     {#if baseline === true}
@@ -83,7 +86,7 @@
   
   <style>
     .tick {
-      font-size: 0.725em;
+      font-size: 0.8em;
       font-weight: 200;
     }
   

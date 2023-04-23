@@ -45,16 +45,16 @@
         simulation.tick();
       }
     }
-
     $: console.log(simulation.nodes())
+
   </script>
   
   <g class='bee-group'>
     {#each simulation.nodes() as node}
       <circle
         fill='{$zGet(node)}'
-        stroke='{node.race === activeName.race && node.sex === activeName.sex && node.age === activeName.age ? 'black' : stroke}'
-        stroke-width='{node.race === activeName.race && node.sex === activeName.sex && node.age === activeName.age ? 2   : 0}'
+        stroke='{node.race === activeName.race && node.sex === activeName.sex && node.age === activeName.age ? activeName.year === "all" ? 'white' : activeName.year === node.year ? "white" : stroke : stroke}'
+        stroke-width='{node.race === activeName.race && node.sex === activeName.sex && node.age === activeName.age ? activeName.year === "all" ? 2 : activeName.year === node.year ? 2 : 0 : 0}'
         cx='{node.x}'
         cy='{node.y}'
         r='{r}'

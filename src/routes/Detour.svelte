@@ -4,7 +4,7 @@
 
     let scrollY: number;
     let navAlpha = tweened(0)
-    $: (scrollY < 5113) ? navAlpha.set(0) : navAlpha.set(1)
+    $: (scrollY <= 0 ) ? navAlpha.set(1) : navAlpha.set(1) //5113
     let windowheight: number;
 
     let scrollprogress: number;

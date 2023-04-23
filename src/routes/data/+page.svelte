@@ -11,11 +11,20 @@
 	import MultiKey from './MultiKey.svelte';
   import probData from './_data/prob-data';
   import Prob from './Prob.svelte';
+	import Map from './Map.svelte';
+  import Area from './Area.svelte';
+  import Search from './search/Search.svelte';
+	import { colors } from './stores';
+  import { tweened } from 'svelte/motion';
+	import { color, csvParse } from 'd3';
+  import { fade } from 'svelte/transition';
+
 
   let whiteTooltip = false;
   let x: number, y: number, scrollY: number, windowHeight: number, active: string;
   let labels: boolean = false;
   let barWidth: number = 20;
+  let headerHeight: number = 0;
 
   function mouseOver(event) {
 		whiteTooltip = true;
@@ -30,9 +39,6 @@
   let value;
 
   $: scrollY > 1200 ? active = 'per_capita': active = 'nominal';
-  $: scrollY > 488 && scrollY < 2246 ? labels = true: labels = false;
-
-  $: console.log(scrollY)
 
   let age = "minor";
   let sex = "female";
@@ -54,29 +60,251 @@
   $: activeName = {
     "race": race,
     "age": age,
-    "sex": sex
+    "sex": sex,
+    "year": "all"
   }
 
   let selectWidth;
 
+  $: {
+      if (scrollY < headerHeight){
+        colors.set(colorScheme.grays)
+        labels = false;
+      }
+      if (scrollY > headerHeight && scrollY < 1200){
+        labels = true;
+      colors.set(
+        {
+          "black": colorScheme.colors.black,
+          "white": colorScheme.colors.white,
+          "indian": colorScheme.colors.indian,
+          "asian": colorScheme.colors.asian,
+          "female": colorScheme.grays.female,
+          "male": colorScheme.grays.male,
+          "minor": colorScheme.grays.minor,
+          "adult": colorScheme.grays.adult,
+        }
+      )
+    }
+  }
 
+  
+  let colorsRaceSex = {
+      "black": colorScheme.colors.black,
+      "white": colorScheme.colors.white,
+      "indian": colorScheme.colors.indian,
+      "asian": colorScheme.colors.asian,
+      "female": colorScheme.colors.female,
+      "male": colorScheme.colors.male,
+      "minor": colorScheme.grays.minor,
+      "adult": colorScheme.grays.adult,
+    }
 
+    let colorsAge = {
+      "black": colorScheme.grays.black,
+      "white": colorScheme.grays.white,
+      "indian": colorScheme.grays.indian,
+      "asian": colorScheme.grays.asian,
+      "female": colorScheme.grays.female,
+      "male": colorScheme.grays.male,
+      "minor": colorScheme.colors.minor,
+      "adult": colorScheme.colors.adult,
+    }
 
+  let buttons = {
+    "race":["all races", "black", "white", "asian", "indian"], 
+    "sex": ["all sexes", "male", "female"], 
+    "age": ["all ages", "minor", "adult"],
+    "year": ["all years", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"]}
+    $: console.log(activeName)
 </script>
 
 <svelte:window bind:scrollY={scrollY} />
 
+<div class="debug"> 
+  <p>scrollY: {scrollY}</p>
+  <p>active: {active}</p>
+  <p>labels: {labels}</p>
+  <p>headerHeight: {headerHeight}</p>
+  <p>colors: {scrollY > headerHeight}</p>
+</div>
+
 <div class="body-container">
-<div class="spacer">
+  <div class="header" bind:clientHeight={headerHeight}>
+    <h1>What missing persons reveal about intersectionality</h1>
+    <p class="byline">By <a href="/">Cole Schnell</a>, May 20, 2023</p>
+  </div>
+<div class="sticky-container">
+  <div class="sticky slide">
+  <div class="chart">
+    <Sankey 
+      {active}
+      {labels}
+      {scrollY}
+    />  
+  </div>
+  <div class="key">
+    <Key />
+  </div>
+  {#if scrollY > 900 && scrollY < 1200}
+    <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.black}; position: fixed; left: 70%; top: 175px; width: 400px">
+      <p class="body">Over the last three years, 552,835 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> were reported missing to the FBI.</p>
+    </div>
+  {/if}
+  {#if scrollY > 950 && scrollY < 1200}
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.white}; position: fixed; left: 30%; top: 370px; width: 400px">
+    <p class="body">Over the same time period, 939,191 <span class="race-label" style="background-color:{colorScheme.colors["white"]};">White American</span> were reported missing to the FBI.</p>
+  </div>
+  {/if}
+  {#if scrollY > 2000 && scrollY < 2300}
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.black}; position: fixed; left: 70%; top: 175px; width: 400px">
+    <p class="body">Every year, about 3.8 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> per 1,000 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> are reported as missing.</p>
+  </div>
+  {/if}
+  {#if scrollY > 2050 && scrollY < 2300}
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.white}; position: fixed; left: 30%; top: 370px; width: 400px">
+    <p class="body">For White Americans, that number is about 1.2 per 1,000.</p>
+  </div>
+  {/if}
+  {#if scrollY > 2300 && scrollY < 2600}
+  <div style="visibility: hidden; display: none">{colors.set(colorsRaceSex)}</div>
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.indian}; position: fixed; left: 25%; top: 150px; width: 400px">
+    <p class="body">When also sorted by sex, American Indian women surpass White Americans, making them the third most likely to go missing along the intersection of race and sex, following Black women and men. </p>
+  </div>
+  {/if}
+  {#if scrollY > 2400 && scrollY < 2600}
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.indian}; position: fixed; left: 70%; top: 360px; width: 400px">
+    <p class="body">
+      Unlike other cases, American Indian disappearances are typically related to violent crimes, with murder being the third most common death for Indian women, according to the Urban Indian Health Institute. This phenomenon sparked activism, leading to the unanimous passage of the Not Invisible Act in 2019.
+      </p>
+  </div>
+  {/if}
+  {#if scrollY > 2600 && scrollY < 2900}
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.indian}; position: fixed; left: 48%; top: 370px; width: 400px">
+    <p class="body">
+      “There is still much work to do to combat the epidemic of missing and murdered Indigenous women and girls,” Co-sponsor Senator Catherine Cortez Masto (D-NV) said after the bill was extended in late 2022.
+    </p>
+  </div>
+  {/if}
+  {#if scrollY > 2900 && scrollY < 3200}
+  <div style="visibility: hidden; display: none">{colors.set(colorsAge)}</div>
+  <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.minor}; position: fixed; left: 48%; top: 340px; width: 400px">
+    <p class="body">
+      Adding age reveals the largest disparity, children are 65% of cases before adjusting for the much larger adult population; after population adjustment, 87% of cases are younger than 18.    
+     </p>
+  </div>
+  {/if}
+  {#if scrollY > 3200 && scrollY < 3400}
+  <div style="visibility: hidden; display: none">{colors.set(colorScheme.colors)}</div>
+  {/if}
+  </div>
+</div>
+<div class="card">
+  <p class="body first-paragraph">David Robinson is one of over half a million Americans who go missing every year.</p>
+  <p>Though less than one percent of those are missing long term, Black Americans are more likely to be missing and for longer.</p>
+  <p>For Black children, even more often and longer.</p>
+</div>
+<div class="card" style="top: 1800px; flex-direction: row;">
+  <div class="slope" style="width: 300px; height: 250px; padding-bottom: 50px; padding-right: 20px">
+    <Area />
+  </div>
+  <p style="width: 200px;">If the data is adjusted for population size, still figure what to say here.</p>
+  <!-- <p>Also, notably, after adjusting for population, <span class="race-label" style="background-color:{colorScheme["indian"]}; color: black;">American Indian women</span> also surpass <span class="race-label" style="background-color:{colorScheme["white"]}; color: black;" on:mouseover={mouseOver} on:mouseleave={mouseOut}>White Americans<ion-icon name="help-circle-outline"></ion-icon></span>, making them the third most likley to go missing along the intersection of race and sex, following <span class="race-label" style="background-color:{colorScheme["black"]};">Black women and men</span>.</p> -->
+</div>
+<div class="para">
+  <p class="body">
+    Missing children are more likely to be found and missing for a shorter periods than adults, with 99.5% of missing children being found, according to a 2018 study on missing children cases in New York. However, the study found that Black children are over twice as likely not to be found and more likely to be missing for longer.
+  </p>
+  <p class="body">
+    The mechanism for these disparities is likely due differences in how Black missing person cases are treated. The Black and Missing Foundation attributes this to the police’s higher tendency to associate Black missing children as runaways and adults as criminals. This changes the amount of resources used to search. For instance, if a child is labled as a runaway, the police can’t issue an AMBER alert, one of the most succesful tools in abduction cases. 
+  </p>
+  <p class="body">                       
+    These sterotypes are also relayed into the less media coverage. According to a 2015 study of media coverage of missing children, 9% of media mising children mentions involve Black children, despite black children being 36% of cases.  
+  </p>
+  <p class="body">
+    Examining sex, age and race alone doesn’t reveal the full disparities in missing person cases. Intersectionality ?  is when there is an additional effect beyond the combined effects of separate characteristics. These intersectional effects are very present in missing persons.
+  </p>
+  <p class="body">
+    For instance, within the population of Black minors, XX times more go missing per person than the general population. That is more missing persons per person than the number of missing persons per person in the populations of both minors and black people, revealing an additional intersectional risk from being a minor and Black.
+  </p>
+  <p class="body">
+    Choose different characteristics to see how intersections change the probability of going missing:
+  </p>
+</div>
+  <div class="bees">
+    <Bees
+    {activeName} 
+    />
+  </div>
+  <div class="btn-container-container">
+  <div class="btn-container">
+    {#each Object.keys(buttons) as key}
+      <div class="btn-group">
+        {#each buttons[key] as item}
+          <button class="btn" style="opacity:{activeName[key] == item.split(" ")[0] ? 1 : 0.5}; border: {activeName[key] == item.split(" ")[0] ? "1px solid white" : "none"}" on:click={() => {activeName[key] = item.split(" ")[0]}}>{item == "indian" ? "american indian" : item}</button>
+        {/each}
+      </div>
+    {/each}
+  </div>
+  </div>
+  <div class="para">
+    <p class="body">
+      One of the tools used to find missing persons in the U.S. is the National Missing and Unidentified Persons System or NamUs, which provide a database of missing persons cases. However, for a missing persons cases to be entered, it has to be voluntarily submitted, which is then checked with local law enforcement to ensure accuracy. 
+    </p>
+    <p class="body">
+      However, the NamUs database has proportionally less Black missing persons cases relative to statistics provided by the FBI, which includes every missing persons case entry reported to law enforcement.
+    </p>
+    <p class="body">
+      This has led to media organizations to mistate the percentage of Black missing persons cases, citing NamUs, a non representive sample, and further underrepresenting Black missing persons in the media.
+    </p>
+    <p class="body">
+      For example, a YouTube video with over half a million views listed the top ten states with the most missing persons per capita. However, due to underrepresentation of Black missing persons cases in the dataset, White states are overrepresented and Black states are underrepresented, with four of the states with highest number of white people making the top ten list. This one example of many top Google search results that contained misinformation misusing NamUs data.
+    </p>
+    <p class="body">
+      "Participation in NamUs is voluntary, therefore trends in missing person data may not correlate with actual missing persons cases reported to law enforcement," a spokesperson for NamUs said over email. "We recommend analyzing data provided by National Crime Information Center." 
+    </p>
+    <p class="body">
+      While the NamUs database may not be a good source for finding statistics, it is the only national source for where people go missing and was used for the following map. Detour was denied a request to FBI for more-detailed and accurate missing persons data.
+    </p>
+    <p class="body">
+      Despite the FBI’s collection of data, there is no complete national database of missing persons cases. The FBI’s National Crime Information Center (NCIC) is the closest thing to a national database, but it is not public beyond the yearly statistcs.</p>
+    <p class="body">
+      The NCIC database is used by law enforcement to track missing persons and criminals. However, the database is not public, and the FBI does not provide any statistics on missing persons.
+    </p>
+    <p class="body">
+      The map below represents all active missing persons cases in the NamUs database. Every dot represents an active case. This map is to represent the sheer size of active cases and not an accurate measure of where people go missing.
+    </p>
+  </div>
+  <div class="map">
+    <Map />
+  </div>
+  <div class="key">
+    <Key />
+  </div>
+    <div class="search">
+      <Search />
+    </div>
+
+  <div class="para" style="padding-top: 50px">
+      <p class="body">
+        Read the methodolgy.
+      </p>
+      <p class= "body">
+        To report an error or suggest an edit, email <a href="mailto:coloeschnell@gmail.com">coleschnell@gmail.com.</a>
+      </p> 
+      <h3>Notes</h3>
+      <p class="body">
+        This article takes some visual inspiration by <a href="https://projects.propublica.org/coronavirus-unemployment/">What Coronavirus Job Losses Reveal About Racism in America,"</a> by Lena V. Groeger at ProPublica.
+      </p>  
+      <p class="body">
+        The data for this article was collected from the FBI, NamUs, and the U.S. Census Bureau.
+      </p>
+  </div>
+
+
 </div>
 
-<div class="card first">
-  <h1>Missing in the U.S. by the numbers</h1>
-  <div style ="width:60px; height:2px; background-color:black"></div>
-  <h4>By Cole Schnell</h4>
-</div>
-
-<div class="card second">
+<!-- <div class="card second">
   <p>Over half a million Americans are reported missing every year, according to statistics collected by the FBI. That is equivalent to the population of Wyoming disapearing every year. </p>
   <p>A majority of those you go missing are <span class="race-label" style="background-color:{colorScheme["white"]}; color: black;" on:mouseover={mouseOver} on:mouseleave={mouseOut}>White<ion-icon name="help-circle-outline"></ion-icon></span>, slightly over 60% of cases.</p>
   <p>However, that is small part of the story. If the data is adjusted for population, the picture becomes more clear.</p>
@@ -88,9 +316,8 @@
 {/if}
 
 <div class="card third">
-  <h3>Population adjustion</h3>
   <div class="slope">
-    <Slope />
+    <Area />
   </div>
   <p>After adjusting for population, <span class="race-label" style="background-color:{colorScheme["black"]};">Black American</span> are much more likely to go missing, with 784 <span class="race-label" style="background-color:{colorScheme["black"]};">Black American</span> going missing yearly per 100,000.</p>
   <p>Also, notably, after adjusting for population, <span class="race-label" style="background-color:{colorScheme["indian"]}; color: black;">American Indian women</span> also surpass <span class="race-label" style="background-color:{colorScheme["white"]}; color: black;" on:mouseover={mouseOver} on:mouseleave={mouseOut}>White Americans<ion-icon name="help-circle-outline"></ion-icon></span>, making them the third most likley to go missing along the intersection of race and sex, following <span class="race-label" style="background-color:{colorScheme["black"]};">Black women and men</span>.</p>
@@ -99,18 +326,18 @@
 <div class="card forth">
   <p>Race and sex clearly contribute to who goes missing but age is the strongest indicator among the three, with 65% of missing subjects being below 18 years old. After adjusting for population, that number increases to 87%.</p>
   <div class="bar" bind:clientWidth={barWidth}>
-      <div class="chunk" style="width: {barWidth * .65}px; background-color: #fbb812">
-        <p>65% of cases are minors</p>
+      <div class="chunk" style="width: {barWidth * .66}px; background-color: #fbb812">
+        <p>66% of cases are minors</p>
       </div>
       <div class="chunk" style="background-color: black; width: 1px"/>
-      <div class="chunk" style="width: {barWidth * .35}px; background-color: LightSlateGray"></div>
+      <div class="chunk" style="width: {barWidth * .34}px; background-color: LightSlateGray"></div>
   </div>
   <div class="bar" bind:clientWidth={barWidth}>
-    <div class="chunk" style="width: {barWidth * .87}px; background-color: #fbb812">
-      <p>87% of population-adjusted cases are minors</p>
+    <div class="chunk" style="width: {barWidth * .86}px; background-color: #fbb812">
+      <p>86% of population-adjusted cases are minors</p>
     </div>
     <div class="chunk" style="background-color: black; width: 1px"/>
-    <div class="chunk" style="width: {barWidth * .13}px; background-color: LightSlateGray"></div>
+    <div class="chunk" style="width: {barWidth * .14}px; background-color: LightSlateGray"></div>
 </div>
 </div>
 
@@ -127,7 +354,6 @@
     <Key />
   </div>
   {/if}
-</div>
 </div>
 
 <div class="sticky-container-second">
@@ -161,13 +387,21 @@
   <div class="prob">
       <Prob />
   </div>
+  <div class="map">
+      <Map />
+  </div>
+  <div class="search">
+    <Search />
+  </div> -->
   <!-- <div class="scatter">
     <Scatter />
   </div>
   <div class="multikey">
     <MultiKey />
   </div> -->
-</div>
+<!-- </div>
+// FAQ
+</div> -->
 
 
 <style lang="sass">
@@ -176,17 +410,126 @@
     $detour-body-font: halyard-display, Segoe UI
     $detour-orange: #fbb812
 
+    a
+      color: white
+      &:hover
+        color: $detour-orange
+
+
+    .debug
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 10001
+      background-color: white
+      color: black
+      font-family: monospace
+      font-size: 12px
+      padding: 10px
+      border: 1px solid black
+      border-radius: 5px
+      box-shadow: 0 0 10px rgba(0,0,0,0.5)
+      pointer-events: none
+
+    .body-container
+      position: relative
+      width: 100%
+      padding-top: 70px
+      background-color: #282729
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      gap: 20px
+      .header
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 10px
+      h1
+        font-family: $detour-headline-font
+        font-size: 4rem
+        font-weight: 700
+        text-align: center
+        color: white
+        width: min(70%, 700px)
+        margin: 0
+        padding: 0
+        text-shadow: 0 10px 10px rgba(0,0,0,0.5)
+        padding-top: 50px
+      p
+        font-family: $detour-body-font
+        font-size: 1.1rem
+        font-weight: 400
+        margin: 0
+        padding: 0
+      .byline 
+        font-style: italic
+        text-align: center
+        font-size: 1.05 rem
+        color: white
+        a
+          color: white
+          text-decoration: underline
+          &:hover
+            color: $detour-orange
+      .body
+        text-align: left
+      .para
+        font-family: $detour-body-font
+        font-size: 1.1rem
+        font-weight: 400
+        margin: 0
+        padding: 0 0 20px 0
+        color: white
+        width: min(70%, 700px)
+        text-align: left
+        line-height: 1.5
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+    .sticky-container
+      width: 100%
+      height: 3650px
+      position: relative
+      top: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: start
+      .sticky
+        position: sticky
+        top: 90px
+        left: 0
+      .chart
+        width: 373px
+        height: 519px
+        padding-left: 230px
+        transform: scale(1.2)
+        z-index: 0
+      .key
+        transform: translateY(-40px)
+
+
+
     .card
         position: absolute
-        right: 50px
-        width: 28%
+        left: 50%
+        top: 900px
+        transform: translateX(-50%)
+        width: min(50%, 500px)
         padding: 15px
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.5)
         z-index: 100
         display: flex
         flex-direction: column
-        justify-content: center
-        align-items: center
+        justify-content: start
+        align-items: start
+        background-color: white
+        gap: 10px
         h1
             font-family: $detour-headline-font
             font-size: 2rem
@@ -199,7 +542,7 @@
             text-align: center
         p
             font-family: $detour-body-font
-            font-size: 1rem
+            font-size: 1.1rem
             font-weight: 400
             text-align: left
             line-height: 1.5rem
@@ -208,153 +551,213 @@
           color: white
           padding: -4px 0px 0px 0px
           border-radius: 3px
-        ion-icon
-          visibility: visible
-          transform: translateY(0.2rem)
-          margin-left: 0.2rem
-        .slope
-          width: 65%
-          height: 120px
-          margin: 0 20px
-          margin-bottom: 40px
-        .bar
-          height: 50px
-          width: 100%
-          display: flex
-          flex-direction: row
-          justify-content: center
-          align-items: center
-          margin-bottom: 20px
-          opacity: 0.8
-          .chunk
-            height: 100%
-            display: flex
-            flex-direction: column
-            justify-content: end
-            align-items: end
-            p
-              font-size: 0.8rem
-              font-weight: 700
-              margin: 0
-              padding: 0
-              margin-bottom: 5px
-              margin-right: 5px
-              text-align: right
-              line-height: 0.7rem
-    
-    .first
-      top: 40%
-    .second
-      top: 130%
-    .third
-      top: 230%
-    .forth
-      top: 360%
 
 
-    .tooltip
-        position: absolute
-        background-color: white
-        color: black
-        border: 1.5px solid black
-        padding: 0 10px
-        font-family: $detour-body-font
-        font-size: 1rem
-        font-weight: 400
-        text-align: left
-        z-index: 1000
-        width: 200px
-    .chart
-        width:  100%
-        height: 100%
-        margin: 0 50px
+  .bees
+    position: relative
+    width: 80%
+    height: 120px
+    left: 0
+    padding: 10px 10% 150px 10%
 
-    .spacer
-        height: 70px
+  .map
+    position: relative
+    width: 80%
 
-    .sticky
-        position: sticky
+  .search
+    position: relative
+    width: 100%
 
-    .sticky-container-first
-      height: 430vh
-      position: relative
-
-    .sticky-container-second
-      height: 430vh
-      position: relative
-    
-    .column
-        top: 70px
-        height: 389.3px
-        width: 80px
-        padding-top: 136.7px
-        padding-bottom: 0
-    
-    .sankey
-        top: 70px
-        width: 373px
-        height: 519px
-        padding-top: 50px
-        padding-left: 300px
-        transform: scale(1.2)
-    
-    .bees
-        position: relative
-        top: 70px
-        width: 80%
-        height: 200px
-        padding-left: 80px
-
-    .input-text
-        position: relative
-        top: 250px
-        width: 100%
+  .btn-container-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    .btn-container
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      gap: 20px
+      padding-bottom: 20px
+      padding-right: 270px
+      .btn-group
         display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        font-family: $detour-body-font
-        font-size: 1.5rem
-        select
-          background-color: transparent // Makes the background transparent
-          border: none // Removes border
-          padding: 0 // Removes padding
-          font-family: inherit // Inherit font family from parent element
-          font-size: inherit // Inherit font size from parent element
-          line-height: inherit // Inherit line height from parent element
-          cursor: pointer // Change cursor to pointer on hover
-        .select-helper
-          position: absolute
-          top: 0
-          left: -9999px
-          text-transform: uppercase
+        flex-direction: column
+        justify-content: start
+        align-items: start
+        gap: 5px
+        flex-wrap: wrap
+        height: 170px
+        .btn
           font-family: $detour-body-font
-          font-size: 1.5rem
-    
-    .scatter
-        position: relative
-        width: 65%
-        height: 10% 
-        top: 300px
-        left: 5%
+          font-size: 1rem
+          font-weight: 400
+          text-align: left
+          color: white
+          background-color: black
+          width: 130px
+          border: none
+          border-radius: 3px
+          opacity: 0.5
+          cursor: pointer
+          text-transform: capitalize
 
-    .multikey
-        position: relative
-        width: 60%
-        height: 60% 
-        top: 470px
-        left: 0%
 
-    .key
-      position: fixed
-      top: 90%
-      left: 8%
+    //     ion-icon
+    //       visibility: visible
+    //       transform: translateY(0.2rem)
+    //       margin-left: 0.2rem
+    //     .slope
+    //       width: 65%
+    //       height: 200px
+    //       margin: 20px 20px
+    //     .bar
+    //       height: 50px
+    //       width: 100%
+    //       display: flex
+    //       flex-direction: row
+    //       justify-content: center
+    //       align-items: center
+    //       margin-bottom: 20px
+    //       opacity: 0.8
+    //       .chunk
+    //         height: 100%
+    //         display: flex
+    //         flex-direction: column
+    //         justify-content: end
+    //         align-items: end
+    //         p
+    //           font-size: 0.8rem
+    //           font-weight: 700
+    //           margin: 0
+    //           padding: 0
+    //           margin-bottom: 5px
+    //           margin-right: 5px
+    //           text-align: right
+    //           line-height: 0.7rem
     
-    .prob
-      position: relative
-      width: 80%
-      height: 80vh
-      top: 300px
-      left: 10%
+    // .first
+    //   top: 40%
+    // .second
+    //   top: 130%
+    // .third
+    //   top: 230%
+    // .forth
+    //   top: 360%
+
+
+    // .tooltip
+    //     position: absolute
+    //     background-color: white
+    //     color: black
+    //     border: 1.5px solid black
+    //     padding: 0 10px
+    //     font-family: $detour-body-font
+    //     font-size: 1rem
+    //     font-weight: 400
+    //     text-align: left
+    //     z-index: 1000
+    //     width: 200px
+    // .chart
+    //     width:  100%
+    //     height: 100%
+    //     margin: 0 50px
+
+    // .spacer
+    //     height: 70px
+
+    // .sticky
+    //     position: sticky
+
+    // .sticky-container-first
+    //   height: 430vh
+    //   position: relative
+
+    // .sticky-container-second
+    //   height: 430vh
+    //   position: relative
+    
+    // .column
+    //     top: 70px
+    //     height: 389.3px
+    //     width: 80px
+    //     padding-top: 136.7px
+    //     padding-bottom: 0
+    
+    // .sankey
+    //     top: 70px
+    //     width: 373px
+    //     height: 519px
+    //     padding-top: 50px
+    //     padding-left: 300px
+    //     transform: scale(1.2)
+    
+
+
+    // .input-text
+    //     position: relative
+    //     top: 150px
+    //     width: 100%
+    //     display: flex
+    //     flex-direction: row
+    //     justify-content: center
+    //     align-items: center
+    //     font-family: $detour-body-font
+    //     font-size: 1.5rem
+    //     background-color: white
+    //     select
+    //       background-color: transparent // Makes the background transparent
+    //       border: none // Removes border
+    //       padding: 0 // Removes padding
+    //       font-family: inherit // Inherit font family from parent element
+    //       font-size: inherit // Inherit font size from parent element
+    //       line-height: inherit // Inherit line height from parent element
+    //       cursor: pointer // Change cursor to pointer on hover
+    //     .select-helper
+    //       position: absolute
+    //       top: 0
+    //       left: -9999px
+    //       text-transform: uppercase
+    //       font-family: $detour-body-font
+    //       font-size: 1.5rem
+    
+    // .scatter
+    //     position: relative
+    //     width: 65%
+    //     height: 10% 
+    //     top: 300px
+    //     left: 5%
+
+    // .multikey
+    //     position: relative
+    //     width: 60%
+    //     height: 60% 
+    //     top: 470px
+    //     left: 0%
+
+    // .key
+    //   position: fixed
+    //   top: 90%
+    //   left: 8%
+    
+    // .prob
+    //   position: relative
+    //   width: 80%
+    //   height: 80vh
+    //   top: 300px
+    //   left: 10%
+    //   background-color: white
+    //   padding: 40px 20px 0px 20px
+    
+    // 
+    
+    // .search
+    //   position: relative
+    //   width: 30%
+    //   height: 80vh
+    //   top: 550px
+    //   left: 10%
 
 </style>

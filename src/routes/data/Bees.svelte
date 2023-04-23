@@ -18,15 +18,15 @@
 
   const r = 6;
 
-  const seriesColors = Object.values(colorScheme);
+  const seriesColors = ['#9683C9', '#185ABC', '#FCE17E', '#82C995', '#F9A8A8'];
 
-  seriesColors.push('#ccc');
 
   const dataTransformed = data.map(d => {
     return {
       [titleKey]: d.race + ' ' + d.sex + " " + d.age + " " + d.year,
       ["sex"]: d.sex,
       ["age"]: d.age,
+      ["year"]: d.year,
       [zKey]: d[zKey],
       [xKey]: d.prob
     }

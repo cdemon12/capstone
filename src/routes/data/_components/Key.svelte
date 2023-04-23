@@ -4,7 +4,7 @@
  -->
  <script lang="ts">
     import { scaleOrdinal } from 'd3-scale';
-    import colorScheme from '../_data/colorScheme';
+    import { colors } from '../stores';
   
     /** @type {String} [shape='square'] - The shape for each item. Can be 'circle', 'line', or 'square'; */
     export let shape = 'square';
@@ -18,10 +18,10 @@
     /** @type {Boolean} [capitalize=true] - Capitalize the first character. */
     export let capitalize = true;
 
-    let zDomain = Object.keys(colorScheme);
-    let zScale = scaleOrdinal()
+    $: zDomain = Object.keys($colors);
+    $: zScale = scaleOrdinal()
       .domain(zDomain)
-      .range(Object.values(colorScheme));
+      .range(Object.values($colors));
   
     function cap (val) {
       return String(val).replace(/^\w/, d => d.toUpperCase());
@@ -48,6 +48,8 @@
     }
 
     let nodes = ["female", "male", "minor", "adult"];
+
+    
 
   </script>
   
@@ -79,9 +81,10 @@
     .name {
       display: inline;
       font-size: 14px;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
       font-family: halyard-display, Segoe UI;
       font-weight: 700;
+      color: white
     }
     .tooltip {
         position: absolute;

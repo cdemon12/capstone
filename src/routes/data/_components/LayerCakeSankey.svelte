@@ -5,7 +5,6 @@
  <script lang="ts">
     import { getContext } from 'svelte';
     import * as Sankey from 'd3-sankey';
-    import colorScheme from '../_data/colorScheme';
     import { draw, fade } from 'svelte/transition';
 	  import { scaleLinear, stackOrderAppearance } from 'd3';
     import columnData from '../_data/column-data';
@@ -15,6 +14,7 @@
 	import { tweened } from 'svelte/motion';
 	import { subscribe } from 'svelte/internal';
 	import { writable } from 'svelte/store';
+  import { colors } from '../stores';
 
   const { data, width, height } = getContext('LayerCake');
 
@@ -56,21 +56,20 @@
 
   let races = Object.keys(nominal)
 
-  let activeData = tweened(nominal, {delay: 1000, duration: 1000});
-
+  let activeData = tweened(nominal, {duration: 1000});
 
   let translateY = -642;
-  let activeSum = tweened(sum.nominal, {delay: 1000, duration: 1000});
+  let activeSum = tweened(sum.nominal, {duration: 1000});
 
   $: (active == 'nominal') && activeData.set(nominal);
   $: (active == 'per_capita') && activeData.set(per_capita);
   $: (active == 'nominal') && (translateY = -642);
-  $: (active == 'per_capita') && (translateY = -629);
-  $: (active == 'nominal') ? activeSum.set(sum.nominal) : activeSum.set(sum.per_capita/2);
+  $: (active == 'per_capita') && (translateY = -633);
+  $: (active == 'nominal') ? activeSum.set(sum.nominal) : activeSum.set(sum.per_capita/400);
   
   
     /** @type {Function} [colorLinks=d => 'rgba(0, 0, 0, .2)'] - A function to return a color for the links. */
-    export let colorLinks = d => colorScheme[d.race];
+    export let colorLinks = d => $colors[d.race];
   
     /** @type {Function} [colorNodes=d => '#333'] - A function to return a color for each node. */
     export let colorNodes = d => '#333';
@@ -124,15 +123,6 @@
     return returnValue
   };
 
-  let colorSex = {
-    male: "darkslateblue",
-    female: "tomato"
-  }
-
-  let colorAge = {
-    minor: "lightblue",
-    adult: "darkslategrey"
-  }
 
   $: color = function(d){
     let returnValue;
@@ -141,10 +131,10 @@
         returnValue = "rgba(0,0,0,0)";
       }
       if (d.id.split("_")[0] == "C") {
-        returnValue = colorSex[d.id.split("_")[2]];
+        returnValue = $colors[d.id.split("_")[2]];
       }
       if (d.id.split("_")[0] == "D") {
-        returnValue = colorAge[d.id.split("_")[3]];
+        returnValue = $colors[d.id.split("_")[3]];
       }
     } catch
     {
@@ -190,17 +180,19 @@
       font-weight: 400;
       text-transform: capitalize;
       font-size: 10px;
+      color: white
     }
   </style>
 
 <g class="sankey-layer" transform='rotate(90 150 200)'>
+    {#if scrollY < 1200 || scrollY > 1800}
     <g class='link-group'>
       {#each sankeyData.links as d, n}
-        {#each range(Math.round(d.width/2)) as i}
+        {#each range(Math.ceil(d.width/2)) as i}
         <path
           d={link(d)}
           fill='none'
-          stroke={colorLinks(d)}
+          stroke={$colors[d.race]}
           stroke-opacity='1'
           stroke-width={0.3} 
           transform ='translate(0 {i*2 - d.width / 2 + 1})'
@@ -208,6 +200,7 @@
         {/each}
       {/each}
     </g>
+    {/if}
     <g class='rect-group'>
       {#each sankeyData.nodes as d, i}
       {#if d.id.split("_")[0] == "A"}
@@ -217,7 +210,7 @@
           y={d.y0 + ($activeData[a].runner) * (d.y1 - d.y0)}
           height={(($activeData[a].value)) * (d.y1 - d.y0) + 1}
           width={50}
-          fill={colorScheme[a.split("_")[0]]}
+          fill={$colors[a.split("_")[0]]}
           transform='scale(1, -1) translate(0, {translateY})'
           />
       {/each}
@@ -246,7 +239,7 @@
         />
       {/if}
       {:else}
-      {#if labels}
+      {#if scrollY < 1200 || scrollY > 1800}
         <rect
         x={d.x0}
         y={d.y0}
@@ -254,16 +247,6 @@
         width={50}
         fill={color(d)}
         stroke-width="2"
-        />
-        <!-- stroke= {d.id.split("_")[2] == "female" ? "Tomato" : "black"} -->
-        <!-- stroke-dasharray={d.id.split("_")[0] == "D" && d.id.split("_")[3] == "minor" ? ("3,3") : ("0,0")} -->
-      {:else}
-        <rect
-        x={d.x0}
-        y={d.y0}
-        height={d.y1 - d.y0}
-        width= {50}
-        fill={color(d)}
         />
       {/if}
       {/if}

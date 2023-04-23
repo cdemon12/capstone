@@ -58,8 +58,8 @@
     .name {
       display: inline;
       font-size: 14px;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
       font-family: halyard-display, Segoe UI;
+      color: white
 
     }
   </style>
