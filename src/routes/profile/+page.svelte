@@ -12,7 +12,7 @@
 <div class="body-container">
 <div class="body">
 <h1>Fatherhood, faith, and fellowship in Arizona</h1>
-<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, fugit.</h2>
+<h2>David Robinson details numerous searches and other efforts to find to his son.</h2>
 <p class="byline">By <a href="/">Brooke Muckerman</a> and <a href="/">Cela Migan</a>, May 22, 2023</p>
 
 <p>On the morning of Feb. 25, the sun did not peek through the mountains surrounding the Teravalis construction site. The cold morning brought an unwelcome cast over the eerie desert. At approximately 7:45 a.m. David Robinson stood in front of over 100 volunteers and gave them earnest thank you’s, and began to explain the logistics of the day. By 8 a.m., three separate groups were formed, with three different tasks to complete. But, each group had one goal: to find any sign of Daniel Robinson. </p>
