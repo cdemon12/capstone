@@ -235,7 +235,7 @@
   <p class="body">“When a person of color goes missing, it’s barely reported in the local news,” said Bishop Holt, president of the local NAACP chapter. “So the question is, is one life better than another? Or is one life more valuable than another?”</p>
   <p class="body">Examining sex, age and race alone doesn’t reveal the full disparities in missing person cases. Intersectionality is when there is an additional effect beyond the combined effects of separate characteristics. These intersectional effects are very present in missing persons.</p>
   <p class="body">For instance, within the population of Black minors in 2022, 6.85 times more people went missing per person than the general population. That is more missing persons per person than the number of missing persons per person in the populations of both minors and black people, revealing an additional intersectional risk from being a minor and Black.</p>
-  <p class="body">Choose different characteristics to see how intersections change the probability of going missing:</p>
+  <p class="body">Choose different characteristics to see how intersections effect the number of people who go missing:</p>
 </div>
   <div class="bees">
     <Bees
@@ -244,7 +244,7 @@
   </div>
   <div class="directions">
     <p>Select at least two demographic characteristics
-    <span style = "font-size: .85rem">(Race + Sex + Age and Race + Age selections are only avaliable for 2020-21)</span>:</p>
+    <span style = "font-size: .85rem">(Race + Sex + Age and Race + Age selections are only avaliable for 2020-22)</span>:</p>
   </div>
   <div class="btn-container-container">
   <div class="btn-container">
