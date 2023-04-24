@@ -6,7 +6,7 @@
 <div class="container" style="align-items: {alignItems}">
     <a href="/video" class="storybox">
     <!-- <a href="#main" class="storybox" on:mouseover={() => alignItems = "start"} on:mouseout={() => alignItems = "end"}> -->
-        <img src="src\routes\assets\search.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/blob/main/src/routes/assets/search.jpg" alt="">
         <div class="words">       
             <div>
                 <h1>Father, volunteers still searching for lost geologist</h1>
@@ -18,7 +18,7 @@
         </div>
     </a>
     <a href="/profile" class="storybox">
-        <img src="src\routes\assets\david.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/david.JPG" alt="">
         <div class="words">
             <div>
                 <h1>Search for Daniel: A father’s mission</h1>
@@ -31,7 +31,7 @@
     </a>
     {#if true}
     <a href="/data" class="storybox">
-        <img src="src\routes\assets\sankey.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/sankey.jpg" alt="">
         <div class="words">
             <div>
                 <h1>What missing persons cases reveal about racism</h1>
@@ -43,7 +43,7 @@
         </div>
     </a>
     <a href="/photo-essay" class="storybox">
-        <img src="src\routes\assets\hopeville.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/hopeville.JPG" alt="">
         <div class="words">
             <div>
                 <h1>Letter from Hopeville</h1>
