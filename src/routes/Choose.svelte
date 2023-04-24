@@ -6,7 +6,7 @@
 <div class="container" style="align-items: {alignItems}">
     <a href="/video" class="storybox">
     <!-- <a href="#main" class="storybox" on:mouseover={() => alignItems = "start"} on:mouseout={() => alignItems = "end"}> -->
-        <img src="https://github.com/cdemon12/capstone/blob/main/src/routes/assets/search.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/search.jpg" alt="">
         <div class="words">       
             <div>
                 <h1>Father, volunteers still searching for lost geologist</h1>
