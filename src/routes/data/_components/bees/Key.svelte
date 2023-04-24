@@ -9,7 +9,7 @@
     export let shape = 'square';
   
     /** @type {String} [align='start'] - Sets the CSS flexbox justify-content setting for the box as a whole. Can be 'start', 'center' or 'end'. */
-    export let align = 'start';
+    export let align = 'end';
   
     /** @type {Function|Object} [lookup] - Either a function that takes the value and returns a formatted string, or an object of values. If a given value is not present in a lookup object, it returns the original value. */
     export let lookup = undefined;

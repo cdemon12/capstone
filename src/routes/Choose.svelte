@@ -4,25 +4,37 @@
 </script>
 
 <div class="container" style="align-items: {alignItems}">
-    <a href="#main" class="storybox">
+    <a href="/video" class="storybox">
     <!-- <a href="#main" class="storybox" on:mouseover={() => alignItems = "start"} on:mouseout={() => alignItems = "end"}> -->
-        <img src="https://picsum.photos/2000/2000" alt="">
+        <img src="src\routes\assets\search.jpg" alt="">
         <div class="words">       
             <div>
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, voluptatibus.</h1>
+                <h1>Father, volunteers still searching for lost geologist</h1>
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
             </div> 
             <div class="byline-recommend">
-                <div class="recommend"><ion-icon name="sparkles-outline"></ion-icon><p>Read next</p></div>
+                <div class="recommend"><ion-icon name="videocam-outline"></ion-icon><p>Video</p></div>
             </div>
         </div>
     </a>
-    {#if true}
-    <a href="#main" class="storybox">
-        <img src="https://picsum.photos/2000/2001" alt="">
+    <a href="/profile" class="storybox">
+        <img src="src\routes\assets\david.jpg" alt="">
         <div class="words">
             <div>
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, voluptatibus.</h1>
+                <h1>Search for Daniel: A father’s mission</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+            </div> 
+            <div class="byline-recommend">
+            <div class="recommend"><ion-icon name="person-circle-outline"></ion-icon><p>Profile</p></div>
+        </div>
+        </div>
+    </a>
+    {#if true}
+    <a href="/data" class="storybox">
+        <img src="src\routes\assets\sankey.jpg" alt="">
+        <div class="words">
+            <div>
+                <h1>What missing persons cases reveal about racism</h1>
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
             </div> 
         <div class="byline-recommend">
@@ -30,27 +42,15 @@
         </div>
         </div>
     </a>
-    <a href="#main" class="storybox">
-        <img src="https://picsum.photos/2001/2000" alt="">
+    <a href="/photo-essay" class="storybox">
+        <img src="src\routes\assets\hopeville.jpg" alt="">
         <div class="words">
             <div>
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, voluptatibus.</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
-            </div> 
-            <div class="byline-recommend">
-            <div class="recommend"><ion-icon name="image-outline"></ion-icon><p>Photo essay</p></div>
-        </div>
-        </div>
-    </a>
-    <a href="#main" class="storybox">
-        <img src="https://picsum.photos/2002/2000" alt="">
-        <div class="words">
-            <div>
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, voluptatibus.</h1>
+                <h1>Letter from Hopeville</h1>
                 <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
             </div> 
         <div class="byline-recommend">
-            <div class="recommend"><ion-icon name="flashlight-outline"></ion-icon><p>In-depth</p></div>
+            <div class="recommend"><ion-icon name="image-outline"></ion-icon><p>Photo essay</p></div>
         </div>
         </div>
     </a>

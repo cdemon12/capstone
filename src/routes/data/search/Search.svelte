@@ -62,7 +62,7 @@
     }))
 
     let fuse = new Fuse(searchData, {
-        keys: ['search'],
+        keys: ['firstName', 'lastName', 'state', 'city', 'county', 'race_ethnicity', 'search'],
         threshold: 0.3,
         ignoreLocation: true,
         useExtendedSearch: true
@@ -73,6 +73,7 @@
     let filtered = writable();
 
     $: filtered.set(fuse.search(query, { limit: 8 }));
+    $: console.log($filtered);
 
 </script>
 
@@ -81,6 +82,19 @@
     <input type="search" placeholder="Search the NamUs Missing Persons Database e.g. 'AZ' or 'Daniel Robinson'" bind:value={query}>
 </div>
 
+{#if $filtered.length === 0}
+    <div class="no-results">
+        <p>
+            National Missing and Unidentified Persons System or NamUs provides a public database of missing person cases. However, it is not a complete database.
+        </p>
+        <p>
+            "Participation in NamUs is voluntary, therefore trends in missing person data may not correlate with actual missing person cases reported to law enforcement," a spokesperson for NamUs said over email. "We recommend analyzing data provided by National Crime Information Center."
+        </p>
+        <p>
+           For instance, NamUs database has proportionally fewer Black missing persons cases relative to statistics provided by the FBI, which includes every missing person's case entry reported to law enforcement.
+        </p>
+    </div>
+{:else}
 <ul>
     {#each $filtered.slice(0,10) as item}
         <li>
@@ -96,6 +110,7 @@
         </li>
     {/each}
 </ul>
+{/if}
 </div>
 
 <style lang="sass">
@@ -113,6 +128,7 @@ $detour-body-font: halyard-display, Segoe UI
     .search-bar
         width: 650px
         height: 40px
+        margin-bottom: 10px
         input
             width: 100%
             height: 100%
@@ -144,5 +160,24 @@ $detour-body-font: halyard-display, Segoe UI
             width: 170px
             p
                 text-transform: capitalize
+    .no-results
+        width: 770px
+        height: 400px
+        background-color: rgba(0,0,0, 0.2)
+        border-radius: 4px
+        margin: 10px 0 0 0
+        padding: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        p
+            color: white
+            font-family: $detour-body-font
+            font-size: 1.05rem
+            font-style: italic
+            width: 500px
+            opacity: 0.6
+
 
 </style>

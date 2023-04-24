@@ -18,6 +18,8 @@
   import { tweened } from 'svelte/motion';
 	import { color, csvParse } from 'd3';
   import { fade } from 'svelte/transition';
+  import MapKey from './_components/map/Key.svelte';
+
 
 
   let whiteTooltip = false;
@@ -117,22 +119,32 @@
     "age": ["all ages", "minor", "adult"],
     "year": ["all years", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"]}
     $: console.log(activeName)
+
+    let debug = true;
 </script>
 
 <svelte:window bind:scrollY={scrollY} />
 
+{#if false}
 <div class="debug"> 
   <p>scrollY: {scrollY}</p>
   <p>active: {active}</p>
   <p>labels: {labels}</p>
   <p>headerHeight: {headerHeight}</p>
   <p>colors: {scrollY > headerHeight}</p>
+  <button on:click={() => debug = false} style="cursor: pointer;">close</button>
 </div>
+{/if}
 
 <div class="body-container">
   <div class="header" bind:clientHeight={headerHeight}>
-    <h1>What missing persons reveal about intersectionality</h1>
-    <p class="byline">By <a href="/">Cole Schnell</a>, May 20, 2023</p>
+    <h1>What missing persons cases reveal about racism</h1>
+    <p class="byline">By <a href="/">Cole Schnell</a> and <a href="/">Kristin Kuchno</a>, May 20, 2023</p>
+    <div class="para" style="padding-top: 10px; padding-bottom: 0">
+    <p class="body">David Robinson didn’t know he would still be searching nearly two years after he drove across the country to find his missing son.</p>
+    <p class="body">Daniel Robinson is one of about half a million who go missing in the U.S. every year.</p>
+    <p class="body">“My faith is that I’m gonna find my son alive,” David Robinson said.</p>
+    </div>
   </div>
 <div class="sticky-container">
   <div class="sticky slide">
@@ -148,22 +160,22 @@
   </div>
   {#if scrollY > 900 && scrollY < 1200}
     <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.black}; position: fixed; left: 70%; top: 175px; width: 400px">
-      <p class="body">Over the last three years, 552,835 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> were reported missing to the FBI.</p>
+      <p class="body">Over the last three years, 552,835 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black Americans</span> were reported missing to the FBI.</p>
     </div>
   {/if}
   {#if scrollY > 950 && scrollY < 1200}
   <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.white}; position: fixed; left: 30%; top: 370px; width: 400px">
-    <p class="body">Over the same time period, 939,191 <span class="race-label" style="background-color:{colorScheme.colors["white"]};">White American</span> were reported missing to the FBI.</p>
+    <p class="body">Over the same time period, 939,191 <span class="race-label" style="background-color:{colorScheme.colors["white"]};">White Americans</span> were reported missing to the FBI.</p>
   </div>
   {/if}
   {#if scrollY > 2000 && scrollY < 2300}
   <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.black}; position: fixed; left: 70%; top: 175px; width: 400px">
-    <p class="body">Every year, about 3.8 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> per 1,000 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black American</span> are reported as missing.</p>
+    <p class="body">Every year, about 3.8 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black Americans</span> per 1,000 <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black Americans</span> are reported as missing.</p>
   </div>
   {/if}
   {#if scrollY > 2050 && scrollY < 2300}
   <div in:fade out:fade class="card" style="border: 2px solid {colorScheme.colors.white}; position: fixed; left: 30%; top: 370px; width: 400px">
-    <p class="body">For White Americans, that number is about 1.2 per 1,000.</p>
+    <p class="body">For <span class="race-label" style="background-color:{colorScheme.colors["white"]};">White Americans</span>, that number is about 1.2 per 1,000.</p>
   </div>
   {/if}
   {#if scrollY > 2300 && scrollY < 2600}
@@ -200,41 +212,39 @@
   </div>
 </div>
 <div class="card">
-  <p class="body first-paragraph">David Robinson is one of over half a million Americans who go missing every year.</p>
-  <p>Though less than one percent of those are missing long term, Black Americans are more likely to be missing and for longer.</p>
-  <p>For Black children, even more often and longer.</p>
+  <p class="body first-paragraph">Though less than one percent of those are missing long term, Black Americans are more likely to be missing and for longer.</p>
+  <p class="body">For Black children, even more often and longer.</p>
+  <p class="body">The lack of resources for Black Americans leaves many families with few options to find their loved ones.</p>
 </div>
-<div class="card" style="top: 1800px; flex-direction: row;">
+<div class="card" style="top: 1800px; flex-direction: row; align-items:center;">
   <div class="slope" style="width: 300px; height: 250px; padding-bottom: 50px; padding-right: 20px">
     <Area />
   </div>
-  <p style="width: 200px;">If the data is adjusted for population size, still figure what to say here.</p>
+  <p style="width: 200px;">There 210 million more <span class="race-label" style="background-color:{colorScheme.colors["white"]};">White Americans</span> than <span class="race-label" style="background-color:{colorScheme.colors["black"]};">Black Americans</span>. So, to see the full picture, the data needs to be adjust for population.</p>
   <!-- <p>Also, notably, after adjusting for population, <span class="race-label" style="background-color:{colorScheme["indian"]}; color: black;">American Indian women</span> also surpass <span class="race-label" style="background-color:{colorScheme["white"]}; color: black;" on:mouseover={mouseOver} on:mouseleave={mouseOut}>White Americans<ion-icon name="help-circle-outline"></ion-icon></span>, making them the third most likley to go missing along the intersection of race and sex, following <span class="race-label" style="background-color:{colorScheme["black"]};">Black women and men</span>.</p> -->
 </div>
 <div class="para">
-  <p class="body">
-    Missing children are more likely to be found and missing for a shorter periods than adults, with 99.5% of missing children being found, according to a 2018 study on missing children cases in New York. However, the study found that Black children are over twice as likely not to be found and more likely to be missing for longer.
-  </p>
-  <p class="body">
-    The mechanism for these disparities is likely due differences in how Black missing person cases are treated. The Black and Missing Foundation attributes this to the police’s higher tendency to associate Black missing children as runaways and adults as criminals. This changes the amount of resources used to search. For instance, if a child is labled as a runaway, the police can’t issue an AMBER alert, one of the most succesful tools in abduction cases. 
-  </p>
-  <p class="body">                       
-    These sterotypes are also relayed into the less media coverage. According to a 2015 study of media coverage of missing children, 9% of media mising children mentions involve Black children, despite black children being 36% of cases.  
-  </p>
-  <p class="body">
-    Examining sex, age and race alone doesn’t reveal the full disparities in missing person cases. Intersectionality ?  is when there is an additional effect beyond the combined effects of separate characteristics. These intersectional effects are very present in missing persons.
-  </p>
-  <p class="body">
-    For instance, within the population of Black minors, XX times more go missing per person than the general population. That is more missing persons per person than the number of missing persons per person in the populations of both minors and black people, revealing an additional intersectional risk from being a minor and Black.
-  </p>
-  <p class="body">
-    Choose different characteristics to see how intersections change the probability of going missing:
-  </p>
+  <p class="body">Missing children are more likely to be found and missing for a shorter period than adults, with 99.5% of missing children being found, according to a 2018 study on missing children cases in New York. However, the study found that Black children are over twice as likely not to be found and more likely to be missing for longer.</p>
+  <p class="body">When police reports are filed for missing children of color, it’s usually assumed that they’re runaways, said Derrica Wilson, who co-founded The Black and Missing Foundation to address disparities in missing persons.</p>
+  <p class="body">When adults of color go missing, they’re labeled as criminals. These stereotypes have a dehumanizing and desensitizing effect, she said.</p>
+  <p class="body">David Robinson asked the vice president of the Arizona West Valley NAACP to join him in his initial meeting with Buckeye police.</p>
+  <p class="body">“The lack of sympathy, empathy, respect that they gave David on that day, it was horrible,” Larnell Farmer said.</p>
+  <p class="body">Being Black changes the number of resources used to search. For instance, if a child is labeled as a runaway, the police can’t issue an AMBER alert, one of the most successful tools in abduction cases.</p>
+  <p class="body">When law enforcement isn’t enough, the FBI can provide additional resources or if warranted, open a federal investigation. Federal investigations are often limited to missing children; even then, there are few, leaving families with very little help beyond local law enforcement.</p>
+  <p class="body">Stereotypes of runaways and criminals are also relayed into less media coverage. According to a 2015 study of media coverage of missing children, 9% of media missing children mentions involving Black children, despite Black children being 36% of cases.
+  <p class="body">“When a person of color goes missing, it’s barely reported in the local news,” said Bishop Holt, president of the local NAACP chapter. “So the question is, is one life better than another? Or is one life more valuable than another?”</p>
+  <p class="body">Examining sex, age and race alone doesn’t reveal the full disparities in missing person cases. Intersectionality is when there is an additional effect beyond the combined effects of separate characteristics. These intersectional effects are very present in missing persons.</p>
+  <p class="body">For instance, within the population of Black minors in 2022, 6.85 times more people went missing per person than the general population. That is more missing persons per person than the number of missing persons per person in the populations of both minors and black people, revealing an additional intersectional risk from being a minor and Black.</p>
+  <p class="body">Choose different characteristics to see how intersections change the probability of going missing:</p>
 </div>
   <div class="bees">
     <Bees
     {activeName} 
     />
+  </div>
+  <div class="directions">
+    <p>Select at least two demographic characteristics
+    <span style = "font-size: .85rem">(Race + Sex + Age and Race + Age selections are only avaliable for 2020-21)</span>:</p>
   </div>
   <div class="btn-container-container">
   <div class="btn-container">
@@ -249,27 +259,7 @@
   </div>
   <div class="para">
     <p class="body">
-      One of the tools used to find missing persons in the U.S. is the National Missing and Unidentified Persons System or NamUs, which provide a database of missing persons cases. However, for a missing persons cases to be entered, it has to be voluntarily submitted, which is then checked with local law enforcement to ensure accuracy. 
-    </p>
-    <p class="body">
-      However, the NamUs database has proportionally less Black missing persons cases relative to statistics provided by the FBI, which includes every missing persons case entry reported to law enforcement.
-    </p>
-    <p class="body">
-      This has led to media organizations to mistate the percentage of Black missing persons cases, citing NamUs, a non representive sample, and further underrepresenting Black missing persons in the media.
-    </p>
-    <p class="body">
-      For example, a YouTube video with over half a million views listed the top ten states with the most missing persons per capita. However, due to underrepresentation of Black missing persons cases in the dataset, White states are overrepresented and Black states are underrepresented, with four of the states with highest number of white people making the top ten list. This one example of many top Google search results that contained misinformation misusing NamUs data.
-    </p>
-    <p class="body">
-      "Participation in NamUs is voluntary, therefore trends in missing person data may not correlate with actual missing persons cases reported to law enforcement," a spokesperson for NamUs said over email. "We recommend analyzing data provided by National Crime Information Center." 
-    </p>
-    <p class="body">
-      While the NamUs database may not be a good source for finding statistics, it is the only national source for where people go missing and was used for the following map. Detour was denied a request to FBI for more-detailed and accurate missing persons data.
-    </p>
-    <p class="body">
-      Despite the FBI’s collection of data, there is no complete national database of missing persons cases. The FBI’s National Crime Information Center (NCIC) is the closest thing to a national database, but it is not public beyond the yearly statistcs.</p>
-    <p class="body">
-      The NCIC database is used by law enforcement to track missing persons and criminals. However, the database is not public, and the FBI does not provide any statistics on missing persons.
+      “There are many Daniel Robinson and David Robinson situations going on in this country,” Holt said. “And unless it’s heard by family members who are going through this, everybody feels alone.”    
     </p>
     <p class="body">
       The map below represents all active missing persons cases in the NamUs database. Every dot represents an active case. This map is to represent the sheer size of active cases and not an accurate measure of where people go missing.
@@ -279,20 +269,20 @@
     <Map />
   </div>
   <div class="key">
-    <Key />
+    <MapKey />
   </div>
     <div class="search">
       <Search />
     </div>
 
-  <div class="para" style="padding-top: 50px">
+  <div class="para">
+      <h3>Notes</h3>
       <p class="body">
-        Read the methodolgy.
+        Read the <a href="/">methodolgy</a>.
       </p>
       <p class= "body">
         To report an error or suggest an edit, email <a href="mailto:coloeschnell@gmail.com">coleschnell@gmail.com.</a>
       </p> 
-      <h3>Notes</h3>
       <p class="body">
         This article takes some visual inspiration by <a href="https://projects.propublica.org/coronavirus-unemployment/">What Coronavirus Job Losses Reveal About Racism in America,"</a> by Lena V. Groeger at ProPublica.
       </p>  
@@ -429,12 +419,11 @@
       border: 1px solid black
       border-radius: 5px
       box-shadow: 0 0 10px rgba(0,0,0,0.5)
-      pointer-events: none
 
     .body-container
       position: relative
       width: 100%
-      padding-top: 70px
+      padding-top: 50px
       background-color: #282729
       display: flex
       flex-direction: column
@@ -489,6 +478,8 @@
         display: flex
         flex-direction: column
         gap: 20px
+      h3
+        margin: 0
 
     .sticky-container
       width: 100%
@@ -521,7 +512,7 @@
         top: 900px
         transform: translateX(-50%)
         width: min(50%, 500px)
-        padding: 15px
+        padding: 30px
         box-shadow: 0 0 10px 0 rgba(0,0,0,0.5)
         z-index: 100
         display: flex
@@ -558,13 +549,19 @@
     width: 80%
     height: 120px
     left: 0
-    padding: 10px 10% 150px 10%
+    padding: 10px 10% 130px 10%
+
+  .directions
+    color: #666
+    padding: 0
+    margin: 0
 
   .map
     position: relative
-    width: 80%
+    width: 70%
 
   .search
+    padding-top: 20px
     position: relative
     width: 100%
 

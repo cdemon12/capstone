@@ -118,11 +118,11 @@
         <h1>This is their story.</h1>
     </div>
 {/if}
-{#if inStep($step, 40, 100)}
+<!-- {#if inStep($step, 40, 100)}
     <div class="headline fourth">
         <iframe width="800" height="450" style="transform: scale({$scaleVideo})" src="https://www.youtube.com/embed/34XKylJksSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-{/if}
+{/if} -->
 <div class="choose">
     <Choose />
 </div>
