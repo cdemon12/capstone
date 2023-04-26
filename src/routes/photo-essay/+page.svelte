@@ -16,7 +16,7 @@
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="">
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="">
 </div>
-<p class="cutline">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
+<p class="cutline" style="width:92%;">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
 </div>
 
 <div class="body">
