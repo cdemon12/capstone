@@ -11,9 +11,9 @@
 </div>
 
 <div class="photo">
-    <img style="width: 30%;" src="src\routes\photo-essay\photos\Triad1.JPG" alt="">
-    <img style="width: 30%;" src="src\routes\photo-essay\photos\Triad2.JPG" alt="">
-    <img style="width: 30%;" src="src\routes\photo-essay\photos\Triad3.JPG" alt="">
+    <img style="width: 30%;" src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad1.JPG" alt="">
+    <img style="width: 30%;" src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="">
+    <img style="width: 30%;" src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="">
 </div>
 
 <div class="body">
@@ -26,7 +26,7 @@
 </div>
 
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Allenville_Photo1.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Photo1.JPG" alt="">
 </div>
 
 <div class="body">
@@ -39,7 +39,7 @@
 </div>
 
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Allenville_Puddle_Photo2.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Puddle_Photo2.JPG" alt="">
 </div>
 
 <div class="body">
@@ -52,7 +52,7 @@
 </div>
 
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Hopeville_Kids_Photo3_Brighten.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo3_Brighten.JPG" alt="">
 </div>
 
 <div class="body">
@@ -78,7 +78,7 @@
 </div>
 
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Tree_Allenville_Photo4.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Tree_Allenville_Photo4.JPG" alt="">
 </div>
 <div class="body">
     <p>
@@ -95,7 +95,7 @@
     </p>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Building_Allenville_Photo_5.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Building_Allenville_Photo_5.JPG" alt="">
 </div>
 <div class="body">
     <p>
@@ -109,21 +109,21 @@
     </h3>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Hopeville_Photo_6.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_6.JPG" alt="">
 </div>
 <div class="body">
     <p>Brice Caldwell, known as ‘Buddy’, has lived in Hopeville since 2002, and his grandfather lived in Hopeville before him. Caldwell’s grandfather was actually one of the town’s original residents,</p>
     <p>Caldwell says he has witnessed growing numbers of Hispanic and white families moving to Allenville since his arrival after the last big flood in 1978. The result, he says, is that the Black community has felt less cohesive ever since. </p>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Brice_Photo_7.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Brice_Photo_7.JPG" alt="">
 </div>
 <div class="body">
     <p>Even more, as elders pass away, younger Black residents show little interest in the preserving the tight-knit culture created by previous generations. “It's a lot of lost history and things that's gonna be lost,” Caldwell says. “Society makes us not want to learn. It makes us want to just always go, go, go, go … [and] never sit back [and] enjoy what we have in front of us.”</p>
     <p>Chancey Wages moved to Hopeville from Montana and, like Caldwell, aims to eventually move onto a larger plot of land. For now, Wages, a white resident, doesn’t mind living in Hopeville.</p>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Chancey_Photo_8.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Chancey_Photo_8.JPG" alt="">
 </div>
 <div class="body">
     <p>“As far as being in a neighborhood, I'm not used to having neighbors, but it's not bad at all compared to some places I've seen,” Wages says. “Neighbors are pretty polite, we get along pretty well, we're pretty friendly with each other … watch out for each other. ”</p>
@@ -131,7 +131,7 @@
     <p>“It doesn't have to be, you know, a separation or anything like that,” Wages says. “I mean, if you slice your arm open, what color is your blood? I don't care what somebody looks like or anything … What I care about is what their character is. I grew up ranching [and] you judge them how they can ride a horse, not what color their skin is.”</p>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Hopeville_Photo_9.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_9.JPG" alt="">
 </div>
 <div class="body">
     <p>Melvin Douglass, a Black former trucker and Phoenix transplant, lives by a similar creed.</p>
@@ -141,7 +141,7 @@
     <h3>Hopeville’s Future</h3>
 </div>
 <div class="photo">
-    <img src="src\routes\photo-essay\photos\Hopeville_Photo_10.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_10.JPG" alt="">
 </div>
 <div class="body">
     <p>Just south of Hopeville, on the opposite side of South Palo Verde Road, is Buckeye Municipal Airport. The airport, which has been under the ownership of Buckeye since the 1960s, serves about 250 flights per day, and local officials do not know how much that number will increase over the next decade.</p>
