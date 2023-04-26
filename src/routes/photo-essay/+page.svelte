@@ -52,7 +52,7 @@
 </div>
 
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo3_Brighten.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.JPG" alt="">
 </div>
 
 <div class="body">
