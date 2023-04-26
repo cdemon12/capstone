@@ -21,8 +21,8 @@
         <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/david.JPG" alt="">
         <div class="words">
             <div>
-                <h1>Search for Daniel: A father’s mission</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+                <h1>Fatherhood, faith, and fellowship in Arizona</h1>
+                <h4>David Robinson began his search for his missing son, Daniel, over two years ago. Daniel went missing June 2021 while at his worksite in Buckeye, AZ. </h4>
             </div> 
             <div class="byline-recommend">
             <div class="recommend"><ion-icon name="person-circle-outline"></ion-icon><p>Profile</p></div>
