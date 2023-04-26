@@ -57,7 +57,7 @@
 </div>
 
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.jpg" alt="">
     <p class="cutline">Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s. </p>
 </div>
 
@@ -200,7 +200,7 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            width: min(70%, 700px)
+            width: min(70%, 800px)
             color: white
             gap: 20px
             h1
