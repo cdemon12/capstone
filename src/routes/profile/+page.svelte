@@ -22,7 +22,7 @@
 </p>
 </div>
 <div class="photo">
-    <video class="video" src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7037.MOV" controls></video>
+    <video class="video" src="src\routes\profile\photos\IMG_7037.MOV" controls></video>
     <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Video by Brooke Muckerman</p>
 </div>
 <div class="body">
