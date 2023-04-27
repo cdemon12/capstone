@@ -22,7 +22,7 @@
 </p>
 </div>
 <div class="photo">
-    <video class="video" src="src\routes\profile\photos\IMG_7037.MOV" controls></video>
+    <video class="video" src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7037.MOV" controls></video>
     <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Video by Brooke Muckerman</p>
 </div>
 <div class="body">
@@ -47,7 +47,7 @@
 <h3>Noon</h3>
 </div>
 <div class="photo">
-    <img src="src\routes\profile\photos\IMG_7074.jpg" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7074.jpg" alt="">
     <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
 </div>
 <div class="body">
@@ -80,7 +80,7 @@
         </p>
     </div>
     <div class="photo" style="float: left">
-        <img src="src\routes\profile\photos\IMG_7088.jpg" alt="" style="width: 90%">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7088.jpg" alt="" style="width: 90%">
         <p class="cutline" style="width: 90%; margin:0;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
     </div>
 </div>
