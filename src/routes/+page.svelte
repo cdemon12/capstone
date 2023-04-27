@@ -123,8 +123,10 @@
         <iframe width="800" height="450" style="transform: scale({$scaleVideo})" src="https://www.youtube.com/embed/34XKylJksSs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 {/if} -->
-<div class="choose">
-    <Choose />
+<div class="sticky-container">
+    <div class="choose">
+        <Choose />
+    </div>
 </div>
 </div>
 </div>
@@ -265,12 +267,20 @@
                 font-size: 0.7em
                 font-family: $detour-body-font
                 color: black
-    .choose
+
+
+    .sticky-container
         position: absolute
-        top: 850vh
+        top: 700vh
         width: 100%
-        height: 100vh
-        left: 50%
-        transform: translate(-50%, -50%)
+        height: 200vh
+        left: 0
+
+
+    .choose
+        position: sticky
+        top: 85px
+        left: 0
+
 
 </style>

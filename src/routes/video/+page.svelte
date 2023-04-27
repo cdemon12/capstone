@@ -1,11 +1,5 @@
 <script>
 
-    const grafs = ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis facilis deleniti ratione, molestiae ea earum natus vitae! Voluptates id quaerat harum quasi libero quidem sint voluptas, placeat qui dolorem!", 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis facilis deleniti ratione, molestiae ea earum natus vitae! Voluptates id quaerat harum quasi libero quidem sint voluptas, placeat qui dolorem!", 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis facilis deleniti ratione, molestiae ea earum natus vitae! Voluptates id quaerat harum quasi libero quidem sint voluptas, placeat qui dolorem!", 
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis facilis deleniti ratione, molestiae ea earum natus vitae! Voluptates id quaerat harum quasi libero quidem sint voluptas, placeat qui dolorem!"
-]
-
 </script>
 
 
@@ -14,18 +8,9 @@
 <h1>Lorem ipsum dolor sit amet consectetur</h1>
 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, fugit.</h2>
 <p class="byline">By <a href="/">First Last</a>, May 22, 2023</p>
-
-    {#each grafs as graf}
-        <p>{graf}</p>
-    {/each}
-
-    <h4>"Highlight a quote like this"</h4>
-
-    {#each grafs as graf}
-        <p>{@html graf}</p>
-    {/each}
-
-
+</div>
+<div class="photo">
+    <video src="src\routes\video\Draft 3.mp4" controls></video>
 </div>
 </div>
 
@@ -89,6 +74,56 @@
                 font-style: italic
                 text-align: center
                 font-size: 1.05 rem
+
+         
+    .photo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 100%
+        gap: 10px
+        margin: 30px 0 0 0
+        img
+            width: 70%
+            height: auto
+            margin: 0
+            padding: 0
+            object-fit: cover
+            object-position: center
+        .three
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            gap: 10px
+            img
+                width: 30%
+                height: auto
+                aspect-ratio: 3/2
+                margin: 0
+                padding: 0
+                object-fit: cover
+                object-position: center
+
+    .cutline
+        font-family: $detour-body-font
+        color: white
+        opacity: 0.6
+        font-size: 0.9rem
+        font-weight: 400
+        text-align: left
+        margin: 0 0 30px 0
+        padding: 0
+        width: 70%
+
+    video
+        width: 70%
+        height: auto
+        margin: 0
+        padding: 0
+        object-fit: cover
+        object-position: center
 
 
 </style>

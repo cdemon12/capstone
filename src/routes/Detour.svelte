@@ -22,10 +22,18 @@
 
 <div class="top-bar">
 <div class="progress-bar" style="width:{scrollprogress}%"></div>
-<nav style="background-color: rgba(255, 255, 255, {$navAlpha})">
-    <div class="menu"></div>
-    <div class="logo-container"><a href="https://detourxp.com/"><img src="https://detourxp.com/wp-content/uploads/sites/2/2022/12/DETOUR_logo.png" alt="Detour logo"></a></div>
-    <div class="socials"></div>
+<nav>
+    <div class="logo-container"><a href="https://detourxp.com/"><img src="src\routes\assets\Detour Investigates font.png" alt="Detour logo"></a></div>
+    <div class="socials">
+        <ul>
+            <li><a href="/"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="/"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+            <li><a href="/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="/"><ion-icon name="share-social-outline"></ion-icon></a></li>
+        </ul>
+    </div>
 </nav>
 </div>
 
@@ -45,24 +53,50 @@
         top: 0
         left: 0
         z-index: 9998
-        display: grid
+        display: flex
         grid-template-columns: repeat(3, 1fr)
         border-bottom: 2px solid rgba(0, 0, 0, 0)
         color: $primary-color
+        background-color: #282729
         height: 70px
         width: 100%
-        justify-items: center
         align-items: center
+        justify-content: space-between
         position: fixed
-
+        border-bottom: .5px solid white
+        padding-bottom: 0px
         img
-            max-height: 46px
-            max-width: 100%  
+            height: 100px
+            width: 100% 
+            object-fit: cover
+            object-position: center
+            overflow: hidden 
+            transform: translateX(-10%)
         a
             text-decoration: none
             color: white
             font-size: 18px
             text-align: center
             padding: 10px
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-between
+            width: 250px
+            padding-right: 20px
+            li
+                font-size: 20px
+                color: white
+                transition: all .3s ease-in-out
+                cursor: pointer
+                margin: 0
+                padding: 0
+                &:hover
+                    color: $primary-color
+                    transform: scale(1.2)
+                    transition: all .3s ease-in-out
+                ion-icon
+                    visibility: visible
+            
 
 </style>

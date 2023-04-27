@@ -6,14 +6,26 @@
 
 <div class="body-container">
 <div class="body">
-<h1>Lost in Buckeye</h1>
-<h2>Searching for Daniel Robinson</h2>
-<p class="byline">By <a href="/">Brooke Muckerman</a> and <a href="/">Cela Migan</a>, May 22, 2023</p>
+<div class="header">
+    <img src="src\routes\profile\photos\IMG_7021.jpg" alt="">
+    <div class="titles">
+    <h1>Lost in Buckeye</h1>
+    <h2>Searching for Daniel Robinson</h2>
+    <p class="byline">By <a href="/">Brooke Muckerman</a> and <br/><a href="/">Cela Migan</a>, May 22, 2023</p>
+    </div>
+</div>
+
 
 <h3>Morning</h3>
 <p>
     Some 60 miles TK of Phoenix in the Sonoran desert, David Robinson moved briskly through a crowd of volunteers. Robinson is a U.S. Army veteran who served two tours in Afghanistan. On this chilly morning, he was again dressed for combat: boots, camo fatigues, holstered firearm. He was in full command of his troops by 7:45 a.m., issuing orders, explaining logistics, zipping across the rugged landscape in his ATV. By 8 a.m., Robinson’s team leaders had divided volunteers into groups and were fanning out across the desert on a special mission: to find any sign of Daniel Robinson. 
 </p>
+</div>
+<div class="photo">
+    <video class="video" src="src\routes\profile\photos\IMG_7037.MOV" controls></video>
+    <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Video by Brooke Muckerman</p>
+</div>
+<div class="body">
 <p>
     Daniel is David Robinson’s son. He went missing TK, 2021. At the time, he was 24 years old working as a geologist when he disappeared from a desert work site in Buckeye, Arizona. A month later, his Jeep was found overturned in a ravine near TK. Inside the vehicle, investigators found TK and TK and TK but have not offered new evidence since.
 </p>
@@ -33,6 +45,12 @@
     David Robinson spent much of the morning canvasing the desert on his ATV while a crew of supervising volunteers – he calls them his “A-Team” – handed out waters and snacks at the command center. Meanwhile, other volunteers trudged in neat lines back and forth across the desert. Occasionally, a distant shout would cut into the silence and the volunteers would stop. Someone found something. Not every hold, or stop merited further investigation by a forensic team; there are animal bones scattered throughout the wilderness. Sometimes, volunteers would call out for a branch, confusing it with a bone. Other times, a nestle of bones would be bagged and shipped off to a testing site to confirm if they were human remains. 
 </p>
 <h3>Noon</h3>
+</div>
+<div class="photo">
+    <img src="src\routes\profile\photos\IMG_7074.jpg" alt="">
+    <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
+</div>
+<div class="body">
 <p>
     According to police reports, the last person to see Daniel Roinson was a co-worker. Offer a couple details here from the report. 
 </p>
@@ -54,9 +72,20 @@
 <h3>
     Night
 </h3>
-<p>
-    A few hours after the search, David Robinson sipped bottled water and shared a story. The military had trained him to keep a lid on his emotions, but last night he was close to tears, he said.  It was dusk and he had driven the TK miles from Phoenix to scope out the area and prepare for the arrival of nearly 100 volunteers. But the entry gate was padlocked  – despite the fact that Bucktown PD had signed off weeks ago on Robinson’s request for access. Robinson says he put his head on his ATV steering wheel and prayed to God that Buckeye PD had not blocked him from searching for his son. Then it occurred to him there was another gate nearby he’d used in previous searches which might be an option. He drove the ATV a few hundred yards up the road and found the gate. It was unlocked.  
-</p>
+</div>
+<div class="split">
+    <div class="body">
+        <p>
+            A few hours after the search, David Robinson sipped bottled water and shared a story. The military had trained him to keep a lid on his emotions, but last night he was close to tears, he said.  It was dusk and he had driven the TK miles from Phoenix to scope out the area and prepare for the arrival of nearly 100 volunteers. But the entry gate was padlocked  – despite the fact that Bucktown PD had signed off weeks ago on Robinson’s request for access. Robinson says he put his head on his ATV steering wheel and prayed to God that Buckeye PD had not blocked him from searching for his son. Then it occurred to him there was another gate nearby he’d used in previous searches which might be an option. He drove the ATV a few hundred yards up the road and found the gate. It was unlocked.  
+        </p>
+    </div>
+    <div class="photo" style="float: left">
+        <img src="src\routes\profile\photos\IMG_7088.jpg" alt="" style="width: 90%">
+        <p class="cutline" style="width: 90%; margin:0;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
+    </div>
+</div>
+
+<div class="body">
 <p>
     Robinson says he believes in miracles. His mother raised him and his TK siblings in subsidized housing where they survived on prayer. He remembers a time, back when he was in grade school, there was no food in the house and his mother set the table with her best dishes anyway, filling the tea cups with hot water and telling Robinson and his siblings to imagine eating a good meal. It felt strange chewing invisible food, he says, but him and his siblings obeyed mom. 
 </p>
@@ -138,20 +167,84 @@
                 width: 100%
                 margin: 0
                 padding: 0
-        .break
-            p
-                padding-top: 10px
-                padding-bottom: 10px
-                &:first-child
-                    padding-top: 0
-                &:last-child
-                    padding-bottom: 0
-            .left
-                margin-right: 15px
-                float: left
-            .right
-                margin-left: 15px
-                float: right
+            .header
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                gap: 20px
+                img
+                    width: 100%
+                    height: auto
+                    max-width: 400px
+                    margin: 20px 0 0 0 
+                    padding: 0
+                    object-fit: cover
+                    object-position: center
+                .titles
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    gap: 20px
+                    .photo
+        
+    .photo
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 100%
+        gap: 10px
+        margin: 30px 0 0 0
+        img
+            width: 70%
+            height: auto
+            margin: 0
+            padding: 0
+            object-fit: cover
+            object-position: center
+        .three
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            gap: 10px
+            img
+                width: 30%
+                height: auto
+                aspect-ratio: 3/2
+                margin: 0
+                padding: 0
+                object-fit: cover
+                object-position: center
 
+    .cutline
+        font-family: $detour-body-font
+        color: white
+        opacity: 0.6
+        font-size: 0.9rem
+        font-weight: 400
+        text-align: left
+        margin: 0 0 30px 0
+        padding: 0
+        width: 70%
+
+    .video
+        width: 70%
+        height: auto
+        margin: 0
+        padding: 0
+        object-fit: cover
+        object-position: center
+
+    .split
+        display: flex
+        flex-direction: row
+        justify-content: start
+        align-items: start
+        gap: 20px
+        width: min(70%, 700px)
+        margin: 20px
 
 </style>

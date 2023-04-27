@@ -29,7 +29,6 @@
         </div>
         </div>
     </a>
-    {#if true}
     <a href="/data" class="storybox">
         <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/sankey.jpg" alt="">
         <div class="words">
@@ -54,7 +53,18 @@
         </div>
         </div>
     </a>
-    {/if}
+    <a href="/list" class="storybox">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/list.JPG" alt="">
+        <div class="words">
+            <div>
+                <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+            </div> 
+        <div class="byline-recommend">
+            <div class="recommend"><ion-icon name="list-outline"></ion-icon><p>List</p></div>
+        </div>
+        </div>
+    </a>
 </div>
 
 <style lang="sass">
@@ -140,11 +150,12 @@
                     //background-color: white
                     font-family: $detour-headline-font
                     margin-top: 7px
-                    width: calc(22vw - 25px)
+                    width: calc(17vw - 25px)
                     text-shadow: 0 0 10px black
                     transition: opacity 0.8s ease-in-out
+                    font-size: 1.6rem
                 h4
-                    width: calc(22vw - 70px)
+                    width: calc(20vw - 70px)
                     background-color: white
                     color: $not-quite-black
                     font-family: $detour-body-font
@@ -160,14 +171,15 @@
                     align-items: end
                     .recommend
                         display: flex
-                        align-items: end
-                        justify-content: end
+                        align-items: center
+                        justify-content: center
                         color: $detour-orange
                         background: $not-quite-black
                         padding: 5px 10px
                         border-radius: 5px
                         opacity: 0.8
                         text-shadow: 0 0 10px black
+                        text-align: center
                         p
                             margin: 0
                             font-size: 0.9em
