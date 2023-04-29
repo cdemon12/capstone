@@ -26,7 +26,7 @@ console.log(data)
             <p>{data?.bio}</p>
         </div>
     </div>
-        <a href=""><h3>Meet the rest  of the team</h3></a>
+        <a href="/team"><h3>Meet the rest  of the team</h3></a>
     </div> 
 </div>
 

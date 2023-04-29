@@ -100,6 +100,7 @@ $detour-orange: #fbb812
         flex-direction: row
         justify-content: center
         align-items: center
+        gap: 10px
         border: 1px solid white
         padding: 10px
         filter: grayscale(100%)
