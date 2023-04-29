@@ -139,7 +139,7 @@
 <div class="body-container">
   <div class="header" bind:clientHeight={headerHeight}>
     <h1>What missing persons cases reveal about racism</h1>
-    <p class="byline">By <a href="/">Cole Schnell</a> and <a href="/">Kristin Kuchno</a>, May 20, 2023</p>
+    <p class="byline">By <a href="/team/cole">Cole Schnell</a> and <a href="/team/kristin">Kristin Kuchno</a>, May 20, 2023</p>
     <div class="para" style="padding-top: 10px; padding-bottom: 0">
     <p class="body">David Robinson didn’t know he would still be searching nearly two years after he drove across the country to find his missing son.</p>
     <p class="body">Daniel Robinson is one of about half a million who go missing in the U.S. every year.</p>
