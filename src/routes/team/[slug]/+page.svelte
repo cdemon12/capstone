@@ -138,5 +138,13 @@ $detour-orange: #fbb812
                     width: 30px
                     height: 30px
 
+@media screen and (max-width: 800px)
+    .page
+        height: inherit
+        padding: 50px 0
+        .bio
+            flex-direction: column
+            gap: 30px
+
 
 </style>
