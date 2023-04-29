@@ -102,7 +102,7 @@
                 <b>Name:</b> <br/> {item.item.first_name.toLowerCase()} {item.item.last_name.toLowerCase()}
             </p> 
             <p>
-                <b>Last since in:</b> <br/> {item.item.city}, {item.item.state} 
+                <b>Last seen in:</b> <br/> {item.item.city}, {item.item.state} 
             </p>
             <p>
                 <b>Race / Ethnicity:</b> <br/> {item.item.race_ethnicity}

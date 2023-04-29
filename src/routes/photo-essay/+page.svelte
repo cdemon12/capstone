@@ -7,6 +7,7 @@
 <div class="body-container">
 <div class="body">
 <h1>Letter from Hopeville</h1>
+<h3 style="text-align: center">Buckeye's Black community on the verge of vanishing</h3>
 <p class="byline">By <a href="/">Olivia Gyapong</a>, May 22, 2023</p>
 </div>
 

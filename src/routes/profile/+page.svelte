@@ -9,8 +9,8 @@
 <div class="header">
     <img src="src\routes\profile\photos\IMG_7021.jpg" alt="">
     <div class="titles">
-    <h1>Lost in Buckeye</h1>
-    <h2>Searching for Daniel Robinson</h2>
+    <h1>72 Hours in Buckeye</h1>
+    <h2>The Search for Daniel Robinson</h2>
     <p class="byline">By <a href="/">Brooke Muckerman</a> and <br/><a href="/">Cela Migan</a>, May 22, 2023</p>
     </div>
 </div>
