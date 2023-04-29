@@ -113,7 +113,7 @@
       transform: translateX(-3px);
     }
     text {
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
       font-size: 14px;
     }
   </style>

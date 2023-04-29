@@ -97,7 +97,7 @@
     .tick text {
       fill: white;
       transform: rotate(-90deg);
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
       font-weight: 700;
       opacity: 0.8;
       color: white

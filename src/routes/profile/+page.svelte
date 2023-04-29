@@ -11,7 +11,7 @@
     <div class="titles">
     <h1>72 Hours in Buckeye</h1>
     <h2>The Search for Daniel Robinson</h2>
-    <p class="byline">By <a href="/">Brooke Muckerman</a> and <br/><a href="/">Cela Migan</a>, May 22, 2023</p>
+    <p class="byline">By <a href="/team/brooke">Brooke Muckerman</a> and <br/><a href="/team/cela">Cela Migan</a>, May 22, 2023</p>
     </div>
 </div>
 
@@ -98,7 +98,7 @@
 <style lang="sass">
 
     $detour-headline-font: Georgia
-    $detour-body-font: halyard-display, Segoe UI
+    $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
 
     a

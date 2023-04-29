@@ -98,7 +98,7 @@
   
     .tick text {
       fill: #666;
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
     }
   
     .tick .tick-mark,

@@ -90,7 +90,7 @@
     .tick {
       font-size: .8em;
       font-weight: 600;
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
     }
   
     .tick line {

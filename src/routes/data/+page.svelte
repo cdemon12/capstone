@@ -397,7 +397,7 @@
 <style lang="sass">
 
     $detour-headline-font: Georgia
-    $detour-body-font: halyard-display, Segoe UI
+    $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
 
     a

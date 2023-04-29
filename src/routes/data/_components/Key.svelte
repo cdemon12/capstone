@@ -82,7 +82,7 @@
       display: inline;
       font-size: 14px;
       /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
       font-weight: 700;
       color: white
     }
@@ -92,7 +92,7 @@
         color: black;
         border: 1.5px solid black;
         padding: 0 10px;
-        font-family: halyard-display, Segoe UI;
+        font-family: 'Rubik', Segoe UI;
         font-size: 1rem;
         font-weight: 400;
         text-align: left;

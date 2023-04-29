@@ -69,7 +69,7 @@
         opacity: 0.5
 
     p
-        font-family: halyard-display, Segoe UI
+        font-family: 'Rubik', Segoe UI
         font-size: 0.8rem
         padding: 1px 0
 

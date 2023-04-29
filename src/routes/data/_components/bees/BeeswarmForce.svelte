@@ -69,7 +69,7 @@
 
   <style lang="sass">
     text, title
-      font-family: halyard-display, Segoe UI
+      font-family: 'Rubik', Segoe UI
       text-transform: uppercase
     
 

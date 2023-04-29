@@ -28,7 +28,7 @@
 <style lang="sass">
 
     $primary-color: #fbb812
-    $detour-body-font: halyard-display, Segoe UI, Helvetica, Arial, sans-serif
+    $detour-body-font: 'Rubik', Segoe UI, Helvetica, Arial, sans-serif
     $detour-headline-font: Georgia
 
     footer

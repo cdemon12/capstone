@@ -109,7 +109,7 @@
   <style lang="sass">
 
     text
-      font-family: halyard-display, Segoe UI
+      font-family: 'Rubik', Segoe UI
 
     .chart-container
       width: 100%

@@ -176,7 +176,7 @@
   <style>
     text {
       pointer-events: none;
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
       font-weight: 400;
       text-transform: capitalize;
       font-size: 10px;

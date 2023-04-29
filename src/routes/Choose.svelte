@@ -72,7 +72,7 @@
     $not-quite-black: #303030
     $detour-orange: #fbb812
     $detour-headline-font: Georgia
-    $detour-body-font: halyard-display, Segoe UI
+    $detour-body-font: 'Rubik', Segoe UI
 
     a
         text-decoration: none

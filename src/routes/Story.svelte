@@ -26,7 +26,7 @@
 <style lang="sass">
 
     $detour-headline-font: Georgia
-    $detour-body-font: halyard-display, Segoe UI
+    $detour-body-font: 'Rubik', Segoe UI
 
     *
         font-family: $detour-body-font

@@ -58,7 +58,7 @@
     .name {
       display: inline;
       font-size: 14px;
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
       color: white
 
     }

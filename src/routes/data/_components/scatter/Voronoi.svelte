@@ -88,11 +88,11 @@
     .title {
       text-transform: capitalize;
       font-weight: bold;
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
     }
 
     .body {
-      font-family: halyard-display, Segoe UI;
+      font-family: 'Rubik', Segoe UI;
     }
   </style>
   

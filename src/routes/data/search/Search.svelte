@@ -115,7 +115,7 @@
 
 <style lang="sass">
 
-$detour-body-font: halyard-display, Segoe UI
+$detour-body-font: 'Rubik', Segoe UI
 
 
 .container

@@ -8,7 +8,7 @@
 
 <style lang="sass">
     $primary-color: #fbb812
-    $detour-body-font: halyard-display, Segoe UI
+    $detour-body-font: 'Rubik', Segoe UI
 
     .buttons
         list-style: none
