@@ -46,7 +46,7 @@
         <div class="words">
             <div>
                 <h1>Letter from Hopeville</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+                <h4>Some people aren’t surprised Daniel Robinson went missing in what they characterize as a “sundown town.” Perhaps this is because the city of Buckeye has a troubling racial past. Take a look through Allenville and Hopeville: two historically black neighborhoods near Buckeye, Arizona that illustrate the town’s legacy of discrimination. </h4>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="image-outline"></ion-icon><p>Photo essay</p></div>

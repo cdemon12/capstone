@@ -91,9 +91,9 @@
 </div>
 {#if inStep($step, 0, 20)}
     <div class="headline first" out:blur={{duration: 1000}}>
-        <h1>Searching for Daniel</h1>
-        <h1 style="font-size: 30px">A father's mission</h1>
-        <h3 style="font-size: 20px">Presented by Detour and the Missouri School of Journalism</h3>
+        <h1>Lost in Buckeye</h1>
+        <h1 style="font-size: 30px">A father's search for his son</h1>
+        <h3 style="font-size: 20px">Presented by Detour and <br /> the Missouri School of Journalism</h3>
     </div>
 {/if}
 {#if inStep($step, 7, 30)}

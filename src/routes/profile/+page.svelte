@@ -147,6 +147,7 @@
                 margin: 0
                 padding: 0
                 width: 100%
+                line-height: 1.5rem
             h4
                 font-size: 1.8rem
                 padding: 0
