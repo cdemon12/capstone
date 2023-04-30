@@ -1,7 +1,7 @@
     <div class="page">
         <div class="body">
             <div class="photo">
-                <img src="src\routes\_assets\ron.jpg" alt="">
+                <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/ron.jpg" alt="">
             </div>
             <div class="words">
                 <h1>Publisher's Note</h1>
