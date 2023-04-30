@@ -59,10 +59,12 @@
         {mapComponent.flyTo({center: [$lng, $lat], zoom: $zoom, bearing: $bearing, pitch: $pitch, speed: 1, curve: 0.5, easing(t) {return t;}}) 
     }}
 
+    let width: number;
+
 
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} />
 
 <div class="debug">
     <p>Step: {$step}</p>
@@ -75,14 +77,20 @@
     <p>Y: {y}</p>
 </div>
 
-{#if y < 5200}
+{#if y < 5200 && width > 900}
+<div class="scroll">
+    <p>Scroll to continue</p>
+</div>
+{/if}
+{#if y < 7000 && width <= 900}
 <div class="scroll">
     <p>Scroll to continue</p>
 </div>
 {/if}
 
+
 <div class="outer">
-<div class="container" bind:clientHeight={windowheight}>
+<div class="container" bind:clientHeight={windowheight} bind:clientWidth={width}>
 <div class="map">
 <Map
     accessToken={PUBLIC_MAPBOX_TOKEN}
@@ -153,7 +161,7 @@
     $detour-orange: #fbb812
 
     .debug
-        visibility: hidden
+        visibility: visible
         position: fixed
         top: 0
         left: 0
@@ -372,6 +380,24 @@
             text-decoration: underline
             &:hover
                 color: $detour-orange
+
+    @media (max-width: 900px)
+        .choose
+            top: 70px
+        .sticky-container
+            height: 150vh
+        .video
+            flex-direction: column
+            justify-content: start
+            height: 60vh
+            iframe
+                width: 100%
+                height: 300px
+                aspect-ratio: 16/9
+            .words
+                width: 80%
+                h1 
+                    font-size: 2rem
 
 
 </style>

@@ -86,34 +86,17 @@
             position: relative
             height: 100%
             width: 25%
-            // height: 50%
-            // width: 25%
             border-radius: 4px
             padding: 0
             overflow: hidden
             box-shadow: 0 0 10px black  
             transition: width 0.8s ease-in-out
-            // transition: height 0.8s ease-in-out
-            // transition: scale 0.8s ease-in-out
-            // &:first-child
-            //     width: calc(75% + 10px)
-            //     transition: height 0.8s ease-in-out
             &:hover
                 width: 100%
                 transition: width 0.8s ease-in-out
-                // height: 70%
-                // transition: height 0.8s ease-in-out
                 h4
                     opacity: 1
                     transition: opacity 0.8s ease-in-out
-            // &:hover ~ .storybox 
-            //     img
-            //         filter: blur(2px)
-            //         -webkit-filter: blur(2px)
-            //         transition: filter 0.8s ease-in-out
-            //     h1
-            //         opacity: 0
-            //         transition: opacity 0.8s ease-in-out
             img
                 position: relative
                 height: 100%
@@ -134,7 +117,6 @@
                     padding: 5px
                 h1
                     color: white // $not-quite-black
-                    //background-color: white
                     font-family: $detour-headline-font
                     margin-top: 7px
                     width: calc(17vw - 25px)
@@ -178,4 +160,29 @@
                 &:hover h4
                     opacity: 0.8
                     transition: opacity 0.4s ease-in-out 
+
+    @media screen and (max-width: 900px)
+        .container
+            flex-direction: column
+            gap: 20px
+            &:hover a:not(a:hover)
+            img
+                filter: none
+                -webkit-filter: none
+                transition: none
+            h1
+                opacity: 1
+                transition: none
+            .storybox
+                width: 100%
+                height: 100%
+                .words
+                    h1
+                        width: 100%
+                        font-size: 1.8rem
+                        margin-bottom: 0
+                    h4
+                        display: none
+
+              
 </style>

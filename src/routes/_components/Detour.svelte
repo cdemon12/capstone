@@ -84,6 +84,7 @@
             justify-content: space-between
             width: 250px
             padding-right: 20px
+            padding-left: 0
             li
                 font-size: 20px
                 color: white
