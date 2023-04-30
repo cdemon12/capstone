@@ -6,7 +6,7 @@ export default [
     title: "What missing persons cases reveal about racism",
     photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/assets/sankey.jpg"},
     {
-    slug: "photo-story",    
+    slug: "photo-essay",    
     title: "Letter from Hopeville",
     photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/assets/hopeville.JPG"},
     {slug: "list",
