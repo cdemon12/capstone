@@ -134,7 +134,7 @@
         <iframe width="711" height="400" src="https://www.youtube.com/embed/CyieJCs_oBk" title="The Whitewashing of Missouri: Finding the Godleys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="words">
             <h1>Father, volunteers still searching for missing Black geologists</h1>
-            <p>By <a href="/taylor">Taylor Schmitt</a>, <a href="/rylee">Rylee Fels</a> and <a href="/lucy">Lucy Caile</a>, May 23, 2023</p>
+            <p>By <a href="/team/taylor">Taylor Schmitt</a>, <a href="/team/rylee">Rylee Fels</a> and <a href="/team/lucy">Lucy Caile</a>, May 23, 2023</p>
         </div>
     </div>
 </div>

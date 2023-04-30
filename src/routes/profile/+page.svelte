@@ -7,7 +7,7 @@
 <div class="body-container">
 <div class="body">
 <div class="header">
-    <img src="src\routes\profile\photos\IMG_7021.jpg" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7021.jpg" alt="">
     <div class="titles">
     <h1>72 Hours in Buckeye</h1>
     <h2>The Search for Daniel Robinson</h2>
