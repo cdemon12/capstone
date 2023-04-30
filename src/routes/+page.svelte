@@ -1,14 +1,14 @@
 <script lang="ts">
     import { Map } from '@beyonk/svelte-mapbox'
     import { PUBLIC_MAPBOX_TOKEN } from '$env/static/public'
-    import Terrian from './Terrian.svelte';
-    import Detour from './Detour.svelte';
+    import Terrian from './_components/Terrian.svelte';
+    import Detour from './_components/Detour.svelte';
 	import { writable } from 'svelte/store';
     import type { Writable } from 'svelte/store';
     import { blur } from 'svelte/transition';
 	import { tweened } from 'svelte/motion';
     import { expoOut, linear, sineOut } from 'svelte/easing';
-	import Choose from './Choose.svelte';
+	import Choose from './_components/Choose.svelte';
 
     
     const inStep = function(step: number, start: number, end: number) {
@@ -75,6 +75,12 @@
     <p>Y: {y}</p>
 </div>
 
+{#if y < 5200}
+<div class="scroll">
+    <p>Scroll to continue</p>
+</div>
+{/if}
+
 <div class="outer">
 <div class="container" bind:clientHeight={windowheight}>
 <div class="map">
@@ -101,7 +107,7 @@
     <h1>On June 23, 2021, Daniel Robinson went missing in this desert.</h1>
 </div>
 {/if}
-{#if inStep($step, 40, 61)}
+{#if inStep($step, 40, 70)}
     <div class="key" in:blur={{duration:1000}} out:blur={{duration:1000}}>
         <div class="key-title">Searches Organized By David Robinson</div>
         <div class="key-item">
@@ -113,7 +119,7 @@
             <div class="key-item-text">Hasty Searched</div>
         </div>
     </div>
-    <div class="headline third" out:blur={{duration:1000}}>
+    <div class="headline third" out:blur={{duration:500}}>
         <h1>His father, David Robinson, has spent the last two years searching the desert.</h1>
         <h1>This is their story.</h1>
     </div>
@@ -124,6 +130,15 @@
     </div>
 {/if} -->
 <div class="sticky-container">
+    <div class="choose video">
+        <iframe width="711" height="400" src="https://www.youtube.com/embed/CyieJCs_oBk" title="The Whitewashing of Missouri: Finding the Godleys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="words">
+            <h1>Father, volunteers still searching for missing Black geologists</h1>
+            <p>By <a href="/taylor">Taylor Schmitt</a>, <a href="/rylee">Rylee Fels</a> and <a href="/lucy">Lucy Caile</a>, May 23, 2023</p>
+        </div>
+    </div>
+</div>
+<div class="sticky-container" style="top:900vh;">
     <div class="choose">
         <Choose />
     </div>
@@ -149,16 +164,37 @@
         font-size: 1rem
         padding: 1rem
 
+    .scroll
+        position: fixed
+        bottom: 0
+        left: 0
+        z-index: 1000
+        background-color: #282729
+        color: black
+        font-family: $detour-body-font
+        font-size: 1rem
+        height: 30px
+        width: 100%
+        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
+        border-top: 0.5px solid white
+        p 
+            color: white
+            margin: 0
+            padding: 0
+
     :global(.mapboxgl-map)
         height: 200px
         width: 500px
 
     .container
-        height: 900vh
+        height: 800vh
         width: 100%
     
     .outer
-        height: 900vh
+        height: 1100vh
         width: 100%
 
     .map
@@ -275,12 +311,67 @@
         width: 100%
         height: 200vh
         left: 0
+        background-color: #282729
+        padding-top: 20px
+        padding-bottom: 20px
+        margin-bottom: 20px
 
 
     .choose
         position: sticky
         top: 85px
         left: 0
+        padding-bottom: 100px
+
+    .video
+        display: flex
+        justify-content: center
+        align-items: center
+        color: white
+        height: calc(100vh - 145px)
+        gap: 20px
+        flex-direction: row-reverse
+        iframe
+            width: 600px
+            height: 400px
+            aspect-ratio: 16/9
+        h1
+            font-family: $detour-headline-font
+            font-size: 3rem
+            font-weight: 700
+            text-align: center
+            margin: 0
+            padding: 0
+            text-shadow: 0 10px 10px rgba(0,0,0,0.5)
+        h2
+            font-family: $detour-body-font
+            font-size: 2rem
+            font-weight: 400
+            text-align: center
+            margin: 0
+            padding: 0
+        p
+            font-family: $detour-body-font
+            font-size: 1.1rem
+            font-weight: 400
+            margin: 0
+            padding: 0
+            width: 100%
+            line-height: 1.5rem
+            text-align: center
+            font-style: italic
+        .words
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            gap: 20px
+            width: 30%
+        a
+            color: white
+            text-decoration: underline
+            &:hover
+                color: $detour-orange
 
 
 </style>

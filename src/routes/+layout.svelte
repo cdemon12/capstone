@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Choose from "./Choose.svelte";
-    import Detour from "./Detour.svelte";
-	import Footer from "./Footer.svelte";
+    import Choose from "./_components/Choose.svelte";
+    import Detour from "./_components/Detour.svelte";
+	import Footer from "./_components/Footer.svelte";
 
 </script>
 

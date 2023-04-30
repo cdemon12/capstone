@@ -1,4 +1,6 @@
 <script>
+	import ReadNext from "../_components/ReadNext.svelte";
+
 
 
 </script>
@@ -21,6 +23,11 @@
 </div>
 
 <div class="body">
+
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+
+<div class="line"></div>
+
     <p>
         Wind whips through serene, empty streets around a mix of refurbished homes, stationary trailers and neglected abodes. Trash and discarded clothes cover some yards, while others are perfectly manicured. 
     </p>
@@ -66,6 +73,7 @@
     <p>
         Yet after barely four decades of treading water, Hopeville and its resilient residents now worry their town could be washed away yet again — not by flooding this time around, but by its own growth-crazed local officials.
     </p>
+    <div class="line"></div>
     <h3>
         The Before
     </h3>
@@ -76,6 +84,7 @@
     <p>
         So John Allen, a Black farmer, purchased the land from Norton for $1.
     </p>
+    <div class="line"></div>
     <h3>
         The Rise and Fall of Allenville
     </h3>
@@ -113,6 +122,7 @@
     <p>
         Eventually, the federal government sponsored a multimillion-dollar relocation project to move the remaining Allenville residents north of Buckeye, out of the path of the rivers’ wrath. The government enlisted the help of the Army Corps of Engineers to construct the community that would come to be known as Hopeville.
     </p>
+    <div class="line"></div>
     <h3>
         The Present – Hopeville
     </h3>
@@ -137,7 +147,7 @@
 </div>
 <div class="photo">
       <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Chancey_Photo_8.JPG" alt="">
-        <p class="cutline">Montana transplant Chancey Wages looks back at his front door expectantly for his wife Feb. 25, 2023. They are celebrating their first wedding anniversary in Hopeville.</p>
+        <p class="cutline">Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.</p>
     </div>
 <div class="body">
     <p>“As far as being in a neighborhood, I'm not used to having neighbors, but it's not bad at all compared to some places I've seen,” Wages says. “Neighbors are pretty polite, we get along pretty well, we're pretty friendly with each other … watch out for each other. ”</p>
@@ -153,6 +163,7 @@
     <p>“I’m surrounded by some of everybody and as long as everybody speak to everybody, it don’t matter to me,” Douglass says. </p>
     <p>Caldwell hopes to start his farm; Wages dreams of living on an expanded ranch with no interference from the government in his day-to-day affairs; and Douglass, though he moved to Hopeville only six years ago, emphasizes lots of space is needed for his multiple trailers.</p>
     <p>Everyone wants more space for themselves and their own endeavors, and as they expand, Hopeville may collapse.</p>
+    <div class="line"></div>
     <h3>Hopeville’s Future</h3>
 </div>
 <div class="photo">
@@ -176,11 +187,20 @@
 </div>
 </div>
 
+<ReadNext />
+
 <style lang="sass">
 
     $detour-headline-font: Georgia
     $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
+
+    .line
+        width: 70%
+        height: 2px
+        background-color: #fbb812
+        margin: 0 20px
+
 
     a
         color: white

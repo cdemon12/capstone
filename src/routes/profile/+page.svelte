@@ -1,5 +1,5 @@
 <script>
-
+	import ReadNext from "../_components/ReadNext.svelte";
 
 </script>
 
@@ -15,6 +15,9 @@
     </div>
 </div>
 
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+
+<div class="line"></div>
 
 <h3>Morning</h3>
 <p>
@@ -44,6 +47,7 @@
 <p>
     David Robinson spent much of the morning canvasing the desert on his ATV while a crew of supervising volunteers – he calls them his “A-Team” – handed out waters and snacks at the command center. Meanwhile, other volunteers trudged in neat lines back and forth across the desert. Occasionally, a distant shout would cut into the silence and the volunteers would stop. Someone found something. Not every hold, or stop merited further investigation by a forensic team; there are animal bones scattered throughout the wilderness. Sometimes, volunteers would call out for a branch, confusing it with a bone. Other times, a nestle of bones would be bagged and shipped off to a testing site to confirm if they were human remains. 
 </p>
+<div class="line"></div>
 <h3>Noon</h3>
 </div>
 <div class="photo">
@@ -69,6 +73,7 @@
 <p>
     In the days leading up to his disappearance, he did not did not mention to his father his fraying connection to a woman he met one night when he delivered alcohol to her home and was invited to drink with her and a roommate. In text messages obtained by investigators, Daniel over the next several days expressed romantic interest in the woman, and even once showed up at her home unannounced – despite her rejections.  “Quote text.” Buckeye PD has not classified the exchanges as evidence in Daniel Robinson’s disappearance.
 </p>
+<div class="line"></div>
 <h3>
     Night
 </h3>
@@ -94,12 +99,19 @@
 </p>
 </div>
 </div>
+<ReadNext />
 
 <style lang="sass">
 
     $detour-headline-font: Georgia
     $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
+
+    .line
+        width: 70%
+        height: 2px
+        background-color: #fbb812
+        margin: 0 20px
 
     a
         color: white
@@ -188,7 +200,6 @@
                     justify-content: center
                     align-items: center
                     gap: 20px
-                    .photo
         
     .photo
         display: flex

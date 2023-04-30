@@ -23,7 +23,7 @@
 <div class="top-bar">
 <div class="progress-bar" style="width:{scrollprogress}%"></div>
 <nav>
-    <div class="logo-container"><a href="https://detourxp.com/"><img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/detour.png" alt="Detour logo"></a></div>
+    <div class="logo-container"><a href="/"><img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/detour.png" alt="Detour logo"></a></div>
     <div class="socials">
         <ul>
             <li><a href="/"><ion-icon name="logo-twitter"></ion-icon></a></li>

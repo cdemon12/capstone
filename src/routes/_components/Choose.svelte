@@ -4,19 +4,6 @@
 </script>
 
 <div class="container" style="align-items: {alignItems}">
-    <a href="/video" class="storybox">
-    <!-- <a href="#main" class="storybox" on:mouseover={() => alignItems = "start"} on:mouseout={() => alignItems = "end"}> -->
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/search.jpg" alt="">
-        <div class="words">       
-            <div>
-                <h1>Father, volunteers still searching for lost geologist</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
-            </div> 
-            <div class="byline-recommend">
-                <div class="recommend"><ion-icon name="videocam-outline"></ion-icon><p>Video</p></div>
-            </div>
-        </div>
-    </a>
     <a href="/profile" class="storybox">
         <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/assets/david.JPG" alt="">
         <div class="words">
@@ -80,13 +67,13 @@
 
     .container
         height: calc(100vh - 100px)
-        width: 95%
+        width: 90%
+        margin: 0 5%
         display: flex
         flex-direction: row
         // flex-wrap: wrap
         justify-content: center
         gap: 10px
-        margin: 0 2.5%
         &:hover a:not(a:hover)
             img
                 filter: blur(2px)
@@ -98,7 +85,7 @@
         .storybox
             position: relative
             height: 100%
-            width: 22%
+            width: 25%
             // height: 50%
             // width: 25%
             border-radius: 4px
@@ -155,7 +142,7 @@
                     transition: opacity 0.8s ease-in-out
                     font-size: 1.6rem
                 h4
-                    width: calc(20vw - 70px)
+                    width: 200px //calc(20vw - 70px)
                     background-color: white
                     color: $not-quite-black
                     font-family: $detour-body-font

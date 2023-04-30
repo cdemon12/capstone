@@ -1,4 +1,6 @@
 <script>
+	import ReadNext from "../_components/ReadNext.svelte";
+
 
 
 </script>
@@ -9,29 +11,36 @@
     <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
     <h2>5 takeaways to know if a friend or loved one mysteriously disappears.</h2>
     <p class="byline">By <a href="/team/kristin">Kristin Kuchno</a>, May 22, 2023</p>
+    <p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+    <div class="line"></div>
     <p>
         When David Robinson learned that his 24-year-old son was missing, he got in his car and drove across country to find him. Unfortunately, for many African Americans and people of color, the decision to take matters into their own hands is all too common. There’s a long history of public distrust and criticism around Missing Persons investigations by U.S. law enforcement among people of color, from accusations of shoddy or insensitive police work to suspicions of racial bias. Here’s what Daniel Robinson’s case taught us about federal and local Missing Persons searches.
     </p>
+    <div class="line"></div>
     <h3>1. 	There are ‘levels’ in Missing Persons searches</h3>
     <p>
         The FBI only opens investigations for missing adults under certain circumstances, says Luke Hunt, a former FBI agent. For example, when foul play is suspected and the individual was last seen on federal property or is believed to have crossed state lines, the FBI would become involved, Hunt said. An interstate kidnapping or the disappearance of a child under 12 years old can also trigger immediate FBI involvement, thanks to the 1932 Lindbergh Law, enacted to curb violence against children. But because some adults go missing intentionally, not all disappearances for those over 21 are even reported to law enforcement. Some go unreported due to a lack of trust in law enforcement, especially in communities of color.
     </p>
+    <div class="line"></div>
     <h3>2. 	Race matters</h3>
     <p>
         African Americans and people of color are missing from U.S. cities and towns in growing numbers. “When we started the organization in 2008, 30% of missing persons in the United States were persons of color,” says Derrica Wilson, co-founder  of the Black and Missing Foundation, “and that number has since increased to 40%.” Wilson’s assists families searching for missing loved ones, from working with law enforcement or spreading the word through social media. When police reports are filed for missing children of color, she adds, it’s often assumed that they’re runaways or involved in criminal activity. “So how do you go in there and say, ‘You know what, we’ll do it,’ without it being looked at as aggression,” says Bishop Holt, president of the West Valley NAACP chapter. “Because sometimes when we started doing things for ourselves, now it’s aggression. Now it’s defiance for law enforcement.”
     </p>
+    <div class="line"></div>
     <h3>
         3. 	Daniel Robinson is no Gabby Petito
     </h3>
     <p>
         According to Columbia Journalism Review’s “Are You Press Worthy?” tool, which  calculates the likelihood of a news organization, missing white women, along with children, tend to get the most media coverage out of any demographic. A TK “is worth” 35 news stories compared to about 120 news stories for a white woman around the same age, says CJR. Two months after Daniel went missing, as Robinson struggled for police assistance, Gabby Petito, a 22 year old white woman in TK, disappeared in a separate case, which quickly made national headlines and garnered such resources such as FBI agents, officers from multiple police departments, cadaver dogs and drone cameras.
     </p>
+    <div class="line"></div>
     <h3>
         4. 	Loved ones can suffer from ‘Ambiguous Loss’
     </h3>
     <p>
         The term “ambiguous loss” refers to the psychological and social experience of a loved one disappearing, acting “as a barrier to adjusting to grief,” according to a study by BMC Psychology. As the NAACP’s TK Farmer puts it: “David hasn’t even had a chance to grieve, you know, that his son is missing because he hit the ground running,” Farmer said. “ … and I’ve witnessed this stuff that Buckeye has done, and again has not done, and to me it’s criminal what the Buckeye Police Department is doing.” TK Holt adds: “ ... There are many Daniel Robinson and David Robinson situations going on in this country. And unless it’s heard by family members who are going through this, everybody feels alone.”
     </p>
+    <div class="line"></div>
     <h3>5. 	Know the law</h3>
     <p>
         The Missing Children Act of 1982 requires the FBI to log missing children in the National Crime Information Center, an online index for criminal justice data. There are no federal laws that require reporting missing adults over 21. Yet while the FBI doesn’t have the authority to open a federal investigation into a missing adult (unless the case meets certain criteria), federal agents can assist in other ways, including conducting interviews, providing forensic support and sharing information. Often, families confuse Missing Persons policies with law. When David Robinson first reported Daniel missing, he says Buckeye PD told him there were still 12 hours left before police could investigate. While many police departments require a person to be missing for 24 hours before they’ll investigate, the waiting period is typically police practice rather than legal requirement.
@@ -39,11 +48,19 @@
 </div>
 </div>
 
+<ReadNext />
+
 <style lang="sass">
 
     $detour-headline-font: Georgia
     $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
+
+    .line
+        width: 70%
+        height: 2px
+        background-color: #fbb812
+        margin: 0 20px
 
     a
         color: white
@@ -132,7 +149,6 @@
                     justify-content: center
                     align-items: center
                     gap: 20px
-                    .photo
         
     .photo
         display: flex
