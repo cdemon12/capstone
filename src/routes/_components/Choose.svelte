@@ -166,13 +166,13 @@
             flex-direction: column
             gap: 20px
             &:hover a:not(a:hover)
-            img
-                filter: none
-                -webkit-filter: none
-                transition: none
-            h1
-                opacity: 1
-                transition: none
+                img
+                    filter: none
+                    -webkit-filter: none
+                    transition: none
+                h1
+                    opacity: 1
+                    transition: none
             .storybox
                 width: 100%
                 height: 100%

@@ -82,7 +82,7 @@
     <p>Scroll to continue</p>
 </div>
 {/if}
-{#if y < 7000 && width <= 900}
+{#if y < 5600 && width <= 900}
 <div class="scroll">
     <p>Scroll to continue</p>
 </div>
@@ -138,7 +138,7 @@
     </div>
 {/if} -->
 <div class="sticky-container">
-    <div class="choose video">
+    <div class="video">
         <iframe width="711" height="400" src="https://www.youtube.com/embed/CyieJCs_oBk" title="The Whitewashing of Missouri: Finding the Godleys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="words">
             <h1>Father, volunteers still searching for missing Black geologists</h1>
@@ -161,7 +161,7 @@
     $detour-orange: #fbb812
 
     .debug
-        visibility: hidden
+        visibility: visible
         position: fixed
         top: 0
         left: 0
@@ -324,8 +324,7 @@
         padding-bottom: 20px
         margin-bottom: 20px
 
-
-    .choose
+    .choose, .video
         position: sticky
         top: 85px
         left: 0
@@ -382,14 +381,11 @@
                 color: $detour-orange
 
     @media (max-width: 900px)
-        .choose
-            top: 70px
-        .sticky-container
-            height: 150vh
         .video
             flex-direction: column
             justify-content: start
             height: 60vh
+            top: 70px
             iframe
                 width: 100%
                 height: 300px
