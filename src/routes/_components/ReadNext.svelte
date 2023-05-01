@@ -75,9 +75,11 @@ $detour-orange: #fbb812
     .socials
         list-style: none
         display: flex
+        flex-wrap: wrap
         justify-content: center
         align-items: center
         padding: 0px
+        width: min(70%, 700px)
         li
             padding: 10px
             color: white
@@ -167,7 +169,7 @@ $detour-orange: #fbb812
             align-items: center
             color: black
             padding: 10px
-            width: 798px
+            width: min(798px, 70%)
             text-decoration: none
             gap: 30px
             img
@@ -196,6 +198,17 @@ $detour-orange: #fbb812
                     margin: 0px
                     padding: 0px
                     font-family: 'Rubik', sans-serif
+
+@media (max-width: 900px)
+    .read-next
+        ul
+            flex-direction: column
+    .behind
+        width: 100vw
+        a
+            flex-direction: column
+        .words
+            width: 85%
 
 
 </style>

@@ -161,7 +161,7 @@
     $detour-orange: #fbb812
 
     .debug
-        visibility: visible
+        visibility: hidden
         position: fixed
         top: 0
         left: 0

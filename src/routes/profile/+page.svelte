@@ -259,4 +259,24 @@
         width: min(70%, 700px)
         margin: 20px
 
+@media (max-width: 900px)
+    .split
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 100%
+        gap: 0
+    .header
+        width: 100%
+        transform: translateY(-5%)
+        img
+            transform: translate(50%, -3%) 
+            margin: 0 0 0 0
+        .titles
+            transform: translateX(calc(-50% - 20px))
+            padding-top: 10px
+            p 
+                padding-top: 10px
+            h2 
+                text-shadow: 0 10px 10px rgba(0,0,0,0.5)
 </style>
