@@ -248,7 +248,7 @@
         transform: translate(-50%, -50%)
         padding: 0.5em
         border: 2px solid rgba(0, 0, 0, 0)
-        width: 500px
+        width: min(500px, 80%)
         font-size: 20px
         color: black
         z-index: 100
