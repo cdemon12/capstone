@@ -23,7 +23,7 @@
 
   const dataTransformed = data.map(d => {
     return {
-      [titleKey]: d.race + ' ' + d.sex + " " + d.age + " " + d.year,
+      [titleKey]: d.race + ' ' + d.sex + " " + d.age + " " + d.year + " " + d.prob,
       ["sex"]: d.sex,
       ["age"]: d.age,
       ["year"]: d.year,
