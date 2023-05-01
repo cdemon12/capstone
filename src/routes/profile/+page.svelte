@@ -132,7 +132,7 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            width: min(70%, 700px)
+            width: min(80%, 700px)
             color: white
             gap: 20px
             h1
@@ -256,7 +256,7 @@
         justify-content: start
         align-items: start
         gap: 20px
-        width: min(70%, 700px)
+        width: min(80%, 700px)
         margin: 20px
 
 @media (max-width: 900px)

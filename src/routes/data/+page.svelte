@@ -442,7 +442,7 @@
         font-weight: 700
         text-align: center
         color: white
-        width: min(70%, 700px)
+        width: min(80%, 700px)
         margin: 0
         padding: 0
         text-shadow: 0 10px 10px rgba(0,0,0,0.5)
@@ -472,7 +472,7 @@
         margin: 0
         padding: 0 0 20px 0
         color: white
-        width: min(70%, 700px)
+        width: min(80%, 700px)
         text-align: left
         line-height: 1.5
         display: flex

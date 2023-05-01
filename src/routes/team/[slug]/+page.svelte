@@ -45,7 +45,7 @@ $detour-orange: #fbb812
     background-color:  #282729
     height: 100vh
     .body
-        width: min(70%, 1000px)
+        width: min(80%, 1000px)
         display: flex
         flex-direction: column
         justify-content: center

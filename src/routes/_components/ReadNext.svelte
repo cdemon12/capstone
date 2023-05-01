@@ -59,7 +59,7 @@
 $detour-orange: #fbb812
 
 .line
-    width: min(calc( .7 * 700px ), calc(70% * .7))
+    width: min(calc( .8 * 700px ), calc(70% * .7))
     height: 2px
     background-color: #fbb812
     margin-bottom: 20px
@@ -79,7 +79,7 @@ $detour-orange: #fbb812
         justify-content: center
         align-items: center
         padding: 0px
-        width: min(70%, 700px)
+        width: min(80%, 700px)
         li
             padding: 10px
             color: white

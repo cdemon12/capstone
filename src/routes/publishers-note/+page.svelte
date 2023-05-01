@@ -25,7 +25,7 @@
         align-items: center
         background-color:  #282729
         .body
-            width: min(70%, 1000px)
+            width: min(80%, 1000px)
             display: flex
             flex-direction: row
             justify-content: center

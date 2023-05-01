@@ -19,7 +19,7 @@
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="">
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="">
 </div>
-<p class="cutline" style="width:92%;">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
+<p class="cutline long">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
 </div>
 
 <div class="body">
@@ -221,7 +221,7 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            width: min(70%, 800px)
+            width: min(80%, 800px)
             color: white
             gap: 20px
             h1
@@ -278,7 +278,7 @@
         gap: 10px
         margin: 30px 0 0 0
         img
-            width: 70%
+            width: 80%
             height: auto
             margin: 0
             padding: 0
@@ -308,8 +308,28 @@
         text-align: left
         margin: 0 0 30px 0
         padding: 0
+        width: 80%
+
+    .long
+        width: 92%
+
+@media (max-width: 900px)
+    .body-container
+        .body
+            h1 
+                font-size: 3rem
+                padding-top: 30px
+            h3
+                font-size: 1.5rem
+
+    .photo
+        .three
+            flex-direction: column
+            img
+                width: 70%
+    .long
         width: 70%
-        
+
 
 
 </style>

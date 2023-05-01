@@ -39,10 +39,11 @@
         padding-bottom: 100px
         z-index: 9999
         .detour-info
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            grid-gap: 40px
+            display: flex
+            gap: 40px
             padding: 30px 10vw 0 10vw
+            div
+                width: 50%
             img
                 max-width: 100%
                 aspect-ratio: auto 300 / 77
@@ -74,5 +75,17 @@
                 font-weight: bold
                 &:hover
                     color: white
+    
+    @media (max-width: 900px)
+        footer
+            height: 550px
+            .detour-info
+                flex-direction: column
+                gap: 0
+                div
+                    width: 100%
+            .copyright
+                margin-top:0
+        
 
 </style>
