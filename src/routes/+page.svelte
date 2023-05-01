@@ -381,6 +381,10 @@
                 color: $detour-orange
 
     @media (max-width: 900px)
+        .second
+            h1 
+                font-size: 2.7rem
+
         .video
             flex-direction: column
             justify-content: start
