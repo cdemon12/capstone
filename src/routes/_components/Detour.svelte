@@ -98,6 +98,14 @@
                     transition: all .3s ease-in-out
                 ion-icon
                     visibility: visible
-            
+
+@media (max-width: 410px)
+    nav
+        img
+            width: 100%
+            height: 90px
+        ul
+            justify-content: end
+            padding-right: 10px
 
 </style>
