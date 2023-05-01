@@ -82,7 +82,7 @@
     <p>Scroll to continue</p>
 </div>
 {/if}
-{#if y < 5600 && width <= 900}
+{#if y < 7000 && width <= 900}
 <div class="scroll">
     <p>Scroll to continue</p>
 </div>
