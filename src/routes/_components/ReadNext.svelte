@@ -102,6 +102,7 @@ $detour-orange: #fbb812
         flex-direction: column
         justify-content: center
         align-items: center
+        width: min(798px, 80%)
         h2
             color: white
             font-size: 24px
@@ -122,7 +123,7 @@ $detour-orange: #fbb812
                 padding: 10px
                 border: 2px solid rgba(0, 0, 0, 0)
                 transition: all .5s
-                width: 250px
+                width: 243.33px
                 height: 300px
                 &:hover
                     border: 2px solid $detour-orange
@@ -148,6 +149,7 @@ $detour-orange: #fbb812
         justify-content: center
         align-items: center
         border: 2px solid rgba(0, 0, 0, 0)
+        width: min(798px, 70%)
         &:hover
             border: 2px solid $detour-orange
             p
@@ -169,7 +171,6 @@ $detour-orange: #fbb812
             align-items: center
             color: black
             padding: 10px
-            width: min(798px, 70%)
             text-decoration: none
             gap: 30px
             img

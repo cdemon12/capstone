@@ -62,7 +62,7 @@
     }))
 
     let fuse = new Fuse(searchData, {
-        keys: ['firstName', 'lastName', 'state', 'city', 'county', 'race_ethnicity', 'search'],
+        keys: ['firstName', 'lastName', 'state', 'city', 'county', 'search'],
         threshold: 0.3,
         ignoreLocation: true,
         useExtendedSearch: true

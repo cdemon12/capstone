@@ -132,7 +132,7 @@
             flex-direction: column
             justify-content: center
             align-items: center
-            width: min(80%, 700px)
+            width: min(80%, 800px)
             color: white
             gap: 20px
             h1
@@ -186,6 +186,7 @@
                 justify-content: center
                 align-items: center
                 gap: 20px
+                height: calc(100vh - 80px)
                 img
                     width: 100%
                     height: auto
@@ -206,30 +207,17 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        width: 100%
+        width: min(800px, 80%)
         gap: 10px
         margin: 30px 0 0 0
         img
-            width: 70%
+            width: 100%
             height: auto
             margin: 0
             padding: 0
             object-fit: cover
             object-position: center
-        .three
-            display: flex
-            flex-direction: row
-            justify-content: center
-            align-items: center
-            gap: 10px
-            img
-                width: 30%
-                height: auto
-                aspect-ratio: 3/2
-                margin: 0
-                padding: 0
-                object-fit: cover
-                object-position: center
+
 
     .cutline
         font-family: $detour-body-font
@@ -240,10 +228,9 @@
         text-align: left
         margin: 0 0 30px 0
         padding: 0
-        width: 70%
-
+        width: 100%
     .video
-        width: 70%
+        width: 100%
         height: auto
         margin: 0
         padding: 0
@@ -256,8 +243,18 @@
         justify-content: start
         align-items: start
         gap: 20px
-        width: min(80%, 700px)
+        width: min(80%, 800px)
         margin: 20px
+        img
+            margin: 0
+            padding: 0
+            height: 430px
+        .photo
+            width: 100%
+            margin: 0
+            padding: 0
+            object-fit: cover
+            object-position: center
 
 @media (max-width: 900px)
     .split

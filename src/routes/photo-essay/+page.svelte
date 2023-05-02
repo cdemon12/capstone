@@ -7,6 +7,7 @@
 
 
 <div class="body-container">
+<div class="hero">
 <div class="body">
 <h1>Letter from Hopeville</h1>
 <h3 style="text-align: center">Buckeye's Black community on the verge of vanishing</h3>
@@ -20,6 +21,7 @@
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="">
 </div>
 <p class="cutline" id="long">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
+</div>
 </div>
 
 <div class="body">
@@ -300,6 +302,14 @@
         padding: 0
         line-height: 1rem
         width: 92%
+
+    .hero
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+        height: calc(100vh - 70px)
+
 
 
 @media (max-width: 900px)

@@ -122,7 +122,7 @@
                     width: calc(17vw - 25px)
                     text-shadow: 0 0 10px black
                     transition: opacity 0.8s ease-in-out
-                    font-size: 1.6rem
+                    font-size: 1.8rem
                 h4
                     width: 200px //calc(20vw - 70px)
                     background-color: white

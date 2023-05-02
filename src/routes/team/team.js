@@ -36,7 +36,31 @@ export default [
       "name": "Cole Schnell",
       "photo": "https://github.com/cdemon12/capstone/raw/main/src/routes/team/photos/cole.jpg",
       "bio": "Cole is a data journalist with a Bachelor's degree in Journalism and Economics from the University of Missouri. He is passionate about using data to tell intersectional and solutions-focused stories. Cole brings a unique perspective to his reporting, combining his background in both journalism and economics to shed light on pressing social and economic issues.",
-      "title": "Web Developer, Data and Visual Journalist",
+      "title": "Web Developer, Data and Visual Reporter",
       "socials": [{icon: 'logo-twitter', link:'https://twitter.com/coleschnell'},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/coleschnell/'},{icon: 'logo-github', link:'https://github.com/cdemon12/'},]
-    }
+    },
+    {
+      "slug": "olivia",
+      "name": "Olivia Gyapong",
+      "photo": "https://github.com/cdemon12/capstone/raw/main/src/routes/team/photos/olivia.jpg",
+      "bio": "Olivia Gyapong is an aspiring policy reporter who attends the University of Missouri. She is a second year Stamps Scholar at MU, majoring in both journalism and political science. In her free time, Gyapong enjoys cooking; volunteering in the Columbia, Mo. community; and playing with her pet rabbit called Salt.",
+      "title": "Reporter, Photographer",
+      "socials": [{icon: 'logo-twitter', link:'https://twitter.com/LivG516'},{icon: 'logo-instagram', link:'https://instagram.com/olivia.gyapong?igshid=YmMyMTA2M2Y='},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/oliviagyapong32116'},]
+    },
+    {
+      "slug": "taylor",
+      "name": "Taylor Schmitt",
+      "photo": "https://github.com/cdemon12/capstone/raw/main/src/routes/team/photos/taylor.jpg",
+      "bio": "Taylor has spent the last few years developing skills in digital journalism and video production. She began her career with Chicago Today for WMAQ, then she worked for EU Reporter in Brussels for a few months before transitioning to New York to work for Weekend Today at NBC. She is currently finishing her degrees at the University of Missouri and is excited to take the next steps of her journey!",
+      "title": "Video Producer",
+      "socials": [{icon: 'logo-twitter', link:'https://twitter.com/taylornbrussels'},{icon: 'logo-instagram', link:'https://www.instagram.com/tschmitt0209/?hl=en'},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/taylor-schmitt-2a2093197/'},]
+    },
+    {
+      "slug": "lucy",
+      "name": "Lucy Caile",
+      "photo": "https://github.com/cdemon12/capstone/raw/main/src/routes/team/photos/lucy.jpg",
+      "bio": "Lucy graduated from the University of Missouri in May 2023. She studied broadcast journalism and worked as a reporter for the NBC affiliate KOMU 8 News for two years. Lucy will continue working as a TV news reporter at WCAX in Burlington, Vermont starting in June. When not reporting, Lucy enjoys running, hiking and just being outdoors.",
+      "title": "Video producer",
+      "socials": [{icon: 'logo-twitter', link:'https://twitter.com/lucycaile'},{icon: 'logo-instagram', link:'https://www.instagram.com/lucycaile.news/'},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/lucycaile/'},]
+    } 
   ]

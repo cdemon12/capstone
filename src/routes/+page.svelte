@@ -46,13 +46,15 @@
     $: travel($step, lat, 2, 30, 33.70804, 33.609363)
     $: travel($step, lng, 2, 30, -112.75343, -112.706596)
     // frame 3
-    $: travel($step, zoom, 35, 50, 14, 10)
+    $: travel($step, zoom, 35, 50, 14, 10.25)
     $: travel($step, bearing, 35, 50, 160, -90)
     $: travel($step, pitch, 35, 50, 90, 0)
     // frame 4
-    $: travel($step, zoom, 50, 100, 10, 10)
+    $: travel($step, zoom, 50, 100, 10.25, 10.25)
     $: travel($step, bearing, 50, 100, -90, -90)
     $: travel($step, pitch, 50, 100, 0, 0)
+    $: travel($step, lat, 50, 100, 33.609363, 33.609363)
+    $: travel($step, lng, 50, 100, -112.706596, -112.706596)
     $: travel($step, scaleVideo, 60, 71, 1, 1.2)
 
     $:{ if (mapComponent) 
@@ -139,8 +141,7 @@
 {/if} -->
 <div class="sticky-container">
     <div class="video">
-        <iframe width="711" height="400" src="https://www.youtube.com/embed/CyieJCs_oBk" title="The Whitewashing of Missouri: Finding the Godleys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div class="words">
+            <iframe width="533" height="400" src="https://www.youtube.com/embed/l82PYrIwb0A" title="Lost in Buckeye: Searching for Daniel Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        <div class="words">
             <h1>Father, volunteers still searching for missing Black geologists</h1>
             <p>By <a href="/team/taylor">Taylor Schmitt</a>, <a href="/team/rylee">Rylee Fels</a> and <a href="/team/lucy">Lucy Caile</a>, May 23, 2023</p>
         </div>

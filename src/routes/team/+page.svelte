@@ -41,19 +41,21 @@ $detour-orange: #fbb812
     width: 100%
     padding: 100px 0px
     .body
-        width: min(90%, 1300px)
+        width: 100%
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        gap: 30px
+        gap: 10px
+        height: calc(100vh - 200px)
+        padding-top: 30px
     ul
         display: flex
         flex-direction: row
         flex-wrap: wrap
         justify-content: center
         align-items: center
-        gap: 30px
+        gap: 20px
         width: 100%
         padding: 0px
         margin: 0px
@@ -61,7 +63,7 @@ $detour-orange: #fbb812
         font-family: $detour-headline-font
         font-size: 3rem
         color: $detour-orange
-        text-align: left
+        text-align: center
         width: 100%
         margin: 0px
         padding: 0px
@@ -84,8 +86,8 @@ $detour-orange: #fbb812
         padding: 0px
         text-align: center
     img
-        width: 150px
-        height: 150px
+        width: 130px
+        height: 130px
         border-radius: 50%
         object-fit: cover
         object-position: center
@@ -95,20 +97,23 @@ $detour-orange: #fbb812
         color: inherit
     li
         list-style: none
-        height: 150px
+        height: 130px
+        width: 290px
         display: flex
         flex-direction: row
         justify-content: center
         align-items: center
-        gap: 10px
+        gap: 5px
         border: 1px solid white
-        padding: 10px
+        padding: 7px
         filter: grayscale(100%)
         transition: all 0.5s ease-in-out
         &:hover
             filter: grayscale(0%)
             transition: all 0.5s ease-in-out
             border: 1px solid $detour-orange
+            // height: 170px
+            // width: 330px
             h3 
                 color: $detour-orange     
     .words

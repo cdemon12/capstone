@@ -19,6 +19,7 @@
 	import { color, csvParse } from 'd3';
   import { fade } from 'svelte/transition';
   import MapKey from './_components/map/Key.svelte';
+  import ReadNext from '../_components/ReadNext.svelte';
 
 
 
@@ -117,7 +118,7 @@
     "race":["all races", "black", "white", "asian", "indian"], 
     "sex": ["all sexes", "male", "female"], 
     "age": ["all ages", "minor", "adult"],
-    "year": ["all years", "2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013", "2012", "2011", "2010", "2009", "2008", "2007"]}
+    "year": ["all years", "2022", "2021", "2020"]}
     $: console.log(activeName)
 
     let debug = true;
@@ -243,8 +244,7 @@
     />
   </div>
   <div class="directions">
-    <p>Select at least two demographic characteristics
-    <span style = "font-size: .85rem">(Race + Sex + Age and Race + Age selections are only avaliable for 2020-22)</span>:</p>
+    <p>Select at least two demographic characteristics:</p>
   </div>
   <div class="btn-container-container">
   <div class="btn-container">
@@ -291,6 +291,7 @@
       </p>
   </div>
 
+  <ReadNext />
 
 </div>
 
@@ -578,7 +579,6 @@
       justify-content: center
       gap: 20px
       padding-bottom: 20px
-      padding-right: 270px
       .btn-group
         display: flex
         flex-direction: column
