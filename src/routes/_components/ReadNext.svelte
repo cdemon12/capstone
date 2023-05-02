@@ -89,6 +89,7 @@ $detour-orange: #fbb812
                 color: white
                 font-size: 18px
                 text-decoration: none
+                transition: all .5s
                 &:hover
                     color: #fbb812
                     transition: .3s
@@ -125,6 +126,10 @@ $detour-orange: #fbb812
                 transition: all .5s
                 width: 243.33px
                 height: 300px
+                display: flex
+                flex-direction: column
+                justify-content: start
+                align-items: center
                 &:hover
                     border: 2px solid $detour-orange
                     transition: all .5s
@@ -132,6 +137,7 @@ $detour-orange: #fbb812
                         color: #fbb812
                         cursor: pointer
                         text-decoration: underline
+                        transition: all .5s
                 a
                     color: white
                     font-size: 18px
@@ -150,8 +156,10 @@ $detour-orange: #fbb812
         align-items: center
         border: 2px solid rgba(0, 0, 0, 0)
         width: min(798px, 70%)
+        transition: all .5s
         &:hover
             border: 2px solid $detour-orange
+            transition: all .5s
             p
                 transition: .3s
                 color: #fbb812
