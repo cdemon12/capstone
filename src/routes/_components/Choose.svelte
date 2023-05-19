@@ -17,7 +17,7 @@
         </div>
     </a>
     <a href="/dashboard" class="storybox">
-        <img src="src\routes\_assets\dashboard.png" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="">
         <div class="words">
             <div>
                 <h1>What missing persons cases reveal about racism</h1>
