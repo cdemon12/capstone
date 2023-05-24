@@ -40,6 +40,10 @@
         .domain([0, .4])
         .range(["#db3236", "#db3236"])
 
+    let colorScaleRiskIso = scaleLinear()
+        .domain([-2.5, 0, 2.5])
+        .range(["#4885ed", "white", "#db3236"])
+
 
     let sortBy = {col: "relative_risk", ascending: false};
 	
@@ -200,18 +204,55 @@
             </td>
             </tr>
             {#if row.clicked}
+                <tr class="calc">
+                    <td colspan="3" style="border-bottom: none;"></td>
+                    <td colspan="3">
+                        <div class="lines">
+                        <svg viewBox="0 0 270 40">
+                            <text style="text-anchor:middle;" fill="white" font-size="12" x="135" y="13">Isolated relative risk</text>
+                            <line x1="{135 + 135 / 2.5 * -2}" y1="39" x2="{135 + 135 / 2.5 * 2}" y2="39" stroke-width="1" stroke="white"/>
+                            {#each [-2, -1, 0, 1, 2] as tick}
+                                <line x1="{135 + 135 / 2.5 * tick}" y1="35" x2="{135 + 135 / 2.5 * tick}" y2="39" stroke="white" stroke-width="1"></line>
+                                <text x="{135 + 135 / 2.5 * tick}" y="30" fill="white" text-anchor="middle" font-size="10px">{tick}</text>
+                            {/each}
+                        </svg>
+                        </div>
+                    </td>
+                </tr>
             {#each Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100) as item}
                 <tr class="calc">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td style="text-align: right">{(/relative_risk_(.*?)_isolated/g).exec(item)[1].replaceAll(/_/g, " & ")}</td>
-                    <td></td>
-                    <td></td>
-                    {#if Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100).slice(-1) == item}
-                    <td style="border-bottom: 1px solid white">+ {Math.round(100*row[item])/100}</td>
+                    {#each ["race", "sex", "age"] as cat}
+                    {#if (/relative_risk_(.*?)_isolated/g).exec(item)[1].split("_").includes(cat)}
+                    <td style="text-align: center; border-bottom: 1px dotted white;">{row[cat]}</td>
                     {:else}
-                    <td>{Math.round(100*row[item])/100}</td>
+                    <td style="border-bottom: 1px dotted white;"></td>
+                    {/if}
+                    {/each}
+                    <td colspan="3" style="border-bottom: 1px dotted white;">
+                        <div class="lines">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 20">
+                        <defs>
+                            <marker id="pos" markerWidth="10" markerHeight="7" 
+                            refX="0" refY="1" orient="auto" fill="#db3236">
+                            <polyline points="0 0, 1.5 1, 0 2"  />
+                            </marker>
+                            <marker id="neg" markerWidth="10" markerHeight="7" 
+                            refX="0" refY="1" orient="auto" fill="#4885ed">
+                            <polyline points="0 0, 1.5 1, 0 2"  />
+                            </marker>
+                        </defs>
+                        <line x1="{125 + 125 / 2.5 * row[item] < 0 ? 125 + 125 / 2.5 * row[item] : 125}" y1="10" x2="{125 + 125 / 2.5 * row[item] > 0 ? 125 + 125 / 2.5 * row[item] : 125}" y2="10" 
+                        stroke="{row[item] > 0 ? "#db3236" :"#4885ed"}" 
+                        stroke-width="4" marker-end="url({row[item] > 0 ? "#pos" :"#neg"})"/>
+                        <line x1="125" y1="20" x2="125" y2="0" stroke="white" stroke-width="1"></line>
+                        </svg>
+                        </div>
+                    </td>
+                    <!-- <td colspan="3" style="text-align: right; text-transform: none;">{(/relative_risk_(.*?)_isolated/g).exec(item)[1].split("_").map(d => row[d]).join(', ')}</td> -->
+                    {#if Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100).slice(-1) == item}
+                    <td style="border-bottom: 1px solid white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 24px;"><span>+</span><span>{Math.round(100*row[item])/100}</span></td>
+                    {:else}
+                    <td style="border-bottom: 1px dotted white;">{Math.round(100*row[item])/100}</td>
                     {/if}
                 </tr>
             {/each}
@@ -219,9 +260,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td style="text-align: right">Total Relative Risk</td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="3" style="text-align: right">Total Relative Risk</td>
                     <td style="text-align: right">{Math.round(100*row.relative_risk)/100}</td>
                 </tr>
             {/if}
@@ -375,8 +414,14 @@
                 align-items: center
         .calc
             td 
-                border-bottom: none
                 text-align: right
+                border-bottom: none
+                padding: 0
+            .lines
+                display: flex
+                justify-content: center
+                align-items: center
+                colspan: 3
 
 
 
