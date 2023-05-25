@@ -7,6 +7,7 @@
 	import Map from './_compotents/Map.svelte';
 	import Key from './_compotents/Key.svelte';
     import namus from "./_data/namus";
+    import { dotHovered } from './dotHovered';
 
 
     let year = "2022"
@@ -18,6 +19,8 @@
     let show = {race: true, sex: true, age: true};
     let xKey = "sex"
     let hovered = false
+    let firstRowHeight = 0;
+    let tableWidth;
 
     $: groupBy = group === "none" ? false : true
     $: xKey = group === "none" ? "sex" : group
@@ -129,8 +132,60 @@
     </div>
 
     {#if clicked == "FBI National Crime Information Center"}
+
+
 <div class="table">
-    <table class="sortable">
+    {#if $dotHovered !== {}}
+    {#each displayData.filter(d => d.race === $dotHovered.race && d.age === $dotHovered.age && d.sex === $dotHovered.sex) as row}
+    <table class="hovered" style="width:{tableWidth}px; position: absolute; top: {$dotHovered.y + firstRowHeight + 70}px;">
+        <tr>
+            {#each [row.race, row.sex, row.age] as cat}
+                {#if cat == "all"}
+                    <td style="background-color: #3a3a3a;"> - </td>
+                {:else}
+                    <td>{cat === "indian" ? "American Indian" : cat}</td>
+                {/if}
+            {/each}
+            <td>
+                <div class="chart-cell">
+                    <div class="labels">
+                        <p>% of Pop.</p>
+                        <p>% of Cases</p>
+                    </div>
+                    <div class="chart">
+                        <div class="bar-and-number">
+                            <div 
+                                class="bar" 
+                                style="width: {row.pop_percent * barChartRange}px; background-color: {colorScaleBar(row.pop_percent)}"
+                                ></div>
+                            <p>{Math.round(100* row.pop_percent)}%</p>
+                        </div>
+                        <div class="bar-and-number">
+                            <div 
+                                class="bar" 
+                                style="width: {row.cases_percent * barChartRange}px; background-color: {colorScaleBar(row.cases_percent)}"
+                                ></div>
+                            <p>{Math.round(100* row.cases_percent)}%</p>
+                        </div>
+                        <!-- <div class="bar" style="width: {Math.abs(row.diff_percent) * barChartRange}%; transform: translateX({row.diff_percent < 0 ? "calc(-100% - 1px)" : 0};"></div> -->
+                    </div>
+                </div>
+            </td>
+        <td
+            style="background-color: {colorScaleDisparity(row.diff_percent)}"
+            >{Math.round(row.diff_percent*100)}%</td>
+            <td
+            style="background-color: {colorScaleCases(row.cases)}"
+            >{row.cases.toLocaleString()}</td>
+            <td
+            style="background-color: {colorScaleRisk(row.relative_risk)}">
+            {Math.round(100*row.relative_risk)/100} 
+            <ion-icon name="calculator-outline" class="calc" on:click={() => row.clicked ? row.clicked = false : row.clicked = true} on:keydown={() => row.clicked ? row.clicked = false : row.clicked = true}></ion-icon>
+        </td>
+    </table>
+    {/each}
+    {/if}
+    <table bind:clientWidth={tableWidth}>
 
         <tr>
             <th colspan="3" style="height: 18px"><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center;"></div>Click to add/remove catagories</th>
@@ -272,7 +327,7 @@
 
     <div class="bee">
 
-        <div class="bee-title">
+        <div class="bee-title" bind:clientHeight={firstRowHeight}>
             <h2>Relative risk</h2>
             <h2>labeled by</h2>
             <select bind:value={zKey}>
@@ -282,7 +337,7 @@
             </select>
             <h2>sorted by</h2>
             <select bind:value={group}>
-                {#each ["none", "age", "sex", "race"] as group}
+                {#each ["none", "age", "sex", "race", "sex and age"] as group}
                     <option value={group}>{group}</option>
                 {/each}
             </select>      
@@ -395,6 +450,17 @@
 
     .table
         grid-area: table
+
+    .hovered
+        z-index: 100
+        background-color: #282729
+        border: 2px solid white
+        position: absolute
+        left: 0
+        transform: translateY(50%)
+        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+
 
 
     table

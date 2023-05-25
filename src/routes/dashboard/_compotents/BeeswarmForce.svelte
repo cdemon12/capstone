@@ -5,6 +5,7 @@
  <script>
     import { getContext } from 'svelte';
     import { forceSimulation, forceX, forceY, forceCollide } from 'd3-force';
+    import { dotHovered } from '../dotHovered';
   
     const { data, yGet, width, zGet, xScale, xGet, custom } = getContext('LayerCake');
   
@@ -29,9 +30,7 @@
 
     export let groupBy = false;
 
-
     $: simulation = forceSimulation(mappedData)            
-
 
     $: nodes = [];
     
@@ -50,11 +49,16 @@
           .restart();
     }
 
+  $: console.log(nodes)
   </script>
   
   <g class='bee-group'>
     {#each nodes as node}
       <circle
+        on:mouseover={() => dotHovered.set({race: node.race, sex: node.sex, age: node.age, y: node.y})}
+        on:mouseout={() => dotHovered.set({})}
+        on:focus={() => dotHovered.set({race: node.race, sex: node.sex, age: node.age,  y: node.y})}
+        on:blur={() => dotHovered.set({})}
         fill='{$zGet(node)}'
         stroke='{stroke}'
         stroke-width='{strokeWidth(node)}'
@@ -62,7 +66,7 @@
         cy='{node.y}'
         r='{r}'
       >
-        {#if getTitle}
+        {#if false}
           <title>{@html getTitle(node)}</title>
         {/if}
       </circle>

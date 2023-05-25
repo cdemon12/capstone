@@ -27,6 +27,7 @@
             [titleKey]: "Race: " + d.race + '&#xA;Sex: ' + d.sex + '&#xA;Age: ' + d.age + '&#xA;Relative risk: ' + Math.round(d.relative_risk*100)/100,
             ["sex"]: d.sex,
             ["age"]: d.age,
+            ["sex and age"]: d.sex + " " + d.age,
             ["race"]: d.race,
             ["year"]: d.year,
             ["cases"]: d.cases_percent,

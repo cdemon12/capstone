@@ -45,6 +45,8 @@
         typeof ticks === 'function' ?
           ticks($yScale.ticks()) :
             $yScale.ticks(ticks);
+
+    $: console.log(xKey)
   </script>
   
   <g class='axis y-axis' transform='translate({-$padding.left}, 0)'>
@@ -79,7 +81,7 @@
     {#if groupBy}
       {#if xKey === "sex"}
         <g class="tick">
-          {#each ["female", "male", "all"] as tick}
+          {#each ["female", "male"] as tick}
           {#if $xScale(tick) !== undefined}
             <text 
               y='{$yScale(-0.25)}'
@@ -94,7 +96,7 @@
       {/if}
       {#if xKey === "age"}
         <g class="tick">
-          {#each ["minor", "adult", "all"] as tick}
+          {#each ["minor", "adult"] as tick}
           {#if $xScale(tick) !== undefined}
             <text 
               y='{$yScale(-0.25)}'
@@ -107,9 +109,24 @@
           {/each}
         </g>
       {/if}
+      {#if xKey == "sex and age"}
+      <g class="tick">
+        {#each ["female minor", "female adult", "male minor", "male adult", "male all", "female all", "all adult", "all minor"] as tick}
+        {#if $xScale(tick) !== undefined}
+          <text 
+            y='{$yScale(-0.25)}'
+            x='{$xScale(tick) + $xScale.bandwidth() / 2}'
+            text-anchor="middle"
+          >
+          {tick.replace("all ", "").replace(" all", "")}
+          </text>
+        {/if}
+        {/each}
+      </g>
+      {/if}
       {#if xKey === "race"}
       <g class="tick">
-        {#each ['black', 'white', 'indian', 'asian', 'all'] as tick}
+        {#each ['black', 'white', 'indian', 'asian'] as tick}
         {#if $xScale(tick) !== undefined}
           <text 
             y='{$yScale(-0.25)}'
