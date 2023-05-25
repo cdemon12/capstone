@@ -10,11 +10,12 @@
 
 
     let year = "2022"
-    $: displayData = data[year]
+    $: cases = data[year].total_cases
+    $: displayData = data[year].breakdown.filter(d => (show.race ? d["race"] !== "all" : d["race"] === "all") && (show.sex ? d["sex"] !== "all" : d["sex"] === "all") && (show.age ? d["age"] !== "all" : d["age"] === "all"))
     let clicked = "FBI National Crime Information Center"
     let zKey = "race"
     let group = "none";
-    let groupBy = false;
+    let show = {race: true, sex: true, age: true};
     let xKey = "sex"
     let hovered = false
 
@@ -66,39 +67,23 @@
 			? 1 * sortModifier 
 			: 0;
 		
-		displayData.breakdown = displayData.breakdown.sort(sort);
+		displayData = displayData.sort(sort);
 	}
 
     let clickedColumns = []
 
 
     $: click = (column) => {
-        if (clickedColumns.includes(column)) {
-            clickedColumns = clickedColumns.filter(d => d !== column)
-        } else {
-            clickedColumns.push(column)
-        }
-        
-        if (clickedColumns.length == 0) {
-            return data[year].breakdown
-            console.log("0")
-        } else if (clickedColumns.length == 1) {
-            return data[year].breakdown.filter(d => d[clickedColumns[0]] === "all")
-        } else if (clickedColumns.length == 2) {
-            return data[year].breakdown.filter(d => d[clickedColumns[0]] === "all").filter(d => d[clickedColumns[1]] === "all")           
-        } else if (clickableColumns.length == 3) {
-            return data[year].breakdown.filter(d => d[clickedColumns[0]] === "all").filter(d => d[clickedColumns[1]] === "all").filter(d => d[clickedColumns[2]] === "all")
-        }
+        show[column] = !show[column]
     }
 
     let clickableColumns = {
-
-    }
-
-    let sortableColumns = {
                     'race' : 'Race',
                     'sex' : 'Sex',
                     'age' : 'Age',
+    }
+
+    let sortableColumns = {
                     'chart': '',
                     'diff_percent': 'Disparity',
                     'cases': 'Cases',
@@ -111,7 +96,7 @@
     {#if clicked == "FBI National Crime Information Center"}
     <div class="header">
 
-        <h2>{displayData.total_cases.toLocaleString()} were reported missing in</h2>
+        <h2>{cases.toLocaleString()} were reported missing in</h2>
         <select bind:value={year}>
             <option value="2022">2022</option>
             <option value="2021">2021</option>
@@ -144,11 +129,18 @@
     </div>
 
     {#if clicked == "FBI National Crime Information Center"}
+<div class="table">
     <table class="sortable">
 
         <tr>
+            <th colspan="3" style="height: 18px"><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center;"></div>Click to add/remove catagories</th>
+            <th style="height: 18px; border-bottom: none;"></th>
+            <th colspan="3" style="height: 18px"><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center;"></div>Click to sort</th>
+        </tr>
+
+        <tr>
             {#each Object.keys(clickableColumns) as col}
-                <th on:click={() => displayData.breakdown = click(col)}>{clickableColumns[col]}</th>
+                <th style="background-color: {show[col] ? '#282729' : '#3a3a3a'};" on:click={() => show[col] = !show[col]}><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center; gap: 3px;">{@html (show[col] ? '<ion-icon name="checkmark-circle"></ion-icon>' : '<ion-icon name="close-circle"></ion-icon>')}{clickableColumns[col]}</div></th>
             {/each}
             {#each Object.keys(sortableColumns) as col}
                 <th 
@@ -161,11 +153,15 @@
             {/each}
         </tr>
 
-        {#each displayData.breakdown as row}
+        {#each displayData as row}
             <tr on:mouseover={() => hovered = row} on:focus={() => {}}  on:mouseleave={() => hovered = false}>
-                <td>{row.race}</td>
-                <td>{row.sex}</td>
-                <td>{row.age}</td>
+                {#each [row.race, row.sex, row.age] as cat}
+                    {#if cat == "all"}
+                        <td style="background-color: #3a3a3a;"> - </td>
+                    {:else}
+                        <td>{cat === "indian" ? "American Indian" : cat}</td>
+                    {/if}
+                {/each}
                 <td>
                     <div class="chart-cell">
                         <div class="labels">
@@ -218,6 +214,7 @@
                         </svg>
                         </div>
                     </td>
+                    <td>1 <br/>(normal risk)</td>
                 </tr>
             {#each Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100) as item}
                 <tr class="calc">
@@ -250,7 +247,7 @@
                     </td>
                     <!-- <td colspan="3" style="text-align: right; text-transform: none;">{(/relative_risk_(.*?)_isolated/g).exec(item)[1].split("_").map(d => row[d]).join(', ')}</td> -->
                     {#if Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100).slice(-1) == item}
-                    <td style="border-bottom: 1px solid white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 24px;"><span>+</span><span>{Math.round(100*row[item])/100}</span></td>
+                    <td><div style="border-bottom: 1px solid white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 24px;"><span>+</span><span>{Math.round(100*row[item])/100}</span></div></td>
                     {:else}
                     <td style="border-bottom: 1px dotted white;">{Math.round(100*row[item])/100}</td>
                     {/if}
@@ -267,7 +264,11 @@
         {/each}
 
     </table>
+    
+    <p>Why aren't Pacific Islanders or Hawaiians included?</p>
+    <p>Why aren't Hispanic Americans included?</p>
 
+</div>
 
     <div class="bee">
 
@@ -289,6 +290,7 @@
         
         <div class="chart">
             <Chart
+                {displayData}
                 {zKey}
                 {year}
                 {groupBy}
@@ -390,10 +392,15 @@
             text-align: center
         
 
-    table
+
+    .table
         grid-area: table
+
+
+    table
         border-collapse: collapse
         margin: 10px
+        width: 100%
         td, th
             border-bottom: 1px solid rgba(255,255,255,0.7)
             margin: 0
@@ -427,10 +434,10 @@
 
     .chart-cell
         display: flex
-        justify-content: center
+        justify-content: start
         align-items: center
         gap: 5px
-        width: 120px
+        width: 140px
         height: 100%
         .labels
             display: flex

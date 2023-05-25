@@ -80,6 +80,7 @@
       {#if xKey === "sex"}
         <g class="tick">
           {#each ["female", "male", "all"] as tick}
+          {#if $xScale(tick) !== undefined}
             <text 
               y='{$yScale(-0.25)}'
               x='{$xScale(tick) + $xScale.bandwidth() / 2}'
@@ -87,12 +88,14 @@
             >
             {tick}
             </text>
+          {/if}
           {/each}
         </g>
       {/if}
       {#if xKey === "age"}
         <g class="tick">
           {#each ["minor", "adult", "all"] as tick}
+          {#if $xScale(tick) !== undefined}
             <text 
               y='{$yScale(-0.25)}'
               x='{$xScale(tick) + $xScale.bandwidth() / 2}'
@@ -100,12 +103,14 @@
             >
             {tick}
             </text>
+          {/if}
           {/each}
         </g>
       {/if}
       {#if xKey === "race"}
       <g class="tick">
         {#each ['black', 'white', 'indian', 'asian', 'all'] as tick}
+        {#if $xScale(tick) !== undefined}
           <text 
             y='{$yScale(-0.25)}'
             x='{$xScale(tick) + $xScale.bandwidth() / 2}'
@@ -113,6 +118,7 @@
           >
           {tick == "indian" ? "American Indian" : tick}
           </text>
+        {/if}
         {/each}
       </g>
     {/if}

@@ -15,13 +15,14 @@
     export let zKey;
     export let year;
     export let hovered;
+    export let displayData;
     const titleKey = 'name';
   
     const r = 8;
   
     const seriesColors = ['#9683C9', '#185ABC', '#FCE17E', '#82C995', '#F9A8A8'];
 
-    const dataTransformed = data[year].breakdown.map(d => {
+    $: dataTransformed = displayData.map(d => {
             return {
             [titleKey]: "Race: " + d.race + '&#xA;Sex: ' + d.sex + '&#xA;Age: ' + d.age + '&#xA;Relative risk: ' + Math.round(d.relative_risk*100)/100,
             ["sex"]: d.sex,
@@ -59,6 +60,7 @@
       zScale={scaleOrdinal()}
       xScale={scaleBand()}
       zRange={seriesColors}
+      yDomain={[0, 7.8]}
       data={dataTransformed}
       custom={{hovered}}
       let:width

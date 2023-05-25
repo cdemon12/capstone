@@ -8,7 +8,7 @@
   
     const { data, yGet, width, zGet, xScale, xGet, custom } = getContext('LayerCake');
   
-    let mappedData = $data.map((d) => ({ ...d }));
+    $: mappedData = $data.map((d) => ({ ...d }));
   
     /** @type {Number} [r=4] - The circle radius size in pixels. */
     export let r = 4;
@@ -30,10 +30,10 @@
     export let groupBy = false;
 
 
-    const simulation = forceSimulation(mappedData)            
+    $: simulation = forceSimulation(mappedData)            
 
 
-    let nodes = [];
+    $: nodes = [];
     
     $: simulation.on('tick', ticked)
 
