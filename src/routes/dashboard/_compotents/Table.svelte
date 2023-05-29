@@ -67,13 +67,21 @@
                     'age' : 'Age',
     }
 
-    let sortableColumns = {
+    $: sortableColumns = (innerWidth > 900) ? {
                     'chart': '',
                     'diff_percent': 'Disparity',
                     'cases': 'Cases',
                     'relative_risk': 'Relative Risk',
+                    } : {
+                    'cases': 'Cases',
+                    'relative_risk': 'Relative Risk',
                     }
+        
+
+    let innerWidth = 0
 </script>
+
+<svelte:window bind:innerWidth/>
 
 <div class="table">
     {#if $dotHovered !== {}}
@@ -152,6 +160,7 @@
                         <td>{cat === "indian" ? "American Indian" : cat}</td>
                     {/if}
                 {/each}
+                {#if innerWidth > 900}
                 <td>
                     <div class="chart-cell">
                         <div class="labels">
@@ -180,6 +189,7 @@
                 <td
                 style="background-color: {colorScaleDisparity(row.diff_percent)}"
                 >{Math.round(row.diff_percent*100)}%</td>
+            {/if}
                 <td
                 style="background-color: {colorScaleCases(row.cases)}"
                 >{row.cases.toLocaleString()}</td>
@@ -190,8 +200,10 @@
                 on:focus={() => row.clicked = true}
                 on:blur={() => row.clicked = false}
                 >
-                {Math.round(100*row.relative_risk)/100} 
+                {Math.round(100*row.relative_risk)/100}
+                {#if innerWidth > 900} 
                 <ion-icon name="calculator-outline" class="calc"></ion-icon>
+                {/if}
             </td>
             </tr>
             {#if row.clicked}
@@ -298,6 +310,7 @@
             text-align: center
             text-transform: capitalize
             width: 70px
+            height: 40px
         th
             cursor: pointer
             height: 40px

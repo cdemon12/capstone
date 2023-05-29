@@ -93,12 +93,6 @@
                 <h2>Relative risk is the risk of a member of a given group going missing compared to the average American in that year.</h2>
             </div>
         </div>
-        <div class="table">
-            <Table
-                {displayData}
-                {show}
-            />
-        </div>
 
         <div class="bee">
             <Chart
@@ -110,6 +104,15 @@
                 hovered={$colHovered}
             />
         </div>
+
+
+        <div class="table">
+            <Table
+                {displayData}
+                {show}
+            />
+        </div>
+
 
 
         <div class="words">
@@ -152,6 +155,7 @@
         grid-template-rows: 270px 1fr
         grid-template-areas: "header header" "bee table" "words words"
         grid-gap: 5px
+        overflow: hidden
 
     .bee
         padding-right: 20px
@@ -184,7 +188,7 @@
         gap: 10px
         width: 100%
         padding: 10px 0 10px 0
-
+        flex-wrap: wrap
         .box
             display: flex
             flex-direction: column
@@ -276,5 +280,24 @@
         &:hover
             color: $detour-orange
 
+
+@media (max-width: 900px)
+    .body
+        display: flex
+        flex-direction: column
+        justify-content: start
+        align-items: center
+        width: 95%
+    .numbers
+        justify-content: center
+        align-items: center
+        .box
+            width: calc(100% / 2 - 50px)
+    .bee
+        height: 400px
+        width: 100%
+        padding-top: 30px
+    .table
+        width: 100%
 
 </style>

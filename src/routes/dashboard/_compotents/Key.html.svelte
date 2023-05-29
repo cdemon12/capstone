@@ -73,7 +73,14 @@
       font-family: 'Rubik', Segoe UI;
       text-align: center;
     }
-  </style>
+
+    @media (max-width: 900px) {
+      .key {
+        transform: translateY(-25px);
+      }
+    }
+
+</style>
   
   <div class='key' style="justify-content: {align === 'end' ? 'flex-end': align};">
     {#each $zDomain.sort() as item}

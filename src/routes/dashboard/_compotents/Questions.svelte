@@ -1,11 +1,19 @@
 <script>
+    let innerWidth = 0;
+
     let questions =
+        innerWidth > 900 ?
         [
             {question: "Why aren't Hispanic Americans included?", answer: "The FBI includes Hispanic Americans in the 'White' category.", open: false},
             {question: "What is isolated relative risk?", answer: "Isolated relative risk is the risk shared among all groups the associated characteristic(s) is present in.", open: false},
+        ] :
+        [
+            {question: "Why aren't Hispanic Americans included?", answer: "The FBI includes Hispanic Americans in the 'White' category.", open: false},
         ]
 
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div class="container">
     {#each questions as question}
@@ -42,6 +50,7 @@
         font-size: 1.2rem
         margin-right: 10px
         cursor: pointer
+        visibility: visible
 
     .line
         width: 2px

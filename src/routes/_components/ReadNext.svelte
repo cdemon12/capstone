@@ -96,6 +96,7 @@ $detour-orange: #fbb812
                 ion-icon
                     width: 30px
                     height: 30px
+                    visibility: visible
     .read-next
         display: flex
         flex-direction: column

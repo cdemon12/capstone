@@ -41,7 +41,7 @@ $detour-orange: #fbb812
     width: 100%
     padding: 100px 0px
     .body
-        width: 100%
+        width: min(100%, 1120px)
         display: flex
         flex-direction: column
         justify-content: center

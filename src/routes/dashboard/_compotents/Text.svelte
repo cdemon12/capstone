@@ -18,7 +18,7 @@
 
             <h1>A case per minute</h1>
             <h2>Missing persons by the numbers</h2>
-            <p class="byline">By Cole Schnell and Kristin Kuchno, May 23, 2023</p>
+            <p class="byline">By <a href="/team/cole">Cole Schnell</a> and <a href="/team/kristin">Kristin Kuchno</a>, May 20, 2023</p>
 
             <p>One person is reported missing every minute in the U.S. on average. Nearly two years ago, in one of those minutes, Daniel Robinson was reported missing. Since he has been missing, about a million minutes have passed and about a million people have been reported missing.</p>
             <p>Still remaining unfound, Daniel Robinson is less fortunate than most; 98% of reported missing person cases are resolved within a year. Why was Daniel Robinson less fortunate than others? There are perhaps many unknown reasons — but the data tells us that race is a factor.</p>
@@ -28,6 +28,7 @@
             <p>When police reports are filed for missing children of color, it’s usually assumed that they’re runaways, said Derrica Wilson, who co-founded Black and Missing Foundation. When adults of color go missing, they’re labeled as criminals. This stereotyping has a dehumanizing and desensitizing effect, she said.</p>
             <p>This placing of blame on the missing individual affects how the police act in the vital, first days someone is missing. For instance, if a child is labeled as a runaway, the police can’t issue an AMBER alert, one of the most successful tools in abduction cases.</p>
             <p>This common disregard is also relayed into media coverage, another important tool in locating missing persons. Nine percent of media missing children mentions involve Black children, despite making up 36% of cases, according to a 2015 study of media coverage of missing children. “When a person of color goes missing, it’s barely reported in the local news,” said Bishop Anthony Holt, president of the NAACP chapter local to where Daniel Robinson went missing. “So the question is, is one life better than another? Or is one life more valuable than another?”</p>
+            <div class="line">x</div>
             <h4>Deeper dive into the data</h4>
             <p>Over the last three years, 939,191 White Americans were reported missing to the FBI, compared to 552,835 Black Americans reported missing.</p>
             <p>However, after adjusting for the size of the White population, White Americans are reported missing three times fewer than Black Americans.</p>
@@ -60,6 +61,8 @@
         border: 2px solid white
         background-color: #282729
         font-size: 24px
+        ion-icon
+            visibility: visible
         
     .article
         position: fixed
@@ -110,6 +113,11 @@
             font-style: italic
             text-align: center
             font-size: 1.05 rem
+            a
+                color: white
+                text-decoration: underline
+                &:hover
+                    color: $detour-orange
         h4
             font-size: 1.8rem
             padding: 0
@@ -118,6 +126,13 @@
             float: right
             font-family: $detour-headline-font
             margin: 0
+        
+        .line
+            width: 70%
+            height: 2px
+            background-color: #fbb812
+            margin: 0 20px
+            color: rgba(0, 0, 0, 0)
 
 
 
