@@ -14,6 +14,12 @@
 
     $:scrollprogress= (100*storyy)/(height-windowheight);
 
+    import { page } from '$app/stores';
+
+    $: slug = $page.route.id?.split("/")[1]
+
+    const main_url = "https://capstone-rosy.vercel.app/"
+
 
 </script>
 
@@ -26,12 +32,11 @@
     <div class="logo-container"><a href="/"><img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/detour.png" alt="Detour logo"></a></div>
     <div class="socials">
         <ul>
-            <li><a href="/"><ion-icon name="logo-twitter"></ion-icon></a></li>
-            <li><a href="/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="/"><ion-icon name="logo-pinterest"></ion-icon></a></li>
-            <li><a href="/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="/"><ion-icon name="share-social-outline"></ion-icon></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u={main_url + slug}"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={main_url + slug}"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://pinterest.com/pin/create/button/?url={main_url + slug}"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+            <li><a href="https://twitter.com/intent/tweet?url={main_url + slug}"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="mailto:info@example.com?&subject=&cc=&bcc=&body={main_url + slug}%0A"><ion-icon name="mail"></ion-icon></a></li>
         </ul>
     </div>
 </nav>
