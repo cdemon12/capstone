@@ -183,7 +183,7 @@
     .numbers
         display: flex
         flex-direction: row
-        justify-content: start
+        justify-content: center
         align-items: center
         gap: 10px
         width: 100%
@@ -195,7 +195,7 @@
             justify-content: center
             align-items: center
             gap: 5px
-            width: calc(100% / 4 - 10px)
+            width: calc(100% / 4 - 50px)
             height: 100px
             background-color: #3a3a3a
             border-radius: 10px

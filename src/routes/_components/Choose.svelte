@@ -17,11 +17,11 @@
         </div>
     </a>
     <a href="/dashboard" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.jpg" alt="">
         <div class="words">
             <div>
-                <h1>What missing persons cases reveal about racism</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+                <h1>A case per minute: Missing persons by the numbers</h1>
+                <h4>One person is reported missing every minute in the U.S. on average. Explore the risks of demographic groups going missing in the last three years.</h4>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="bar-chart-outline"></ion-icon><p>Data-focused</p></div>
