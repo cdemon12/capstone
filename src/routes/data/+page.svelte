@@ -119,7 +119,6 @@
     "sex": ["all sexes", "male", "female"], 
     "age": ["all ages", "minor", "adult"],
     "year": ["all years", "2022", "2021", "2020"]}
-    $: console.log(activeName)
 
     let debug = true;
 </script>

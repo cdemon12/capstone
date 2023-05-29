@@ -5,7 +5,6 @@ import { page } from '$app/stores';
 
 let { slug } = $page.params;
 let data = team.find(member => member.slug === slug);
-console.log(data)
 
 </script>
 

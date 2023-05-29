@@ -6,8 +6,6 @@
 
     $: posts = data.filter(post => post.slug !== slug)
 
-    $: console.log(slug)
-
 </script>
 
 

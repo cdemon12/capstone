@@ -45,7 +45,6 @@
         simulation.tick();
       }
     }
-    $: console.log(simulation.nodes())
 
   </script>
   

@@ -6,9 +6,6 @@
     import AxisY from './AxisY.svelte';
     import Beeswarm from './BeeswarmForce.svelte';
   
-    // This example loads csv data as json using @rollup/plugin-dsv
-    import data from '../_data/data';
-  
     const yKey = 'relative_risk';
     export let groupBy;
     export let xKey;
@@ -40,12 +37,6 @@
   </script>
   
   <style>
-    /*
-      The wrapper div needs to have an explicit width and height in CSS.
-      It can also be a flexbox child or CSS grid element.
-      The point being it needs dimensions since the <LayerCake> element will
-      expand to fill it.
-    */
     .chart-container {
       width: 100%;
       height: 100%;
@@ -61,7 +52,7 @@
       zScale={scaleOrdinal()}
       xScale={scaleBand()}
       zRange={seriesColors}
-      yDomain={[0, 7.8]}
+      yDomain={[0, 7.9]}
       data={dataTransformed}
       custom={{hovered}}
       let:width

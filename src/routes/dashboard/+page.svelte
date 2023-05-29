@@ -1,578 +1,216 @@
 <script>
-    import data from './_data/data'
-    import { scaleLinear } from 'd3-scale'
-    import Chart from './_compotents/Chart.svelte'
-    import Searchbar from './_compotents/Searchbar.svelte';
-	import Search from '../data/search/Search.svelte';
-	import Map from './_compotents/Map.svelte';
-	import Key from './_compotents/Key.svelte';
-    import namus from "./_data/namus";
-    import { dotHovered } from './dotHovered';
 
+    import Chart from './_compotents/Chart.svelte'
+    import Table from './_compotents/Table.svelte';
+    import Text from './_compotents/Text.svelte';
+    import Questions from './_compotents/Questions.svelte';
+    import ReadNext from '../_components/ReadNext.svelte';
+
+    import { open } from './open';
+    import { colHovered } from './colHovered';
+
+    import { tweened } from 'svelte/motion';
+
+    // layout variables
+    let firstRowHeight;
+
+
+
+
+    // data variables
+    import data from './_data/data'
 
     let year = "2022"
-    $: cases = data[year].total_cases
-    $: displayData = data[year].breakdown.filter(d => (show.race ? d["race"] !== "all" : d["race"] === "all") && (show.sex ? d["sex"] !== "all" : d["sex"] === "all") && (show.age ? d["age"] !== "all" : d["age"] === "all"))
-    let clicked = "FBI National Crime Information Center"
     let zKey = "race"
     let group = "none";
-    let show = {race: true, sex: true, age: true};
     let xKey = "sex"
-    let hovered = false
-    let firstRowHeight = 0;
-    let tableWidth;
+    let show = {race: true, sex: true, age: true};
+    let cases = tweened(0, {duration: 1000})
+    let selected = "race, sex and age"
 
+    $: show = selected === "race, sex and age" ? {race: true, sex: true, age: true} : selected
+
+
+    $: cases.set(data[year].total_cases)
+    $: displayData = data[year]
+        .breakdown
+        .filter(d => 
+            (show.race ? d["race"] !== "all" : d["race"] === "all") &&
+            (show.sex ? d["sex"] !== "all" : d["sex"] === "all") &&
+            (show.age ? d["age"] !== "all" : d["age"] === "all")
+            )
     $: groupBy = group === "none" ? false : true
     $: xKey = group === "none" ? "sex" : group
 
 
-    let barChartRange = 100
+    $: show.race ? show.age ? show.sex ? group = "sex and age" : group = "age" : show.sex ? group = "sex" : group = "none" : show.age ? show.sex ? group = "sex" : group = "none" : show.sex ? group = "none" : group = "none"
+    $: show.race ? zKey = "race" : show.age && show.sex ? zKey = "age" : show.age ? zKey = "age" : zKey = "sex"
 
-    let colorScaleRisk = scaleLinear()
-        .domain([0, 7.59])
-        .range(["#282729", "#db3236"])
+    $: console.log(show)
 
-    let colorScaleDisparity = scaleLinear()
-        .domain([-.3, 0, .3])
-        .range(["#4885ed", "#282729","#db3236"])
-    
-    let colorScaleCases = scaleLinear()
-        .domain([0, 200000])
-        .range(["#282729", "#db3236"])
-
-    let colorScaleBar = scaleLinear()
-        .domain([0, .4])
-        .range(["#db3236", "#db3236"])
-
-    let colorScaleRiskIso = scaleLinear()
-        .domain([-2.5, 0, 2.5])
-        .range(["#4885ed", "white", "#db3236"])
-
-
-    let sortBy = {col: "relative_risk", ascending: false};
-	
-	$: sort = (column) => {
-		
-		if (sortBy.col == column) {
-			sortBy.ascending = !sortBy.ascending
-		} else {
-			sortBy.col = column
-			sortBy.ascending = true
-		}
-		
-		// Modifier to sorting function for ascending or descending
-		let sortModifier = (sortBy.ascending) ? 1 : -1;
-		
-		let sort = (a, b) => 
-			(a[column] < b[column]) 
-			? -1 * sortModifier 
-			: (a[column] > b[column]) 
-			? 1 * sortModifier 
-			: 0;
-		
-		displayData = displayData.sort(sort);
-	}
-
-    let clickedColumns = []
-
-
-    $: click = (column) => {
-        show[column] = !show[column]
-    }
-
-    let clickableColumns = {
-                    'race' : 'Race',
-                    'sex' : 'Sex',
-                    'age' : 'Age',
-    }
-
-    let sortableColumns = {
-                    'chart': '',
-                    'diff_percent': 'Disparity',
-                    'cases': 'Cases',
-                    'relative_risk': 'Relative Risk',
-                    }
 </script>
 
-
-<div class="body">
-    {#if clicked == "FBI National Crime Information Center"}
-    <div class="header">
-
-        <h2>{cases.toLocaleString()} were reported missing in</h2>
-        <select bind:value={year}>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-        </select>
-    </div>
-    {/if}
-
-    {#if clicked == "National Missing and Unidentified Persons System"}
-    <div class="header">
-
-        <h2>{namus.length.toLocaleString()} active missing person cases in NAMUS</h2>
-
-    </div>
-
-    {/if}
-
-    <div class="buttons">
-
-        <h2>Explore missing person datasets:</h2>
-
-        {#each ["FBI National Crime Information Center", "National Missing and Unidentified Persons System"] as button}
-            <button 
-                style = "opacity:{clicked == button ? 1 : 0.5};}"
-                on:click={() => {clicked = button}}>
-                {@html clicked == button ? "<ion-icon name='caret-forward-outline'></ion-icon>" + button : button}
-            </button>
-        {/each}
-
-    </div>
-
-    {#if clicked == "FBI National Crime Information Center"}
-
-
-<div class="table">
-    {#if $dotHovered !== {}}
-    {#each displayData.filter(d => d.race === $dotHovered.race && d.age === $dotHovered.age && d.sex === $dotHovered.sex) as row}
-    <table class="hovered" style="width:{tableWidth}px; position: absolute; top: {$dotHovered.y + firstRowHeight + 70}px;">
-        <tr>
-            {#each [row.race, row.sex, row.age] as cat}
-                {#if cat == "all"}
-                    <td style="background-color: #3a3a3a;"> - </td>
-                {:else}
-                    <td>{cat === "indian" ? "American Indian" : cat}</td>
-                {/if}
-            {/each}
-            <td>
-                <div class="chart-cell">
-                    <div class="labels">
-                        <p>% of Pop.</p>
-                        <p>% of Cases</p>
-                    </div>
-                    <div class="chart">
-                        <div class="bar-and-number">
-                            <div 
-                                class="bar" 
-                                style="width: {row.pop_percent * barChartRange}px; background-color: {colorScaleBar(row.pop_percent)}"
-                                ></div>
-                            <p>{Math.round(100* row.pop_percent)}%</p>
-                        </div>
-                        <div class="bar-and-number">
-                            <div 
-                                class="bar" 
-                                style="width: {row.cases_percent * barChartRange}px; background-color: {colorScaleBar(row.cases_percent)}"
-                                ></div>
-                            <p>{Math.round(100* row.cases_percent)}%</p>
-                        </div>
-                        <!-- <div class="bar" style="width: {Math.abs(row.diff_percent) * barChartRange}%; transform: translateX({row.diff_percent < 0 ? "calc(-100% - 1px)" : 0};"></div> -->
-                    </div>
+<div class="body-container" on:click={() => open.set(false)} on:keydown>
+    <div class="body">
+        <div class="header">
+            <div class="numbers">
+                <div class="box">
+                    <select bind:value={year}>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
                 </div>
-            </td>
-        <td
-            style="background-color: {colorScaleDisparity(row.diff_percent)}"
-            >{Math.round(row.diff_percent*100)}%</td>
-            <td
-            style="background-color: {colorScaleCases(row.cases)}"
-            >{row.cases.toLocaleString()}</td>
-            <td
-            style="background-color: {colorScaleRisk(row.relative_risk)}">
-            {Math.round(100*row.relative_risk)/100} 
-            <ion-icon name="calculator-outline" class="calc" on:click={() => row.clicked ? row.clicked = false : row.clicked = true} on:keydown={() => row.clicked ? row.clicked = false : row.clicked = true}></ion-icon>
-        </td>
-    </table>
-    {/each}
-    {/if}
-    <table bind:clientWidth={tableWidth}>
+                <div class="box">
+                    <h1>{Math.round($cases).toLocaleString()}</h1>
+                    <h2>missing persons cases</h2>
+                </div>
+                <div class="box">
+                    <h1>{Math.round($cases / 365).toLocaleString()}</h1>
+                    <h2>missing persons cases per day</h2>
+                </div>
+                <div class="box">
+                    <h1>{Math.round($cases / 365 / 24 / 60).toLocaleString()}</h1>
+                    <h2>missing persons cases per minute</h2>
+                </div>
 
-        <tr>
-            <th colspan="3" style="height: 18px"><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center;"></div>Click to add/remove catagories</th>
-            <th style="height: 18px; border-bottom: none;"></th>
-            <th colspan="3" style="height: 18px"><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center;"></div>Click to sort</th>
-        </tr>
-
-        <tr>
-            {#each Object.keys(clickableColumns) as col}
-                <th style="background-color: {show[col] ? '#282729' : '#3a3a3a'};" on:click={() => show[col] = !show[col]}><div style="display: flex; flex-direction: row-reverse; align-items: center; justify-content: center; gap: 3px;">{@html (show[col] ? '<ion-icon name="checkmark-circle"></ion-icon>' : '<ion-icon name="close-circle"></ion-icon>')}{clickableColumns[col]}</div></th>
-            {/each}
-            {#each Object.keys(sortableColumns) as col}
-                <th 
-                    on:click={() => sort(col == 'chart' ? 'diff_percent' : col)}>
-                    <div class="col-names">
-                        <p>{sortableColumns[col]}</p> 
-                        {@html sortBy.col == col ? sortBy.ascending == true ? "<ion-icon name='caret-down-outline'></ion-icon>" : "<ion-icon name='caret-up-outline'></ion-icon>" : ""}
-                    </div>
-                </th>
-            {/each}
-        </tr>
-
-        {#each displayData as row}
-            <tr on:mouseover={() => hovered = row} on:focus={() => {}}  on:mouseleave={() => hovered = false}>
-                {#each [row.race, row.sex, row.age] as cat}
-                    {#if cat == "all"}
-                        <td style="background-color: #3a3a3a;"> - </td>
-                    {:else}
-                        <td>{cat === "indian" ? "American Indian" : cat}</td>
-                    {/if}
-                {/each}
-                <td>
-                    <div class="chart-cell">
-                        <div class="labels">
-                            <p>% of Pop.</p>
-                            <p>% of Cases</p>
-                        </div>
-                        <div class="chart">
-                            <div class="bar-and-number">
-                                <div 
-                                    class="bar" 
-                                    style="width: {row.pop_percent * barChartRange}px; background-color: {colorScaleBar(row.pop_percent)}"
-                                    ></div>
-                                <p>{Math.round(100* row.pop_percent)}%</p>
-                            </div>
-                            <div class="bar-and-number">
-                                <div 
-                                    class="bar" 
-                                    style="width: {row.cases_percent * barChartRange}px; background-color: {colorScaleBar(row.cases_percent)}"
-                                    ></div>
-                                <p>{Math.round(100* row.cases_percent)}%</p>
-                            </div>
-                            <!-- <div class="bar" style="width: {Math.abs(row.diff_percent) * barChartRange}%; transform: translateX({row.diff_percent < 0 ? "calc(-100% - 1px)" : 0};"></div> -->
-                        </div>
-                    </div>
-                </td>
-                <td
-                style="background-color: {colorScaleDisparity(row.diff_percent)}"
-                >{Math.round(row.diff_percent*100)}%</td>
-                <td
-                style="background-color: {colorScaleCases(row.cases)}"
-                >{row.cases.toLocaleString()}</td>
-                <td
-                style="background-color: {colorScaleRisk(row.relative_risk)}">
-                {Math.round(100*row.relative_risk)/100} 
-                <ion-icon name="calculator-outline" class="calc" on:click={() => row.clicked ? row.clicked = false : row.clicked = true} on:keydown={() => row.clicked ? row.clicked = false : row.clicked = true}></ion-icon>
-            </td>
-            </tr>
-            {#if row.clicked}
-                <tr class="calc">
-                    <td colspan="3" style="border-bottom: none;"></td>
-                    <td colspan="3">
-                        <div class="lines">
-                        <svg viewBox="0 0 270 40">
-                            <text style="text-anchor:middle;" fill="white" font-size="12" x="135" y="13">Isolated relative risk</text>
-                            <line x1="{135 + 135 / 2.5 * -2}" y1="39" x2="{135 + 135 / 2.5 * 2}" y2="39" stroke-width="1" stroke="white"/>
-                            {#each [-2, -1, 0, 1, 2] as tick}
-                                <line x1="{135 + 135 / 2.5 * tick}" y1="35" x2="{135 + 135 / 2.5 * tick}" y2="39" stroke="white" stroke-width="1"></line>
-                                <text x="{135 + 135 / 2.5 * tick}" y="30" fill="white" text-anchor="middle" font-size="10px">{tick}</text>
-                            {/each}
-                        </svg>
-                        </div>
-                    </td>
-                    <td>1 <br/>(normal risk)</td>
-                </tr>
-            {#each Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100) as item}
-                <tr class="calc">
-                    {#each ["race", "sex", "age"] as cat}
-                    {#if (/relative_risk_(.*?)_isolated/g).exec(item)[1].split("_").includes(cat)}
-                    <td style="text-align: center; border-bottom: 1px dotted white;">{row[cat]}</td>
-                    {:else}
-                    <td style="border-bottom: 1px dotted white;"></td>
-                    {/if}
-                    {/each}
-                    <td colspan="3" style="border-bottom: 1px dotted white;">
-                        <div class="lines">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 20">
-                        <defs>
-                            <marker id="pos" markerWidth="10" markerHeight="7" 
-                            refX="0" refY="1" orient="auto" fill="#db3236">
-                            <polyline points="0 0, 1.5 1, 0 2"  />
-                            </marker>
-                            <marker id="neg" markerWidth="10" markerHeight="7" 
-                            refX="0" refY="1" orient="auto" fill="#4885ed">
-                            <polyline points="0 0, 1.5 1, 0 2"  />
-                            </marker>
-                        </defs>
-                        <line x1="{125 + 125 / 2.5 * row[item] < 0 ? 125 + 125 / 2.5 * row[item] : 125}" y1="10" x2="{125 + 125 / 2.5 * row[item] > 0 ? 125 + 125 / 2.5 * row[item] : 125}" y2="10" 
-                        stroke="{row[item] > 0 ? "#db3236" :"#4885ed"}" 
-                        stroke-width="4" marker-end="url({row[item] > 0 ? "#pos" :"#neg"})"/>
-                        <line x1="125" y1="20" x2="125" y2="0" stroke="white" stroke-width="1"></line>
-                        </svg>
-                        </div>
-                    </td>
-                    <!-- <td colspan="3" style="text-align: right; text-transform: none;">{(/relative_risk_(.*?)_isolated/g).exec(item)[1].split("_").map(d => row[d]).join(', ')}</td> -->
-                    {#if Object.keys(row).slice(16, 23).filter(d => Math.round(100*row[d])/100).slice(-1) == item}
-                    <td><div style="border-bottom: 1px solid white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 24px;"><span>+</span><span>{Math.round(100*row[item])/100}</span></div></td>
-                    {:else}
-                    <td style="border-bottom: 1px dotted white;">{Math.round(100*row[item])/100}</td>
-                    {/if}
-                </tr>
-            {/each}
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td colspan="3" style="text-align: right">Total Relative Risk</td>
-                    <td style="text-align: right">{Math.round(100*row.relative_risk)/100}</td>
-                </tr>
-            {/if}
-        {/each}
-
-    </table>
-    
-    <p>Why aren't Pacific Islanders or Hawaiians included?</p>
-    <p>Why aren't Hispanic Americans included?</p>
-
-</div>
-
-    <div class="bee">
-
-        <div class="bee-title" bind:clientHeight={firstRowHeight}>
-            <h2>Relative risk</h2>
-            <h2>labeled by</h2>
-            <select bind:value={zKey}>
-                {#each ["race", "sex", "age"] as option}
-                    <option value={option}>{option}</option>
-                {/each}
-            </select>
-            <h2>sorted by</h2>
-            <select bind:value={group}>
-                {#each ["none", "age", "sex", "race", "sex and age"] as group}
-                    <option value={group}>{group}</option>
-                {/each}
-            </select>      
+            </div>
+            <div>
+                <h1>Which groups among</h1>
+            
+                <select bind:value={selected}>
+                    <option value="race, sex and age">race, sex and age</option>
+                    <option value="{{race: true, sex: true, age: false}}">race and sex</option>
+                    <option value="{{race: true, sex: false, age: true}}">race and age</option>
+                    <option value="{{race: true, sex: false, age: false}}">race</option>
+                    <option value="{{race: false, sex: true, age: false}}">sex</option>
+                    <option value="{{race: false, sex: false, age: true}}">age</option>
+                </select>
+            
+            <h1> had the greatest relative risk of going missing?</h1>
+            </div>
+            <div>
+                <h2>Relative risk is the risk of a member of a given group going missing compared to the average American in that year.</h2>
+            </div>
         </div>
-        
-        <div class="chart">
+        <div class="table">
+            <Table
+                {displayData}
+                {show}
+            />
+        </div>
+
+        <div class="bee">
             <Chart
                 {displayData}
                 {zKey}
                 {year}
                 {groupBy}
                 {xKey}
-                {hovered}
+                hovered={$colHovered}
             />
         </div>
-    </div>
-    {/if}
 
-    {#if clicked == "National Missing and Unidentified Persons System"}
-        <div class="bee">
-            <Searchbar />
-        </div>            
-    {/if}
 
-    <div class="map-container" style="visibility: {clicked == 'National Missing and Unidentified Persons System' ? 'visible' : "hidden"};">
-        <p><ion-icon name="ellipse" class="dot"></ion-icon> Each dot represents the last known location of every active cases in the NAMUS database</p>
-        <div class="map">
-            <Map />
-        </div>
-        <div class="key">
-            <Key 
-            shape={"circle"}
-            />
+        <div class="words">
+            <Questions />
+
+            <h1>
+                About the data
+            </h1>
+            <p>
+                The data used in this project comes from the FBI's National Crime Information Center (NCIC) Missing Person and Unidentified Person Statistics for 2020-22. The 2022 data is available for download <a href="https://www.fbi.gov/file-repository/2022-ncic-missing-person-and-unidentified-person-statistics.pdf/view">here</a>.
+            </p>
+            <p>
+                To report an error or suggest an edit, email <a href="mailto:coloeschnell@gmail.com">coleschnell@gmail.com.</a>
+            </p> 
         </div>
     </div>
-    
 </div>
+
+<ReadNext />
+
+<Text />
 
 <style lang="sass">
 
     $detour-headline-font: Georgia
     $detour-body-font: 'Rubik', Segoe UI
     $detour-orange: #fbb812
-
-
-    @keyframes blink
-        0%
-            opacity: 0
-        50%
-            opacity: 1
-        100%
-            opacity: 0
-
-    ion-icon.dot
-        font-size: 10px
-        color: red
-        animation: blink 2s infinite
-        padding-top: 2px
-
-    ion-icon.calc
-        cursor: pointer
-
-    
+   
+    .body-container
+        width: 100%
+        background-color: #282729
 
     .body
-        width: 100%
+        width: min(100%, 1200px)
+        margin: 0 auto
         padding-top: 70px
         background-color: #282729
         display: grid
-        grid-template-columns: 2fr 3fr 3fr
-        grid-template-rows: 110px 4fr
-        grid-template-areas: "header buttons bee" "table table bee"
+        grid-template-columns: 2fr 3fr
+        grid-template-rows: 270px 1fr
+        grid-template-areas: "header header" "bee table" "words words"
         grid-gap: 5px
 
-    .header
-        grid-area: header
-        padding: 10px
-        
-
-    .buttons
-        grid-area: buttons
-        display: flex
-        justify-content: start
-        align-items: start
-        width: 100%
-        flex-direction: column
-        padding-top: 10px
-
-    .map-container
-        grid-area: table
+    .bee
+        padding-right: 20px
+        grid-area: bee
+        height: calc(100vh - 70px - 270px - 30px)
         display: flex
         flex-direction: column
         justify-content: start
         align-items: center
         gap: 10px
-        padding: 10px
-        .key
-            display: flex
-            justify-content: center
-            align-items: center
-        .map
-            width: 85%
-            height: 85%
-            padding-left: 15px
-        p 
-            width: 100%
-            text-align: center
-        
-
 
     .table
         grid-area: table
-
-    .hovered
-        z-index: 100
-        background-color: #282729
-        border: 2px solid white
-        position: absolute
-        left: 0
-        transform: translateY(50%)
-        box-shadow: 0 0 10px rgba(0,0,0,0.5)
-
-
-
-
-    table
-        border-collapse: collapse
-        margin: 10px
         width: 100%
-        td, th
-            border-bottom: 1px solid rgba(255,255,255,0.7)
-            margin: 0
-            padding: 2px
-            font-family: $detour-body-font
-            font-size: 14px
-            font-weight: 400
-            color: white
-            text-align: center
-            text-transform: capitalize
-            width: 70px
-        th
-            cursor: pointer
-            height: 40px
-            .col-names
-                display: flex
-                justify-content: center
-                align-items: center
-        .calc
-            td 
-                text-align: right
-                border-bottom: none
-                padding: 0
-            .lines
-                display: flex
-                justify-content: center
-                align-items: center
-                colspan: 3
 
-
-
-    .chart-cell
-        display: flex
-        justify-content: start
-        align-items: center
-        gap: 5px
-        width: 140px
-        height: 100%
-        .labels
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: end
-            gap: 4px
-            p
-                margin: 0
-                padding: 0
-                font-family: $detour-body-font
-                font-size: 12px
-                font-weight: 400
-                color: white
-                line-height: 1
-                height: 20px
-                display: flex
-                justify-content: center
-                align-items: center
-        .chart
-            width: 40px
-            height: 50px
-            border-left: 2px solid rgba(255,255,255,0.7)
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: start
-            gap: 4px
-            .bar-and-number
-                display: flex
-                justify-content: start
-                align-items: center
-                gap: 2px
-                .bar
-                    height: 20px
-                    background-color: #E3E4FA
-                p
-                    font-family: $detour-body-font
-                    font-size: 12px
-                    font-weight: 400
-                    color: white
-                    margin: 0
-                    padding: 0
-    .bee
-        grid-area: bee
-        padding: 10px 20px 20px 20px
-        height: calc(100vh - 70px - 20px - 20px)
+    .header
+        grid-area: header
+        width: 100%
         display: flex
         flex-direction: column
+        justify-content: center
+        align-items: start
+        gap: 10px
+
+    .numbers
+        display: flex
+        flex-direction: row
         justify-content: start
         align-items: center
         gap: 10px
-        .bee-title
-            width: 100%
-        .chart
-            margin-top: 50px
-            width: 100%
-            height: 63vh
-        .groupby
-            font-family: $detour-body-font
-            font-size: 14px
-            font-weight: 400
-            color: white
+        width: 100%
+        padding: 10px 0 10px 0
 
+        .box
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 5px
+            width: calc(100% / 4 - 10px)
+            height: 100px
+            background-color: #3a3a3a
+            border-radius: 10px
+            padding: 20px
+            text-align: center
 
-
+    .words
+        grid-area: words
+        width: 100%
+        padding: 0 20px 0 20px
+        display: flex
+        flex-direction: column
+        justify-content: start
+        align-items: start
+        gap: 10px        
+    
     // basic
 
-    h2
+    h1
         color: white
         font-size: 30px
         font-weight: 100
@@ -580,10 +218,20 @@
         padding: 0
         font-family: $detour-headline-font
         display: inline
+    
+    h2
+        color: white
+        font-size: 20px
+        font-weight: 400
+        margin: 0
+        padding: 0
+        font-family: $detour-body-font
+        display: inline
+        opacity: 0.6
 
     p
         color: white
-        font-size: 14px
+        font-size: 1.2rem
         font-weight: 400
         margin: 0
         padding: 0
@@ -604,6 +252,7 @@
         margin-left: 4px
         height: 35px
         paddding-bottom: 10px
+        border-radius: 10px
 
     button
         background-color: #282729
@@ -616,6 +265,16 @@
         border: none
         width: 100%
 
+    a
+        font-family: $detour-body-font
+        font-weight: 400
+        text-align: left
+        border: none
+        width: 100%
+        cursor: pointer
+        color: white
+        &:hover
+            color: $detour-orange
 
 
 </style>

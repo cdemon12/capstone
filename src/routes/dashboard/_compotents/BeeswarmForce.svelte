@@ -49,7 +49,6 @@
           .restart();
     }
 
-  $: console.log(nodes)
   </script>
   
   <g class='bee-group'>

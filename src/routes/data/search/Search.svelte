@@ -73,7 +73,6 @@
     let filtered = writable();
 
     $: filtered.set(fuse.search(query, { limit: 8 }));
-    $: console.log($filtered);
 
 </script>
 

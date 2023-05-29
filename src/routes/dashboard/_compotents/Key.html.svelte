@@ -38,7 +38,7 @@
       align-items: start;
       justify-content: center;
       width: 100%;
-      transform: translateY(-47px);
+      transform: translateY(-10px);
     }
     .key-item {
       display: flex;

@@ -46,7 +46,6 @@
           ticks($yScale.ticks()) :
             $yScale.ticks(ticks);
 
-    $: console.log(xKey)
   </script>
   
   <g class='axis y-axis' transform='translate({-$padding.left}, 0)'>
