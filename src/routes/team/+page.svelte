@@ -3,6 +3,12 @@
     
 </script>
 
+<svelte:head>
+    <title>
+        The Team | Detour Investigates
+    </title>
+</svelte:head>
+
 <div class="page">
     <div class="body">
         <h1>The Team</h1>

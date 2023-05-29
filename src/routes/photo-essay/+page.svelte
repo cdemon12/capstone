@@ -1,9 +1,14 @@
 <script>
 	import ReadNext from "../_components/ReadNext.svelte";
 
-
-
 </script>
+
+
+<svelte:head>
+    <title>
+        Letter from Hopeville: Buckeye's Black community on the verge of vanishing | Detour Investigates
+    </title>
+</svelte:head>
 
 
 <div class="body-container">

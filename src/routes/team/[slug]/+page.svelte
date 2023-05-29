@@ -8,6 +8,12 @@ let data = team.find(member => member.slug === slug);
 
 </script>
 
+<svelte:head>
+    <title>
+        {data?.name} | Detour Investigates
+    </title>
+</svelte:head>
+
 <div class="page">
     <div class="body">
     <div class="bio">

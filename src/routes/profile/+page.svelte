@@ -3,6 +3,12 @@
 
 </script>
 
+<svelte:head>
+    <title>
+        72 Hours in Buckeye: The Search for Daniel Robinson | Detour Investigates
+    </title>
+</svelte:head>
+
 
 <div class="body-container">
 <div class="body">

@@ -19,6 +19,7 @@
 
     // data variables
     import data from './_data/data'
+	import { min } from 'd3';
 
     let year = "2022"
     let zKey = "race"
@@ -49,6 +50,12 @@
     $: console.log(show)
 
 </script>
+
+<svelte:head>
+    <title>
+        A case per minute: Missing persons by the numbers | Detour Investigates
+    </title>
+</svelte:head>
 
 <div class="body-container" on:click={() => open.set(false)} on:keydown>
     <div class="body">

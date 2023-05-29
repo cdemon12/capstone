@@ -78,6 +78,12 @@
 
 </script>
 
+<svelte:head>
+    <title>
+        Lost in Buckeye: A father's search for his son | Detour Investigates
+    </title>
+</svelte:head>
+
 <svelte:window bind:scrollY={y} />
 
 {#if !$mapLoaded}

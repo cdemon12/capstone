@@ -1,7 +1,7 @@
 <script>
     let innerWidth = 0;
 
-    let questions =
+    $: questions =
         innerWidth > 900 ?
         [
             {question: "Why aren't Hispanic Americans included?", answer: "The FBI includes Hispanic Americans in the 'White' category.", open: false},

@@ -1,3 +1,11 @@
+<svelte:head>
+    <title>
+        Publisher's Note | Detour Investigates
+    </title>
+</svelte:head>
+
+    
+    
     <div class="page">
         <div class="body">
             <div class="photo">

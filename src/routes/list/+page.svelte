@@ -5,6 +5,12 @@
 
 </script>
 
+<svelte:head>
+    <title>
+        What’s missing in ‘Missing Persons’ investigations? | Detour Investigates
+    </title>
+</svelte:head>
+
 
 <div class="body-container">
 <div class="body">
