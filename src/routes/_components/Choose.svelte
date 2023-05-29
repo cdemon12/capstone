@@ -17,7 +17,7 @@
         </div>
     </a>
     <a href="/dashboard" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="">
         <div class="words">
             <div>
                 <h1>A case per minute: Missing persons by the numbers</h1>
@@ -45,7 +45,7 @@
         <div class="words">
             <div>
                 <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nemo officiis, magni placeat velit quo enim temporibus exercitationem est voluptatum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quos.</h4>
+                <h4>5 takeaways to know if a friend or loved one mysteriously disappears.</h4>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="list-outline"></ion-icon><p>List</p></div>

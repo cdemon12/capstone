@@ -4,7 +4,7 @@ export default [
     photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG"},
     {slug: "dashboard",
     title: "A case per minute: Missing persons by the numbers",
-    photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/sankey.jpg"},
+    photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png"},
     {
     slug: "photo-essay",    
     title: "Letter from Hopeville",
