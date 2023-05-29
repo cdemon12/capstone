@@ -17,7 +17,7 @@
     <div class="titles">
     <h1>72 Hours in Buckeye</h1>
     <h2>The Search for Daniel Robinson</h2>
-    <p class="byline">By <a href="/team/brooke">Brooke Muckerman</a> and <br/><a href="/team/cela">Cela Migan</a>, May 22, 2023</p>
+    <p class="byline">By <a href="/team/brooke">Brooke Muckerman</a> and <br/><a href="/team/cela">Cela Migan</a>, June 16, 2023</p>
     </div>
 </div>
 
