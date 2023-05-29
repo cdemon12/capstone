@@ -18,7 +18,7 @@ let data = team.find(member => member.slug === slug);
     <div class="body">
     <div class="bio">
         <div class="photo">
-            <img src="{data?.photo}" alt="">
+            <img src="{data?.photo}" alt="{data?.name}">
             <ul class="socials">
                 {#each data?.socials as social}
                     <li><a href="{social.link}"><ion-icon name="{social.icon}"></ion-icon></a></li>

@@ -5,7 +5,7 @@
 
 <div class="container" style="align-items: {alignItems}">
     <a href="/profile" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG" alt="David Robinson speaking to volunteers">
         <div class="words">
             <div>
                 <h1>Fatherhood, faith, and fellowship in Arizona</h1>
@@ -17,7 +17,7 @@
         </div>
     </a>
     <a href="/dashboard" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="Graph of relative risk of going missing amoung race, sex and age">
         <div class="words">
             <div>
                 <h1>A case per minute: Missing persons by the numbers</h1>
@@ -29,7 +29,7 @@
         </div>
     </a>
     <a href="/photo-essay" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/hopeville.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/hopeville.JPG" alt="Sign for the town of 'Hopeville'">
         <div class="words">
             <div>
                 <h1>Letter from Hopeville</h1>
@@ -41,7 +41,7 @@
         </div>
     </a>
     <a href="/list" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/list.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/list.JPG" alt="Volunteers in the desert during the search">
         <div class="words">
             <div>
                 <h1>What’s missing in ‘Missing Persons’ investigations?</h1>

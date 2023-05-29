@@ -17,7 +17,7 @@
             {#each data as member}
                 <a href="/team/{member.slug}">
                 <li>
-                    <img src="{member.photo}" alt="">
+                    <img src="{member.photo}" alt="{member.name}">
                     <div class="words">
                         <h3>{member.name}</h3>
                         <h4>{member.title}</h4>

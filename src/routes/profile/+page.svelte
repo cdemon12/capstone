@@ -13,7 +13,7 @@
 <div class="body-container">
 <div class="body">
 <div class="header">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7021.jpg" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7021.jpg" alt="David Robinson in a ATV during the search">
     <div class="titles">
     <h1>72 Hours in Buckeye</h1>
     <h2>The Search for Daniel Robinson</h2>
@@ -32,7 +32,7 @@
 </div>
 <div class="photo">
     <video class="video" src="src\routes\profile\photos\IMG_7037.MOV" controls></video>
-    <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Video by Brooke Muckerman</p>
+    <p class="cutline">Video by Brooke Muckerman.</p>
 </div>
 <div class="body">
 <p>
@@ -57,8 +57,8 @@
 <h3>Noon</h3>
 </div>
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7074.jpg" alt="">
-    <p class="cutline">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7074.jpg" alt="Sonoran desert">
+    <p class="cutline">Photo by Brooke Muckerman.</p>
 </div>
 <div class="body">
 <p>
@@ -91,8 +91,8 @@
         </p>
     </div>
     <div class="photo" style="float: left">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7088.jpg" alt="" style="width: 90%">
-        <p class="cutline" style="width: 90%; margin:0;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, porro. Photo by Brooke Muckerman</p>
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7088.jpg" alt="Sunset" style="width: 90%">
+        <p class="cutline" style="width: 90%; margin:0;">Photo by Brooke Muckerman</p>
     </div>
 </div>
 

@@ -21,9 +21,9 @@
 
 <div class="photo">
 <div class="three">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad1.JPG" alt="">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad1.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
 </div>
 <p class="cutline" id="long">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
 </div>
@@ -43,7 +43,7 @@
     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Photo1.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Photo1.JPG" alt="An empty drum lies on its side in the midst of what used to be the thriving, Black neighborhood of Allenville in Buckeye, Ariz. Feb. 25, 2023. The refuse left behind is symbolic of the rapid decline of the neighborhood.">
         <p class="cutline">An empty drum lies on its side in the midst of what used to be the thriving, Black neighborhood of Allenville in Buckeye, Ariz. Feb. 25, 2023. The refuse left behind is symbolic of the rapid decline of the neighborhood.</p>
     </div>
 
@@ -55,7 +55,7 @@
     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Puddle_Photo2.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Puddle_Photo2.JPG" alt="Water pools in a divet on the land where Allenville formerly sat.">
         <p class="cutline">Water pools in a divet on the land where Allenville formerly sat.</p>
     </div>
 
@@ -67,7 +67,7 @@
     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.jpg" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.jpg" alt="Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s.">
         <p class="cutline">Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s. </p>
     </div>
 
@@ -94,7 +94,7 @@
     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Tree_Allenville_Photo4.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Tree_Allenville_Photo4.JPG" alt="A Joshua-esque tree stands tall against the bright blue sky in Allenville Feb. 25, 2023. It is a striking presence and remarkable that it has stood the test of time when an entire neighborhood of people were washed away.">
         <p class="cutline">A Joshua-esque tree stands tall against the bright blue sky in Allenville Feb. 25, 2023. It is a striking presence and remarkable that it has stood the test of time when an entire neighborhood of people were washed away.</p>
     </div>
     <p>
@@ -110,7 +110,7 @@
         The destruction from the floods created several schisms in the community: some residents stayed in government-provided trailers in and around Buckeye, others moved away and still others stayed put and attempted to rebuild.
     </p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Building_Allenville_Photo_5.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Building_Allenville_Photo_5.JPG" alt="hat’s left of a building sits dilapidated on the property of the former neighborhood of Allenville Feb. 25, 2023.<">
         <p class="cutline">What’s left of a building sits dilapidated on the property of the former neighborhood of Allenville Feb. 25, 2023.</p>
     </div>
     <p>
@@ -124,28 +124,28 @@
         The Present – Hopeville
     </h3>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_6.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_6.JPG" alt="The neighborhood of Hopeville is framed by mountains in Buckeye, Ariz. Feb. 25, 2023.">
         <p class="cutline">The neighborhood of Hopeville is framed by mountains in Buckeye, Ariz. Feb. 25, 2023.
         </p>
     </div>
     <p>Brice Caldwell, known as ‘Buddy’, has lived in Hopeville since 2002, and his grandfather lived in Hopeville before him. Caldwell’s grandfather was actually one of the town’s original residents,</p>
     <p>Caldwell says he has witnessed growing numbers of Hispanic and white families moving to Allenville since his arrival after the last big flood in 1978. The result, he says, is that the Black community has felt less cohesive ever since. </p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Brice_Photo_7.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Brice_Photo_7.JPG" alt="Brice Caldwell works on his truck in the driveway of the Hopeville home he has inhabited for more than 20 years Feb. 25, 2023.">
         <p class="cutline">Brice Caldwell works on his truck in the driveway of the Hopeville home he has inhabited for more than 20 years Feb. 25, 2023.
         </p>
     </div>
     <p>Even more, as elders pass away, younger Black residents show little interest in the preserving the tight-knit culture created by previous generations. “It's a lot of lost history and things that's gonna be lost,” Caldwell says. “Society makes us not want to learn. It makes us want to just always go, go, go, go … [and] never sit back [and] enjoy what we have in front of us.”</p>
     <p>Chancey Wages moved to Hopeville from Montana and, like Caldwell, aims to eventually move onto a larger plot of land. For now, Wages, a white resident, doesn’t mind living in Hopeville.</p>
     <div class="photo">
-      <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Chancey_Photo_8.JPG" alt="">
+      <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Chancey_Photo_8.JPG" alt="Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.">
         <p class="cutline">Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.</p>
     </div>
     <p>“As far as being in a neighborhood, I'm not used to having neighbors, but it's not bad at all compared to some places I've seen,” Wages says. “Neighbors are pretty polite, we get along pretty well, we're pretty friendly with each other … watch out for each other. ”</p>
     <p>Wages is aware the town used to be predominantly Black, and he says some residents wish that was still the case. Wages himself had never seen a Black person until he was 16 when a Black man came into the grocery store in which he was working, but despite having little exposure to diversity before moving to Hopeville, living in a community with such a strong Black history and several Black residents does not phase him.</p>
     <p>“It doesn't have to be, you know, a separation or anything like that,” Wages says. “I mean, if you slice your arm open, what color is your blood? I don't care what somebody looks like or anything … What I care about is what their character is. I grew up ranching [and] you judge them how they can ride a horse, not what color their skin is.”</p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_9.JPG" alt="">
+        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_9.JPG" alt="Clouds blanket the sky over the neighborhood of Hopeville Feb. 25, 2023. On one side of a cul-de-sac is what appears to be a newly renovated house, and on another sits a trailer with a roll cart full of discarded clothing.">
         <p class="cutline">Clouds blanket the sky over the neighborhood of Hopeville Feb. 25, 2023. On one side of a cul-de-sac is what appears to be a newly renovated house, and on another sits a trailer with a roll cart full of discarded clothing.</p>
     </div>
     <p>Melvin Douglass, a Black former trucker and Phoenix transplant, lives by a similar creed.</p>
@@ -155,7 +155,7 @@
     <div class="line"></div>
     <h3>Hopeville’s Future</h3>
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_10.JPG" alt="">
+    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_10.JPG" alt="On the other side of South Palo Verde Road, farther down the way, is the Buckeye Municipal Airport. This expanse of land just across the way from Hopeville will be consumed by a commercial center to be built in the next couple of decades.">
     <p class="cutline">On the other side of South Palo Verde Road, farther down the way, is the Buckeye Municipal Airport. This expanse of land just across the way from Hopeville will be consumed by a commercial center to be built in the next couple of decades.</p>
 </div>
     <p>Just south of Hopeville, on the opposite side of South Palo Verde Road, is Buckeye Municipal Airport. The airport, which has been under the ownership of Buckeye since the 1960s, serves about 250 flights per day, and local officials do not know how much that number will increase over the next decade.</p>
