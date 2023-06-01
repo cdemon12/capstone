@@ -126,13 +126,16 @@
                         width: 30px
                         height: 30px
     
-    @media screen and (max-width: 800px)
+    @media (max-width: 800px)
         .page
-            height: inherit
-            padding: 50px 0
-            .bio
+            .body
                 flex-direction: column
                 gap: 30px
+                padding: 50px 0
+            .photo
+                position: static
+                width: 100%
+                padding-top: 50px
     
     
     </style>
