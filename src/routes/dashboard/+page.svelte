@@ -302,7 +302,7 @@
             width: calc(100% / 2 - 50px)
     .bee
         height: 400px
-        width: 100%
+        width: 90%
         padding-top: 30px
     .table
         width: 100%

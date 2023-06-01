@@ -1,16 +1,17 @@
 <script>
+	import { fade, fly, slide } from 'svelte/transition';
     import { open } from '../open';
     import Clock from './Clock.svelte';
 
 </script>
 
 <div class="button" on:click={() => open.set(!$open)} on:keydown>
-    <ion-icon name="information-outline"></ion-icon>
+    Click to read more
 </div>
 
 {#if $open}
 
-        <div class="article">
+        <div class="article" in:slide out:slide>
 
             <!-- <div class="clock">
                 <Clock />
@@ -50,9 +51,9 @@
         z-index: 99999
         bottom: 20px
         right: 20px
-        width: 50px
         height: 50px
-        border-radius: 50%
+        border-radius: 25px
+        padding: 0 20px
         color: white
         cursor: pointer
         display: flex
@@ -61,6 +62,7 @@
         border: 2px solid white
         background-color: #282729
         font-size: 24px
+        font-family: $detour-body-font
         ion-icon
             visibility: visible
         
