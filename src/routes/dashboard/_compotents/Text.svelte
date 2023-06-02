@@ -117,11 +117,11 @@
             font-style: italic
             text-align: center
             font-size: 1.05 rem
-            a
-                color: white
-                text-decoration: underline
-                &:hover
-                    color: $detour-orange
+        a
+            color: white
+            text-decoration: underline
+            &:hover
+                color: $detour-orange
         h4
             font-size: 1.8rem
             padding: 0

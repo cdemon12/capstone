@@ -15,7 +15,7 @@
 <div class="header">
     <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7021.jpg" alt="David Robinson in a ATV during the search">
     <div class="titles">
-    <h1>72 Hours in Buckeye</h1>
+    <h1>72 Hours in Buckeye, Arizona</h1>
     <h2>The Search for Daniel Robinson</h2>
     <p class="byline">By <a href="/team/brooke">Brooke Muckerman</a> and <br/><a href="/team/cela">Cela Migan</a>, June 16, 2023</p>
     </div>

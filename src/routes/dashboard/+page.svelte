@@ -168,7 +168,7 @@
     .bee
         padding-right: 20px
         grid-area: bee
-        height: calc(100vh - 70px - 270px - 30px)
+        height: calc(100vh - 70px - 270px - 40px)
         display: flex
         flex-direction: column
         justify-content: start
@@ -302,9 +302,9 @@
         .box
             width: calc(100% / 2 - 50px)
     .bee
-        height: 400px
+        height: 390px
+        padding-bottom: 20px
         width: 90%
-        padding-top: 30px
     .table
         width: 100%
 

@@ -38,7 +38,7 @@
       align-items: start;
       justify-content: center;
       width: 100%;
-      transform: translateY(-7px);
+      transform: translateY(calc(100vh - 70px - 270px - 30px));
     }
     .key-item {
       display: flex;
@@ -76,7 +76,7 @@
 
     @media (max-width: 900px) {
       .key {
-        transform: translateY(-25px);
+        transform: translateY(395px);
       }
     }
 

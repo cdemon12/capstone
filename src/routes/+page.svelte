@@ -80,7 +80,7 @@
 
 <svelte:head>
     <title>
-        Lost in Buckeye: A father's search for his son | Detour Investigates
+        Lost in Buckeye: Searching for David Robinson | DETOUR Investigates
     </title>
 </svelte:head>
 
@@ -89,7 +89,7 @@
 {#if !$mapLoaded}
 <div class="loader">
 
-    <p>Loading your experience ... {Math.round($loadProgress)}%</p>
+    <p>Loading Lost in Buckeye ... {Math.round($loadProgress)}%</p>
     <div class="progress-bar">
         <div class="progress" style="width:{$loadProgress}%"></div>
     </div>
@@ -134,7 +134,7 @@
 {#if inStep($step, 0, 20)}
     <div class="headline first" out:blur={{duration: 1000}}>
         <h1>Lost in Buckeye</h1>
-        <h1 style="font-size: 30px">A father's search for his son</h1>
+        <h1 style="font-size: 30px">Searching for Daniel Robinson</h1>
         <h3 style="font-size: 20px">Presented by Detour and <br /> the Missouri School of Journalism </h3>
         <h3 style="font-size: 20px; "><em>June 16, 2023</em></h3>
         
@@ -142,7 +142,7 @@
 {/if}
 {#if inStep($step, 7, 30)}
 <div class="headline second" in:blur={{duration: 1000}} out:blur={{duration: 2000}}>
-    <h1>On June 23, 2021, Daniel Robinson went missing in this desert.</h1>
+    <h1>On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in this desert.</h1>
 </div>
 {/if}
 {#if inStep($step, 40, 70)}
@@ -158,7 +158,7 @@
         </div>
     </div>
     <div class="headline third" out:blur={{duration:500}}>
-        <h1>His father, David Robinson, has spent the last two years searching the desert.</h1>
+        <h1>His father, a U.S. army veteran who survived two tours in Afghanistan desert, has been searching ever since.</h1>
         <h1>This is their story.</h1>
     </div>
 {/if}
@@ -170,7 +170,8 @@
 <div class="sticky-container one">
     <div class="video">
             <iframe width="533" height="400" src="https://www.youtube.com/embed/oHZJpC-fcUA" title="Lost in Buckeye: Searching for Daniel Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        <div class="words">
-            <h1>Father, volunteers still searching for missing Black geologists</h1>
+            <h1>Out there, somewhere...</h1>
+            <h2>A father's mission</h2>
             <p>By <a href="/team/taylor">Taylor Schmitt</a>, <a href="/team/rylee">Rylee Fels</a> and <a href="/team/lucy">Lucy Caile</a>, May 23, 2023</p>
             <p>Read <a href="https://s3.documentcloud.org/documents/21080582/robinson-report-9-23-21.pdf?fbclid=IwAR1ueFK5AO2B-2yyjaYAI8dkxABiJjBe4TRgjNod956Te6FDzRVEUyBk3js">the the police report here.</a></p>
         </div>

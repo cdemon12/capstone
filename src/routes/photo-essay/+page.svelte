@@ -6,7 +6,7 @@
 
 <svelte:head>
     <title>
-        Letter from Hopeville: Buckeye's Black community on the verge of vanishing | Detour Investigates
+        Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | Detour Investigates
     </title>
 </svelte:head>
 
@@ -14,7 +14,7 @@
 <div class="body-container">
 <div class="hero">
 <div class="body">
-<h1>Letter from Hopeville</h1>
+<h1>Letter from Hopeville, Arizona</h1>
 <h3 style="text-align: center">Buckeye's Black community on the verge of vanishing</h3>
 <p class="byline">By <a href="/team/olivia">Olivia Gyapong</a>, June 16, 2023</p>
 </div>

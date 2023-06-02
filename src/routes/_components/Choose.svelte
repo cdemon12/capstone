@@ -8,8 +8,7 @@
         <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG" alt="David Robinson speaking to volunteers">
         <div class="words">
             <div>
-                <h1>Fatherhood, faith, and fellowship in Arizona</h1>
-                <h4>David Robinson began his search for his missing son, Daniel, over two years ago. Daniel went missing June 2021 while at his worksite in Buckeye, AZ. </h4>
+                <h1>72 hours in Buckeye, Arizona</h1>
             </div> 
             <div class="byline-recommend">
             <div class="recommend"><ion-icon name="person-circle-outline"></ion-icon><p>Profile</p></div>
@@ -21,7 +20,6 @@
         <div class="words">
             <div>
                 <h1>A case per minute: Missing persons by the numbers</h1>
-                <h4>One person is reported missing every minute in the U.S. on average. Explore the risks of demographic groups going missing in the last three years.</h4>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="bar-chart-outline"></ion-icon><p>Data-focused</p></div>
@@ -32,8 +30,7 @@
         <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/hopeville.JPG" alt="Sign for the town of 'Hopeville'">
         <div class="words">
             <div>
-                <h1>Letter from Hopeville</h1>
-                <h4>Some people aren’t surprised Daniel Robinson went missing in what they characterize as a “sundown town.” Perhaps this is because the city of Buckeye has a troubling racial past. Take a look through Allenville and Hopeville: two historically black neighborhoods near Buckeye, Arizona that illustrate the town’s legacy of discrimination. </h4>
+                <h1>Letter from Hopeville, Arizona</h1>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="image-outline"></ion-icon><p>Photo essay</p></div>
@@ -45,7 +42,6 @@
         <div class="words">
             <div>
                 <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
-                <h4>5 takeaways to know if a friend or loved one mysteriously disappears.</h4>
             </div> 
         <div class="byline-recommend">
             <div class="recommend"><ion-icon name="list-outline"></ion-icon><p>List</p></div>
