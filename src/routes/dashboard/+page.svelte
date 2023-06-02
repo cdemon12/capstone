@@ -134,6 +134,7 @@
             <p>
                 To report an error or suggest an edit, email <a href="mailto:coloeschnell@gmail.com">coleschnell@gmail.com.</a>
             </p> 
+            <p style="text-align: left;">This one of several elements in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
         </div>
     </div>
 </div>
@@ -153,7 +154,7 @@
         background-color: #282729
 
     .body
-        width: min(100%, 1200px)
+        width: min(95%, 1200px)
         margin: 0 auto
         padding-top: 70px
         background-color: #282729

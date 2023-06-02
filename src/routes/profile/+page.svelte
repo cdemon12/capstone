@@ -269,17 +269,17 @@
         align-items: center
         width: 100%
         gap: 0
-    .header
-        width: 100%
-        transform: translateY(-5%)
-        img
-            transform: translate(50%, -3%) 
-            margin: 0 0 0 0
-        .titles
-            transform: translateX(calc(-50% - 20px))
-            padding-top: 10px
-            p 
-                padding-top: 10px
-            h2 
-                text-shadow: 0 10px 10px rgba(0,0,0,0.5)
+    .body-container
+        .body
+            .header
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                gap: 0px
+                height: calc(100vh - 80px)
+                h1
+                    padding-top: 0px
+                img
+                    height: min(400px, 30%)
+
 </style>
