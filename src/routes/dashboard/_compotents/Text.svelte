@@ -21,7 +21,7 @@
             <h2>Missing persons by the numbers</h2>
             <p class="byline">By <a href="/team/cole">Cole Schnell</a> and <a href="/team/kristin">Kristin Kuchno</a>, June 16, 2023</p>
 
-            <p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+            <p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
             <p>One person is reported missing every minute in the U.S. on average. Nearly two years ago, in one of those minutes, Daniel Robinson was reported missing. Since he has been missing, about a million minutes have passed and about a million people have been reported missing.</p>
             <p>Still remaining unfound, Daniel Robinson is less fortunate than most; 98% of reported missing person cases are resolved within a year. Why was Daniel Robinson less fortunate than others? There are perhaps many unknown reasons — but the data tells us that race is a factor.</p>

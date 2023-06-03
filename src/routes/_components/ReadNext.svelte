@@ -41,10 +41,9 @@
 
     <div class="behind">
         <a href="/">
-            <img src="https://picsum.photos/300" alt="">
+            <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/bts.jpg" alt="">
             <div class="words">
-                <h3>Publisher's studio Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas omnis dolorum ipsam neque animi enim voluptates minima qui temporibus sequi veniam repellat ex ratione repellendus, laborum repudiandae soluta eum voluptatibus.</p>
+                <h3>Behind the Scenes: Publisher's Studio</h3>
             </div>
         </a>
     </div>

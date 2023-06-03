@@ -5,7 +5,7 @@
 
 <svelte:head>
     <title>
-        72 Hours in Buckeye: The Search for Daniel Robinson | Detour Investigates
+        72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates
     </title>
 </svelte:head>
 
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
 <div class="line"></div>
 

@@ -6,7 +6,7 @@
 
 <svelte:head>
     <title>
-        Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | Detour Investigates
+        Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates
     </title>
 </svelte:head>
 
@@ -31,7 +31,7 @@
 
 <div class="body">
 
-<p style="font-style: italic; text-align: center;">This one of several articles in <a href="/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
 <div class="line"></div>
 

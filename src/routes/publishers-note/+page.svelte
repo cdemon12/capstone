@@ -1,6 +1,6 @@
 <svelte:head>
     <title>
-        Publisher's Note | Detour Investigates
+        Publisher's Note | DETOUR Investigates
     </title>
 </svelte:head>
 
@@ -14,7 +14,7 @@
             <div class="words">
                 <h1>Publisher's Note</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem itaque explicabo eaque sapiente, officiis nobis aut animi aliquid, vel alias perferendis accusamus, voluptatum numquam laborum totam assumenda eligendi quod cum neque voluptas. Iure perferendis, accusamus eos cumque repudiandae beatae? Tempore nostrum amet eligendi repellat illum ullam nesciunt aspernatur in aliquam, corporis dolor consequuntur, esse error! Nesciunt doloribus suscipit iste sunt quibusdam, modi inventore repellat! Natus voluptates architecto illo ab perspiciatis! Praesentium explicabo voluptatibus, veritatis mollitia quaerat id, accusantium doloribus enim doloremque voluptate et blanditiis optio, quia molestias quibusdam exercitationem maiores? Quos officiis quis accusamus. Voluptatum distinctio repellat saepe vitae pariatur molestias laboriosam voluptatibus laborum alias debitis quas soluta enim minima et nobis consequatur iste in corrupti ipsam non, facilis nemo? A numquam quidem fugiat odit optio quas exercitationem dolor distinctio ullam assumenda officia, voluptatum repudiandae labore aperiam ducimus adipisci consequuntur, itaque eum cupiditate! Debitis totam atque quas voluptatibus! Id distinctio at magnam quidem explicabo fugit voluptatem suscipit aut voluptas, eligendi tempore odit temporibus. Voluptates accusamus nihil excepturi, animi voluptate quasi temporibus ut! Soluta omnis placeat eos cupiditate consectetur explicabo fugiat totam sint assumenda dolore et, quasi iste inventore ipsa ipsam dicta, nulla non maiores sequi cumque temporibus vero tenetur ratione. Nostrum modi, totam eos earum laborum aliquam non fugit quas perferendis culpa molestias, a facilis iste excepturi? Est, eum quam, eos iusto ab reprehenderit culpa expedita sint velit ipsum soluta asperiores odio id perferendis laboriosam animi ducimus, fugiat laudantium enim dolore rem? Aut dolores laborum voluptatum sapiente, earum architecto molestias labore maxime est quod enim illo at maiores, vitae id quam rerum recusandae et. Recusandae tempora error voluptatibus nobis eveniet voluptas perferendis. Dicta iusto expedita culpa illum, deleniti laudantium asperiores cum quis reprehenderit neque, qui doloremque praesentium suscipit quas. Suscipit libero necessitatibus ex ipsam beatae, laudantium nostrum dolorem dolore quos?</p>
-                <p style="font-style: italic;">- Ron Stodghill, Publisher of Detour</p>
+                <p style="font-style: italic;">- Ron Stodghill, Publisher of DETOUR</p>
             </div>
     </div>
 </div>
