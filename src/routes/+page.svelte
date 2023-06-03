@@ -89,7 +89,7 @@
 {#if !$mapLoaded}
 <div class="loader">
 
-    <p>Loading Lost in Buckeye ... {Math.round($loadProgress)}%</p>
+    <p>Loading 'Lost in Buckeye' ... {Math.round($loadProgress)}%</p>
     <div class="progress-bar">
         <div class="progress" style="width:{$loadProgress}%"></div>
     </div>
