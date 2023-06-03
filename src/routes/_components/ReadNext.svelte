@@ -179,8 +179,9 @@ $detour-orange: #fbb812
             padding: 10px
             text-decoration: none
             gap: 30px
+            width: calc(100% - 20px)
             img
-                width: 250px
+                width: 300px
                 height: 200px
                 object-fit: cover
                 object-position: center
@@ -198,6 +199,7 @@ $detour-orange: #fbb812
                 height: 100%
                 line-height: 1.5rem
                 gap: 15px
+                width: calc(100% - 300px)
                 h3
                     margin: 0px
                     padding: 0px
