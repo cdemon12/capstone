@@ -208,4 +208,9 @@
         width: min(80%, 700px)
         margin: 20px
 
+@media (max-width: 900px)
+    .body-container
+        .body
+            h1
+                font-size: 3rem
 </style>

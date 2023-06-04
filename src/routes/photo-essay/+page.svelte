@@ -309,6 +309,8 @@
 
 @media (max-width: 900px)
     .body-container
+        .hero
+            height: 100%
         .body
             h1 
                 font-size: 3rem
