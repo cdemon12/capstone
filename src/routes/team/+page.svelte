@@ -53,7 +53,6 @@ $detour-orange: #fbb812
         justify-content: center
         align-items: center
         gap: 10px
-        height: calc(100vh - 200px)
         padding-top: 30px
     ul
         display: flex
