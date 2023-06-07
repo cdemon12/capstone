@@ -1,7 +1,6 @@
 <script>
 	import { fade, fly, slide } from 'svelte/transition';
     import { open } from '../open';
-    import Clock from './Clock.svelte';
 
 </script>
 

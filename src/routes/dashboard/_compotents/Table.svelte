@@ -245,10 +245,10 @@
                             <polyline points="0 0, 1.5 1, 0 2"  />
                             </marker>
                         </defs>
-                        <line x1="{125 + 125 / 2.5 * row[item] < 0 ? 125 + 125 / 2.5 * row[item] : 125}" y1="10" x2="{125 + 125 / 2.5 * row[item] > 0 ? 125 + 125 / 2.5 * row[item] : 125}" y2="10" 
+                        <line x1="{135 + 135 / 2.5 * row[item] < 0 ? 135 + 135 / 2.5 * row[item] : 135}" y1="10" x2="{135 + 135 / 2.5 * row[item] > 0 ? 135 + 135 / 2.5 * row[item] : 135}" y2="10" 
                         stroke="{row[item] > 0 ? "#db3236" :"#4885ed"}" 
                         stroke-width="4" marker-end="url({row[item] > 0 ? "#pos" :"#neg"})"/>
-                        <line x1="125" y1="20" x2="125" y2="0" stroke="white" stroke-width="1"></line>
+                        <line x1="135" y1="20" x2="135" y2="0" stroke="white" stroke-width="1"></line>
                         </svg>
                         </div>
                     </td>
@@ -323,11 +323,17 @@
                 text-align: right
                 border-bottom: none
                 padding: 0
+                height: 20px
             .lines
                 display: flex
                 justify-content: center
                 align-items: center
                 colspan: 3
+                width: 100%
+                height: 100%
+                svg
+                    width: 100%
+                    height: 100%
 
 
 
