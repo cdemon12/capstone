@@ -173,6 +173,8 @@
             <h1>Out there, somewhere...</h1>
             <h2>A father's mission</h2>
             <p>By <a href="/team/taylor">Taylor Schmitt</a>, <a href="/team/rylee">Rylee Fels</a> and <a href="/team/lucy">Lucy Caile</a>, May 23, 2023</p>
+            <p style="font-style: italic; text-align: center;">This one of several elements in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+
             <p>Read <a href="https://s3.documentcloud.org/documents/21080582/robinson-report-9-23-21.pdf?fbclid=IwAR1ueFK5AO2B-2yyjaYAI8dkxABiJjBe4TRgjNod956Te6FDzRVEUyBk3js">the the police report here.</a></p>
         </div>
     </div>
