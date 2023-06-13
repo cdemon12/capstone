@@ -6,7 +6,7 @@
 <footer>
     <div class="detour-info">
         <div>
-            <a href="detourxp.com"><img src="https://detourxp.com/wp-content/uploads/sites/2/2022/12/DETOUR_logo.png" alt="Detour Logo" width="300px" height="auto"></a>
+            <a href="https://www.detourxp.com"><img src="https://detourxp.com/wp-content/uploads/sites/2/2022/12/DETOUR_logo.png" alt="Detour Logo" width="300px" height="auto"></a>
             <p>Welcome to DETOUR, your multimedia travel brand that re-introduces you to the world you know – but through a uniquely Black storytelling lens that chronicles and celebrates the places we live and travel. DETOUR brings together journalists, writers, historians, photographers, illustrators and filmmakers to revisit – and, in many cases, revise – the Black cultural narrative worldwide.</p>
         </div>
         <div>
