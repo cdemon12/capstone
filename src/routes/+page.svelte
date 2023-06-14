@@ -9,7 +9,6 @@
 	import { tweened } from 'svelte/motion';
     import { expoOut, linear, sineOut } from 'svelte/easing';
 	import Choose from './_components/Choose.svelte';
-	import { map } from 'd3';
 	import { onMount } from 'svelte';
     import { getContext } from 'svelte';
 	import Loader from './_components/Loader.svelte';
