@@ -8,6 +8,9 @@
 
     onMount(async function () {
 
+        page.loadProgress.set(0)
+        page.mapLoaded.set(false)
+
         map.flyTo({center: [-112.75343, 33.70804], zoom: 14, bearing: 160, pitch: 90, speed: 10, curve: 0.5, easing(t) {return t;}, preloadonly: true})
         await map.once('idle')
         page.loadProgress.set(34)
