@@ -121,10 +121,10 @@
 <Map
     accessToken={PUBLIC_MAPBOX_TOKEN}
     bind:this={mapComponent}    
-    options={{ scrollZoom: false, interactive: false, bearing: 160, pitch: 90, minTileCacheSize: 1000}}
+    options={{ scrollZoom: false, interactive: false, bearing: -90, pitch: 0, minTileCacheSize: 1000}}
     style="mapbox://styles/cs030100/clg4g3200000301lkd3m52xlh"
-    zoom={14}
-    center={[-112.75343, 33.70804]}
+    zoom={10.5}
+    center={[-112.706596, 33.609363]}
 >
 <Loader />
 <Terrian />
