@@ -1,5 +1,6 @@
 <script>
 	import ReadNext from "../_components/ReadNext.svelte";
+    import { pub_date } from "../update";
 
 </script>
 
@@ -17,7 +18,7 @@
     <div class="titles">
     <h1>72 Hours in Buckeye, Arizona</h1>
     <h2>The Search for Daniel Robinson</h2>
-    <p class="byline">By <a href="/team/brooke">Brooke Muckerman</a> and <br/><a href="/team/cela">Cela Migan</a>, June 16, 2023</p>
+    <p class="byline">By <a itemprop="author" name="Brooke Muckerman" href="/team/brooke">Brooke Muckerman</a> and <br/><a itemprop="author" name="Cela Migan" href="/team/cela">Cela Migan</a>, {pub_date}</p>
     </div>
 </div>
 

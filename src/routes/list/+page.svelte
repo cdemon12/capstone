@@ -1,7 +1,6 @@
 <script>
 	import ReadNext from "../_components/ReadNext.svelte";
-
-
+    import { pub_date } from "../update";
 
 </script>
 
@@ -16,7 +15,7 @@
 <div class="body">
     <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
     <h2>5 takeaways to know if a friend or loved one mysteriously disappears.</h2>
-    <p class="byline">By <a href="/team/kristin">Kristin Kuchno</a>, June 16, 2023</p>
+    <p class="byline">By <a itemprop="author" name="Kristin Kuchno" href="/team/kristin">Kristin Kuchno</a>, { pub_date}</p>
     <p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
     <div class="line"></div>
     <p>

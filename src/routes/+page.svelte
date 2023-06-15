@@ -13,6 +13,7 @@
     import { getContext } from 'svelte';
 	import Loader from './_components/Loader.svelte';
     import page from './page';
+    import { pub_date } from './update';
 
 
     
@@ -135,7 +136,7 @@
         <h1>Lost in Buckeye</h1>
         <h1 style="font-size: 30px">Searching for Daniel Robinson</h1>
         <h3 style="font-size: 20px">Presented by Detour and <br /> the Missouri School of Journalism </h3>
-        <h3 style="font-size: 20px; "><em>June 16, 2023</em></h3>
+        <h3 style="font-size: 20px; "><em>{pub_date}</em></h3>
         
     </div>
 {/if}
@@ -171,7 +172,7 @@
             <iframe width="533" height="400" src="https://www.youtube.com/embed/mKkpv1rQRN4" title="Lost in Buckeye: Searching for Daniel Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        <div class="words">
             <h1>Out there, somewhere...</h1>
             <h2>A father's mission</h2>
-            <p>By <a href="/team/taylor">Taylor Schmitt</a>, <a href="/team/rylee">Rylee Fels</a> and <a href="/team/lucy">Lucy Caile</a>, May 23, 2023</p>
+            <p>By <a itemprop="author" name="Taylor Schmitt" href="/team/taylor">Taylor Schmitt</a>, <a  itemprop="author" name="Rylee Fels" href="/team/rylee">Rylee Fels</a> and <a  itemprop="author" name="Lucy Caile" href="/team/lucy">Lucy Caile</a>, {pub_date}</p>
             <p style="font-style: italic; text-align: center;">This one of several elements in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
             <p>Read <a href="https://s3.documentcloud.org/documents/21080582/robinson-report-9-23-21.pdf?fbclid=IwAR1ueFK5AO2B-2yyjaYAI8dkxABiJjBe4TRgjNod956Te6FDzRVEUyBk3js">the the police report here.</a></p>

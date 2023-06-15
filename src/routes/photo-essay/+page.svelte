@@ -1,5 +1,6 @@
 <script>
 	import ReadNext from "../_components/ReadNext.svelte";
+    import { pub_date } from '../update'
 
 </script>
 
@@ -16,7 +17,7 @@
 <div class="body">
 <h1>Letter from Hopeville, Arizona</h1>
 <h3 style="text-align: center">Buckeye's Black community on the verge of vanishing</h3>
-<p class="byline">By <a href="/team/olivia">Olivia Gyapong</a>, June 16, 2023</p>
+<p class="byline">By <a itemprop="author" name="Oliva Gyapong" href="/team/olivia">Olivia Gyapong</a>, {pub_date}</p>
 </div>
 
 <div class="photo">

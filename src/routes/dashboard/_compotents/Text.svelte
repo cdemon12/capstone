@@ -1,6 +1,7 @@
 <script>
 	import { fade, fly, slide } from 'svelte/transition';
     import { open } from '../open';
+    import { pub_date } from '../../update';
 
 </script>
 
@@ -18,7 +19,7 @@
 
             <h1>A case per minute</h1>
             <h2>Missing persons by the numbers</h2>
-            <p class="byline">By <a href="/team/cole">Cole Schnell</a> and <a href="/team/kristin">Kristin Kuchno</a>, June 16, 2023</p>
+            <p class="byline">By <a  itemprop="author" name="Cole Schnell" href="/team/cole">Cole Schnell</a> and <a  itemprop="author" name="Kristin Kuchno" href="/team/kristin">Kristin Kuchno</a>, {pub_date}</p>
 
             <p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 

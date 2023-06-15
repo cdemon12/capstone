@@ -7,6 +7,14 @@
 
 <Detour />
 
+<main>
+
+<article itemscope itemtype="http://schema.org/Article">
+
 <slot />
+
+</article>
+
+</main>
 
 <Footer />

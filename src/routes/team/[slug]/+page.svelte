@@ -14,7 +14,7 @@ let data = team.find(member => member.slug === slug);
     </title>
 </svelte:head>
 
-<div class="page">
+<article itemscope itemtype="http://schema.org/Author">
     <div class="body">
     <div class="bio">
         <div class="photo">
@@ -33,7 +33,7 @@ let data = team.find(member => member.slug === slug);
     </div>
         <a href="/team"><h3>Meet the rest  of the team</h3></a>
     </div> 
-</div>
+</article>
 
 
 <style lang="sass">
@@ -42,7 +42,7 @@ $detour-headline-font: Georgia
 $detour-body-font: 'Rubik', Segoe UI
 $detour-orange: #fbb812
 
-.page
+article
     display: flex
     flex-direction: column
     justify-content: center
