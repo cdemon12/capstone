@@ -5,7 +5,7 @@
 
 <div class="container" style="align-items: {alignItems}">
     <a href="/profile" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG" alt="David Robinson speaking to volunteers">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg" alt="David Robinson speaking to volunteers">
         <div class="words">
             <div>
                 <h1>72 hours in Buckeye, Arizona</h1>
@@ -16,7 +16,7 @@
         </div>
     </a>
     <a href="/dashboard" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/dashboard.png" alt="Graph of relative risk of going missing amoung race, sex and age">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/dashboard.png" alt="Graph of relative risk of going missing amoung race, sex and age">
         <div class="words">
             <div>
                 <h1>A case per minute: Missing persons by the numbers</h1>

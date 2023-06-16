@@ -10,7 +10,7 @@
     <div class="page">
         <div class="body">
             <div class="photo">
-                <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/ron.jpg" alt="Ron Stodghill and David Robinson">
+                <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/ron.jpg" alt="Ron Stodghill and David Robinson">
             </div>
             <div class="words">
                 <h1>Publisher's Note</h1>

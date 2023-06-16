@@ -23,9 +23,9 @@
 
 <div class="photo">
 <div class="three">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad1.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad2.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Triad3.JPG" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory1-scaled.jpg" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory2-scaled.jpg" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory3-scaled.jpg" alt="A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.">
 </div>
 <p class="cutline" id="long">A trailer, broken bicycle and bright blue house sit in the historically Black neighborhood of Hopeville in Buckeye, Ariz. Feb. 25, 2023.</p>
 </div>
@@ -33,7 +33,7 @@
 
 <div class="body">
 
-<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://lostinbuckeye.com/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
 <div class="line"></div>
 
@@ -43,7 +43,7 @@
         The past and future meet here in Allenville, a Black community built on the outskirts of Buckeye, Arizona. The ark may have come for Noah in the Old Testament, but it didn’t quite make it to Allenville. For decades, this desert town borne of flood plain disasters has proven a case study on racial distrust – or more specifically on how poor Black communities become casualties of their white neighbors’ agendas.     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Photo1.JPG" alt="An empty drum lies on its side in the midst of what used to be the thriving, Black neighborhood of Allenville in Buckeye, Ariz. Feb. 25, 2023. The refuse left behind is symbolic of the rapid decline of the neighborhood.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory4-scaled.jpg" alt="An empty drum lies on its side in the midst of what used to be the thriving, Black neighborhood of Allenville in Buckeye, Ariz. Feb. 25, 2023. The refuse left behind is symbolic of the rapid decline of the neighborhood.">
         <p class="cutline">An empty drum lies on its side in the midst of what used to be the thriving, Black neighborhood of Allenville in Buckeye, Ariz. Feb. 25, 2023. The refuse left behind is symbolic of the rapid decline of the neighborhood.</p>
     </div>
 
@@ -53,7 +53,7 @@
         Population zero, Allenville sits on the Gila River Plains, an area prone to extraordinary flooding. After the 1978 flood, the <a href="https://www.abc15.com/news/region-west-valley/buckeye/allenville-history-of-the-all-black-community-near-buckeye">federal government</a> paid for the citizens of Allenville to relocate from the Gila River’s floodplain, to the other side of Buckeye.     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Allenville_Puddle_Photo2.JPG" alt="Water pools in a divet on the land where Allenville formerly sat.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory5-scaled.jpg" alt="Water pools in a divet on the land where Allenville formerly sat.">
         <p class="cutline">Water pools in a divet on the land where Allenville formerly sat.</p>
     </div>
 
@@ -63,7 +63,7 @@
         Since then, Hopeville has sprouted into a community. On Sundays, the church holds a service led by Bishop Abraham Harris III for Black congregants. On many days, Hopeville feels as blessed as its name.    </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Kids_Photo.jpg" alt="Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory6-scaled.jpg" alt="Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s.">
         <p class="cutline">Children play in the yard of a house in Hopeville, the neighborhood established by the Army Corps of Engineers for displaced Allenville residents in the early 1980s. </p>
     </div>
 
@@ -88,7 +88,7 @@
     </p>
 
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Tree_Allenville_Photo4.JPG" alt="A Joshua-esque tree stands tall against the bright blue sky in Allenville Feb. 25, 2023. It is a striking presence and remarkable that it has stood the test of time when an entire neighborhood of people were washed away.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory7-scaled.jpg" alt="A Joshua-esque tree stands tall against the bright blue sky in Allenville Feb. 25, 2023. It is a striking presence and remarkable that it has stood the test of time when an entire neighborhood of people were washed away.">
         <p class="cutline">A Joshua-esque tree stands tall against the bright blue sky in Allenville Feb. 25, 2023. It is a striking presence and remarkable that it has stood the test of time when an entire neighborhood of people were washed away.</p>
     </div>
     <p>
@@ -99,7 +99,7 @@
     <p>
         The destruction from the floods created several schisms in the community: some residents stayed in government-provided trailers in and around Buckeye, others moved away and still others stayed put and attempted to rebuild.    </p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Building_Allenville_Photo_5.JPG" alt="hat’s left of a building sits dilapidated on the property of the former neighborhood of Allenville Feb. 25, 2023.<">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory8-scaled.jpg" alt="hat’s left of a building sits dilapidated on the property of the former neighborhood of Allenville Feb. 25, 2023.<">
         <p class="cutline">What’s left of a building sits dilapidated on the property of the former neighborhood of Allenville Feb. 25, 2023.</p>
     </div>
     <p>
@@ -111,14 +111,14 @@
         The Present – Hopeville
     </h3>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_6.JPG" alt="The neighborhood of Hopeville is framed by mountains in Buckeye, Ariz. Feb. 25, 2023.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory9-scaled.jpg" alt="The neighborhood of Hopeville is framed by mountains in Buckeye, Ariz. Feb. 25, 2023.">
         <p class="cutline">The neighborhood of Hopeville is framed by mountains in Buckeye, Ariz. Feb. 25, 2023.
         </p>
     </div>
     <p>Brice Caldwell, known as ‘Buddy,’ has lived in Hopeville since 2002, and his grandfather lived in Hopeville before him. Caldwell’s grandfather was actually one of the town’s original residents.</p>
     <p>Caldwell says he has witnessed growing numbers of Hispanic and white families moving to Allenville since his arrival. The result, he says, is that the Black community has felt less cohesive ever since. </p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Brice_Photo_7.JPG" alt="Brice Caldwell works on his truck in the driveway of the Hopeville home he has inhabited for more than 20 years Feb. 25, 2023.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory10-scaled.jpg" alt="Brice Caldwell works on his truck in the driveway of the Hopeville home he has inhabited for more than 20 years Feb. 25, 2023.">
         <p class="cutline">Brice Caldwell works on his truck in the driveway of the Hopeville home he has inhabited for more than 20 years Feb. 25, 2023.
         </p>
     </div>
@@ -126,7 +126,7 @@
     <p>Chancey Wages moved to Hopeville from Montana and, like Caldwell, aims to eventually move onto a larger plot of land. For now, Wages, a white resident, doesn’t mind living in Hopeville.
     </p>
     <div class="photo">
-      <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Chancey_Photo_8.JPG" alt="Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.">
+      <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory11-scaled.jpg" alt="Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.">
         <p class="cutline">Montana transplant Chancey Wages stands outside of his house in Hopeville Feb. 25, 2023. He and his wife of one year are celebrating their wedding anniversary.</p>
     </div>
     <p>“As far as being in a neighborhood, I'm not used to having neighbors, but it's not bad at all compared to some places I've seen,” Wages says. “Neighbors are pretty polite, we get along pretty well, we're pretty friendly with each other … watch out for each other. ”</p>
@@ -135,7 +135,7 @@
         “It doesn't have to be, you know, a separation or anything like that,” Wages says. “I mean, if you slice your arm open, what color is your blood? I don't care what somebody looks like or anything … What I care about is what their character is. I grew up ranching [and] you judge them how they can ride a horse, not what color their skin is.”
         </p>
     <div class="photo">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_9.JPG" alt="Clouds blanket the sky over the neighborhood of Hopeville Feb. 25, 2023. On one side of a cul-de-sac is what appears to be a newly renovated house, and on another sits a trailer with a roll cart full of discarded clothing.">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory12-scaled.jpg" alt="Clouds blanket the sky over the neighborhood of Hopeville Feb. 25, 2023. On one side of a cul-de-sac is what appears to be a newly renovated house, and on another sits a trailer with a roll cart full of discarded clothing.">
         <p class="cutline">Clouds blanket the sky over the neighborhood of Hopeville Feb. 25, 2023. On one side of a cul-de-sac is what appears to be a newly renovated house, and on another sits a trailer with a roll cart full of discarded clothing.</p>
     </div>
     <p>Melvin Douglass, a Black former trucker and Phoenix transplant, lives by a similar creed.
@@ -146,7 +146,7 @@
     <div class="line"></div>
     <h3>Hopeville’s Future</h3>
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/photo-essay/photos/Hopeville_Photo_10.JPG" alt="On the other side of South Palo Verde Road, farther down the way, is the Buckeye Municipal Airport. This expanse of land just across the way from Hopeville will be consumed by a commercial center to be built in the next couple of decades.">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/photostory13-scaled.jpg" alt="On the other side of South Palo Verde Road, farther down the way, is the Buckeye Municipal Airport. This expanse of land just across the way from Hopeville will be consumed by a commercial center to be built in the next couple of decades.">
     <p class="cutline">On the other side of South Palo Verde Road, farther down the way, is the Buckeye Municipal Airport. This expanse of land just across the way from Hopeville will be consumed by a commercial center to be built in the next couple of decades.</p>
 </div>
     <p>Just south of Hopeville, on the opposite side of South Palo Verde Road, is Buckeye Municipal Airport. The airport, which has been under the ownership of Buckeye since the 1960s, serves about 250 flights per day, and local officials do not know how much that number will increase over the next decade.</p>

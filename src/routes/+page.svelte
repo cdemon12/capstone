@@ -90,13 +90,13 @@
     <meta property="og:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
     <meta property="og:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since. Explore the investigation by DETOUR as they uncover the truth behind Daniel's disappearance.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://capstone-rosy.vercel.app/">
-    <meta property="og:image" content="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG">
+    <meta property="og:url" content="https://lostinbuckeye.com/">
+    <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://capstone-rosy.vercel.app/">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/">
     <meta property="twitter:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
     <meta property="twitter:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since. Explore the investigation by DETOUR as they uncover the truth behind Daniel's disappearance.">
-    <meta property="twitter:image" content="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG">
+    <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />
@@ -188,7 +188,7 @@
             <h1>Out there, somewhere...</h1>
             <h2>A father's mission</h2>
             <p>By <a itemprop="author" name="Taylor Schmitt" href="/team/taylor">Taylor Schmitt</a>, <a  itemprop="author" name="Rylee Fels" href="/team/rylee">Rylee Fels</a> and <a  itemprop="author" name="Lucy Caile" href="/team/lucy">Lucy Caile</a>, {pub_date}</p>
-            <p style="font-style: italic; text-align: center;">This one of several elements in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+            <p style="font-style: italic; text-align: center;">This one of several elements in <a href="https://lostinbuckeye.com/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
             <p>Read <a href="https://s3.documentcloud.org/documents/21080582/robinson-report-9-23-21.pdf?fbclid=IwAR1ueFK5AO2B-2yyjaYAI8dkxABiJjBe4TRgjNod956Te6FDzRVEUyBk3js">the the police report here.</a></p>
         </div>

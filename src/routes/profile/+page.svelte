@@ -15,7 +15,7 @@
 <div class="body-container">
 <div class="body">
 <div class="header">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7021.jpg" alt="David Robinson in a ATV during the search">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile1-scaled.jpg" alt="David Robinson in a ATV during the search">
     <div class="titles">
     <h1>72 Hours in Buckeye, Arizona</h1>
     <h2>The Search for Daniel Robinson</h2>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+<p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://lostinbuckeye.com/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
 
 <div class="line"></div>
 
@@ -32,7 +32,7 @@
     Some 60 miles outside of Phoenix in the Sonoran desert, David Robinson moved briskly through a crowd of volunteers. The cold February morning brought an unwelcome cast over the eerie desert, while Robinson again donned his combat boots, camo fatigues, holstered firearm. By 7:45 a.m., he stood in front of over 100 volunteers issuing orders and dividing them into groups. His voice rang through the crowd as all attention was given to him with only the ATV motor roaring in the background.  Soon, volunteers began fanning out across the desert on a special mission. While all were commissioned to complete separate tasks, they all had one goal: to find any sign of Daniel Robinson. </p>
 </div>
 <div class="photo">
-    <video class="video" src="src\routes\profile\photos\IMG_7037.MOV" controls></video>
+    <iframe width="100%" src="https://www.youtube.com/embed/mGWbNVt5qug" title="" frameborder="0"></iframe>
     <p class="cutline">Video by Brooke Muckerman.</p>
 </div>
 <div class="body">
@@ -62,7 +62,7 @@
 <h3>Noon</h3>
 </div>
 <div class="photo">
-    <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7074.jpg" alt="Sonoran desert">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile2-scaled.jpg" alt="Sonoran desert">
     <p class="cutline">Photo by Brooke Muckerman.</p>
 </div>
 <div class="body">
@@ -105,7 +105,7 @@
             David joined his close friends for a meal that night after the search. Afterward, he sat down and shared a story. His faith, a driving factor for the last two years, had been central in his life from an early age. When he was a child, he lived with his mother, his aunt, his sister and female cousin. They grew up poor in Columbia, South Carolina and many nights their stomachs went unfilled because money was tight. One night, after his mother called him in for dinner he saw all the fine china sprawled out on their kitchen table. The stove was hot, but there was no food, only boiling water. His mother filled the bowls with water, and told them to eat. Not wanting to make her feel worse for not being able to feed them, he obliged. As they began to spoon the water into their mouths, a knock came to the door.         </p>
     </div>
     <div class="photo" style="float: left">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/profile/photos/IMG_7088.jpg" alt="Sunset" style="width: 90%">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile3-scaled.jpg" alt="Sunset" style="width: 90%">
         <p class="cutline" style="width: 90%; margin:0;">Photo by Brooke Muckerman</p>
     </div>
 </div>
@@ -260,6 +260,10 @@ If you have any information about Daniel Robinson’s case for the Buckeye Polic
             padding: 0
             object-fit: cover
             object-position: center
+        iframe
+            width: 100%
+            height: 450px
+            ratio: 3/2
 
 
     .cutline

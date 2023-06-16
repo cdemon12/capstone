@@ -4,7 +4,7 @@
 
     $: slug = $page.route.id?.split("/")[1]
 
-    const main_url = "https://capstone-rosy.vercel.app/"
+    const main_url = "https://lostinbuckeye.com/"
 
     $: posts = data.filter(post => post.slug !== slug)
 
@@ -19,7 +19,7 @@
         <li><a href="https://www.linkedin.com/shareArticle?mini=true&url={main_url + slug}"><ion-icon name="logo-linkedin"></ion-icon></a></li>
         <li><a href="https://pinterest.com/pin/create/button/?url={main_url + slug}"><ion-icon name="logo-pinterest"></ion-icon></a></li>
         <li><a href="https://twitter.com/intent/tweet?url={main_url + slug}"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li><a href="mailto:info@example.com?&subject=&cc=&bcc=&body={main_url + slug}%0A"><ion-icon name="mail"></ion-icon></a></li>
+        <li><a href="mailto:?&subject=&cc=&bcc=&body={main_url + slug}%0A"><ion-icon name="mail"></ion-icon></a></li>
     </ul>
 
     <div class="line"></div>
@@ -37,17 +37,6 @@
             {/each}
         </ul>
     </div>
-
-
-    <div class="behind">
-        <a href="/">
-            <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/bts.jpg" alt="">
-            <div class="words">
-                <h3>Behind the Scenes: Publisher's Studio</h3>
-            </div>
-        </a>
-    </div>
-
 
 </div>
 

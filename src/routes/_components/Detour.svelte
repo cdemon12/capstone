@@ -18,7 +18,7 @@
 
     $: slug = $page.route.id?.split("/")[1]
 
-    const main_url = "https://capstone-rosy.vercel.app/"
+    const main_url = "https://lostinbuckeye.com/"
 
 
 </script>
@@ -29,7 +29,7 @@
 <div class="top-bar">
 <div class="progress-bar" style="width:{scrollprogress}%"></div>
 <nav>
-    <div class="logo-container"><a href="https://capstone-rosy.vercel.app/"><img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/detour.png" alt="Detour logo"></a></div>
+    <div class="logo-container"><a href="/"><img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/detour.png" alt="Detour logo"></a></div>
     <div class="socials">
         <ul>
             <li><a href="https://www.facebook.com/sharer/sharer.php?u={main_url + slug}"><ion-icon name="logo-facebook"></ion-icon></a></li>

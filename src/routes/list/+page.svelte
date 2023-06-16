@@ -18,7 +18,7 @@
     <h1>What’s missing in ‘Missing Persons’ investigations?</h1>
     <h2>5 takeaways to know if a friend or loved one mysteriously disappears.</h2>
     <p class="byline">By <a itemprop="author" name="Kristin Kuchno" href="/team/kristin">Kristin Kuchno</a>, { pub_date}</p>
-    <p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://capstone-rosy.vercel.app/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
+    <p style="font-style: italic; text-align: center;">This one of several articles in <a href="https://lostinbuckeye.com/">a series about Daniel Robinson and missing persons in U.S.</a> To learn more, read the <a href="/publishers-note">Publisher's Note</a>.</p>
     <div class="line"></div>
     <p>
         When David Robinson learned that his 24-year-old son was missing, he got in his car and drove across the country to find him. Unfortunately, for many African Americans and people of color, the decision to take matters into their own hands is all too common. There’s a long history of public distrust and criticism around Missing Persons investigations by U.S. law enforcement among people of color, from accusations of shoddy or insensitive police work to suspicions of racial bias. Here’s what Daniel Robinson’s case taught us about federal and local Missing Persons searches.    </p>
