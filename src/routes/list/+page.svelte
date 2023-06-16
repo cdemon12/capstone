@@ -8,6 +8,8 @@
     <title>
         What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates
     </title>
+    <meta name="title" content="What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates">
+
 </svelte:head>
 
 

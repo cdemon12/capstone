@@ -7,6 +7,9 @@
     <title>
         The Team | Detour Investigates
     </title>
+    <meta name="title" content="The Team | Detour Investigates">
+    <meta name="og:title" content="The Team | Detour Investigates">
+    <meta name="twitter:title" content="The Team | Detour Investigates">
 </svelte:head>
 
 <div class="page">

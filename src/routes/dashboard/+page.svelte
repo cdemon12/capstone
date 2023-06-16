@@ -55,6 +55,7 @@
     <title>
         A case per minute: Missing persons by the numbers | Detour Investigates
     </title>
+    <meta name="title" content="A case per minute: Missing persons by the numbers | Detour Investigates">    
 </svelte:head>
 
 <div class="body-container" on:click={() => open.set(false)} on:keydown>

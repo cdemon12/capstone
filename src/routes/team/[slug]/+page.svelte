@@ -12,6 +12,7 @@ let data = team.find(member => member.slug === slug);
     <title>
         {data?.name} | Detour Investigates
     </title>
+    <meta name="title" content="{data?.name} | Detour Investigates">
 </svelte:head>
 
 <article itemscope itemtype="http://schema.org/Author">

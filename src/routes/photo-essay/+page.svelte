@@ -9,6 +9,7 @@
     <title>
         Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates
     </title>
+    <meta name="title" content=" Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates"> 
 </svelte:head>
 
 

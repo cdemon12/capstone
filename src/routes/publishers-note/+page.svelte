@@ -2,6 +2,7 @@
     <title>
         Publisher's Note | DETOUR Investigates
     </title>
+    <meta name="title" content="Publisher's Note | DETOUR Investigates">
 </svelte:head>
 
     

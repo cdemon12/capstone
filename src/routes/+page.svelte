@@ -82,6 +82,21 @@
     <title>
         Lost in Buckeye: Searching for David Robinson | DETOUR Investigates
     </title>
+    <meta name="title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
+    <meta name="description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since. Explore the investigation by DETOUR as they uncover the truth behind Daniel's disappearance.">
+    <meta name="author" content="DETOUR">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta property="og:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
+    <meta property="og:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since. Explore the investigation by DETOUR as they uncover the truth behind Daniel's disappearance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://capstone-rosy.vercel.app/">
+    <meta property="og:image" content="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://capstone-rosy.vercel.app/">
+    <meta property="twitter:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
+    <meta property="twitter:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since. Explore the investigation by DETOUR as they uncover the truth behind Daniel's disappearance.">
+    <meta property="twitter:image" content="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/david.JPG">
 </svelte:head>
 
 <svelte:window bind:scrollY={y} />

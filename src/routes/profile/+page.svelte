@@ -8,6 +8,7 @@
     <title>
         72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates
     </title>
+    <meta name="title" content="72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates"> 
 </svelte:head>
 
 
