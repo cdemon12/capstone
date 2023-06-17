@@ -53,4 +53,18 @@
             transform: translate(-50%, -50%) scale(1.1)
 
 
+    @media (max-width: 533px)
+        div
+            width: 100%
+            height: 100%
+        img
+            width: 100%
+            height: 100%
+        ion-icon
+            font-size: 50px
+        iframe
+            width: 100%
+            height: 209px
+
+
 </style>
