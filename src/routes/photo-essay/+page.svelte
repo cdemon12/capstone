@@ -9,7 +9,18 @@
     <title>
         Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates
     </title>
-    <meta name="title" content=" Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates"> 
+    <meta name="title" content="Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates">
+    <meta name="description" content="The past and future meet here in Allenville, a Black community built on the outskirts of Buckeye, Arizona.">
+    <meta name="author" content="Oliva Gyapong">
+    <meta property="og:title" content="Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates">
+    <meta property="og:description" content="The past and future meet here in Allenville, a Black community built on the outskirts of Buckeye, Arizona. ">
+    <meta property="og:url" content="https://lostinbuckeye.com/photo-story/">
+    <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/hopeville-scaled.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/photo-story/">
+    <meta property="twitter:title" content="Letter from Hopeville, Arizona: Buckeye's Black community on the verge of vanishing | DETOUR Investigates">
+    <meta property="twitter:description" content="The past and future meet here in Allenville, a Black community built on the outskirts of Buckeye, Arizona. ">
+    <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/hopeville-scaled.jpg">
 </svelte:head>
 
 

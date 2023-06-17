@@ -10,9 +10,19 @@ let data = team.find(member => member.slug === slug);
 
 <svelte:head>
     <title>
-        {data?.name} | Detour Investigates
+        {data?.name} | The Team | Detour Investigates
     </title>
-    <meta name="title" content="{data?.name} | Detour Investigates">
+    <meta name="title" content="{data?.name} | The Team | Detour Investigates">
+    <meta name="description" content="Meet {data?.name}, {data?.title} for the Lost in Buckeye project.">
+    <meta property="og:title" content="{data?.name} | The Team | Detour Investigates">
+    <meta property="og:description" content="Meet {data?.name}, {data?.title} for the Lost in Buckeye project.">
+    <meta property="og:url" content="https://lostinbuckeye.com/team/{data?.name}/">
+    <meta property="og:image" content="{data?.photo}">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/team/{data?.name}/">
+    <meta property="twitter:title" content="{data?.name} | The Team | Detour Investigates">
+    <meta property="twitter:description" content="Meet {data?.name}, {data?.title} for the Lost in Buckeye project.">
+    <meta property="twitter:image" content="{data?.photo}">
 </svelte:head>
 
 <article itemscope itemtype="http://schema.org/Author">

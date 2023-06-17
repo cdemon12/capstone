@@ -3,8 +3,18 @@
         Publisher's Note | DETOUR Investigates
     </title>
     <meta name="title" content="Publisher's Note | DETOUR Investigates">
+    <meta name="description" content="Read the Publisher's Note by Ron Stodghill for Lost in Buckeye, a multimedia series about Daniel Robinson and missing persons in U.S.">
+    <meta name="author" content="Ron Stodghill">
+    <meta property="og:title" content="Publisher's Note | DETOUR Investigates">
+    <meta property="og:description" content="Read the Publisher's Note by Ron Stodghill for Lost in Buckeye, a multimedia series about Daniel Robinson and missing persons in U.S.">
+    <meta property="og:url" content="https://lostinbuckeye.com/publishers-note/">
+    <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/ron.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/publishers-note/">
+    <meta property="twitter:title" content="Publisher's Note | DETOUR Investigates">
+    <meta property="twitter:description" content="Read the Publisher's Note by Ron Stodghill for Lost in Buckeye, a multimedia series about Daniel Robinson and missing persons in U.S.">
+    <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/ron.jpg">
 </svelte:head>
-
     
     
     <div class="page">

@@ -8,7 +8,18 @@
     <title>
         72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates
     </title>
-    <meta name="title" content="72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates"> 
+    <meta name="title" content="72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates">
+    <meta name="description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since.">
+    <meta name="author" content="Brooke Muckerman and Cela Migan">
+    <meta property="og:title" content="72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates">
+    <meta property="og:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since.">
+    <meta property="og:url" content="https://lostinbuckeye.com/profile">
+    <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/profile/">
+    <meta property="twitter:title" content="72 Hours in Buckeye: The Search for Daniel Robinson | DETOUR Investigates">
+    <meta property="twitter:description" content="On June 23, 2021, Daniel Robinson, a 25-year-old geologist, went missing in the desert. His father has been searching for him ever since.">
+    <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg">
 </svelte:head>
 
 

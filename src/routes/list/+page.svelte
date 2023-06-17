@@ -9,7 +9,17 @@
         What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates
     </title>
     <meta name="title" content="What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates">
-
+    <meta name="description" content="5 takeaways to know if a friend or loved one mysteriously disappears.">
+    <meta name="author" content="Kristin Kuchno">
+    <meta property="og:title" content="What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates">
+    <meta property="og:description" content="5 takeaways to know if a friend or loved one mysteriously disappears.">
+    <meta property="og:url" content="https://lostinbuckeye.com/list/">
+    <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/list-scaled.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lostinbuckeye.com/list/">
+    <meta property="twitter:title" content="What’s missing in ‘Missing Persons’ investigations? | DETOUR Investigates">
+    <meta property="twitter:description" content="5 takeaways to know if a friend or loved one mysteriously disappears.">
+    <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/list-scaled.jpg">
 </svelte:head>
 
 
