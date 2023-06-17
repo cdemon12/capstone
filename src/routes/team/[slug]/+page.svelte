@@ -154,8 +154,8 @@ article
                     width: 30px
                     height: 30px
 
-@media screen and (max-width: 800px)
-    .page
+@media (max-width: 800px)
+    article
         height: inherit
         padding: 50px 0
         .bio

@@ -49,7 +49,6 @@ $detour-orange: #fbb812
     background-color:  #282729
     width: 100%
     padding: 100px 0px
-    height: calc(100vh - 100px)
     .body
         width: min(100%, 1120px)
         display: flex

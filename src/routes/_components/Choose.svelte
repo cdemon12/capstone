@@ -5,7 +5,7 @@
 
 <div class="container" style="align-items: {alignItems}">
     <a href="/profile" class="storybox">
-        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/search-scaled.jpg" alt="David Robinson speaking to volunteers">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/david-scaled.jpg" alt="David Robinson speaking to volunteers">
         <div class="words">
             <div>
                 <h1>72 hours in Buckeye, Arizona</h1>
