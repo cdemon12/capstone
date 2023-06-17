@@ -27,7 +27,7 @@
         </div>
     </a>
     <a href="/photo-essay" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/hopeville.JPG" alt="Sign for the town of 'Hopeville'">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/hopeville-scaled.jpg" alt="Sign for the town of 'Hopeville'">
         <div class="words">
             <div>
                 <h1>Letter from Hopeville, Arizona</h1>
@@ -38,7 +38,7 @@
         </div>
     </a>
     <a href="/list" class="storybox">
-        <img src="https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/list.JPG" alt="Volunteers in the desert during the search">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/list-scaled.jpg" alt="Volunteers in the desert during the search">
         <div class="words">
             <div>
                 <h1>What’s missing in ‘Missing Persons’ investigations?</h1>

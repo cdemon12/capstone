@@ -8,8 +8,8 @@ export default [
     {
     slug: "photo-essay",    
     title: "Letter from Hopeville, Arizona",
-    photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/hopeville.JPG"},
+    photo: "https://detourxp.com/wp-content/uploads/sites/2/2023/06/hopeville-scaled.jpg"},
     {slug: "list",
     title:"What’s missing in ‘Missing Persons’ investigations?",
-    photo: "https://github.com/cdemon12/capstone/raw/main/src/routes/_assets/list.JPG"}
+    photo: "https://detourxp.com/wp-content/uploads/sites/2/2023/06/list-scaled.jpg"}
 ]
