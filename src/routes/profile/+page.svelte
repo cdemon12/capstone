@@ -73,7 +73,7 @@
 <h3>Noon</h3>
 </div>
 <div class="photo">
-    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile2-scaled.jpg" alt="Sonoran desert">
+    <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile3-scaled.jpg" alt="Sonoran desert">
     <p class="cutline">Photo by Brooke Muckerman.</p>
 </div>
 <div class="body">
@@ -116,7 +116,7 @@
             David joined his close friends for a meal that night after the search. Afterward, he sat down and shared a story. His faith, a driving factor for the last two years, had been central in his life from an early age. When he was a child, he lived with his mother, his aunt, his sister and female cousin. They grew up poor in Columbia, South Carolina and many nights their stomachs went unfilled because money was tight. One night, after his mother called him in for dinner he saw all the fine china sprawled out on their kitchen table. The stove was hot, but there was no food, only boiling water. His mother filled the bowls with water, and told them to eat. Not wanting to make her feel worse for not being able to feed them, he obliged. As they began to spoon the water into their mouths, a knock came to the door.         </p>
     </div>
     <div class="photo" style="float: left">
-        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile3-scaled.jpg" alt="Sunset" style="width: 90%">
+        <img src="https://detourxp.com/wp-content/uploads/sites/2/2023/06/profile4-scaled.jpg" alt="Sunset" style="width: 90%">
         <p class="cutline" style="width: 90%; margin:0;">Photo by Brooke Muckerman</p>
     </div>
 </div>
