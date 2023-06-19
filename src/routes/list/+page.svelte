@@ -51,7 +51,7 @@
         4. 	Loved ones can suffer from ‘Ambiguous Loss’
     </h3>
     <p>
-        The term “ambiguous loss” refers to the psychological and social experience of a loved one disappearing, acting “as a barrier to adjusting to grief,” according to <a href="https://bmcpsychology.biomedcentral.com/articles/10.1186/s40359-021-00675-7">a study by BMC Psychology</a>. As the West Valley NAACP’s Larnell Farmer puts it: “David hasn’t even had a chance to grieve, you know, that his son is missing because he hit the ground running,” he said. Holt adds: “There are many Daniel Robinson and David Robinson situations going on in this country. And unless it’s heard by family members who are going through this, everybody feels alone.”    </p>
+        The term “ambiguous loss” refers to the psychological and social experience of a loved one disappearing, acting “as a barrier to adjusting to grief,” according to <a href="https://bmcpsychology.biomedcentral.com/articles/10.1186/s40359-021-00675-7">a study by BMC Psychology</a>. As the West Valley NAACP’s Larnell Farmer puts it: “David hasn’t even had a chance to grieve, you know, that his son is missing because he hit the ground running,” he says. Holt adds: “There are many Daniel Robinson and David Robinson situations going on in this country. And unless it’s heard by family members who are going through this, everybody feels alone.”    </p>
     <div class="line"></div>
     <h3>5. 	Know the law</h3>
     <p>
