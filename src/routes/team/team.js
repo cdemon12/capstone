@@ -35,7 +35,7 @@ export default [
       "slug": "cole",
       "name": "Cole Schnell",
       "photo": "https://detourxp.com/wp-content/uploads/sites/2/2023/06/cole-scaled.jpg",
-      "bio": "Cole is a data journalist with a Bachelor's degree in Journalism and Economics from the University of Missouri. He is passionate about using data to tell intersectional and solutions-focused stories. Cole brings a unique perspective to his reporting, combining his background in both journalism and economics to shed light on pressing social and economic issues.",
+      "bio": "Cole is a data journalist with a Bachelor's degrees in Journalism and Economics from the University of Missouri. He is passionate about using data to tell intersectional and solutions-focused stories. Cole brings a unique perspective to his reporting, combining his background in both journalism and economics to shed light on pressing social and economic issues.",
       "title": "Web Developer, Data and Visual Reporter",
       "socials": [{icon:'desktop-outline', link:'https://coles.dev'},{icon: 'logo-twitter', link:'https://twitter.com/coleschnell'},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/coleschnell/'},{icon: 'logo-github', link:'https://github.com/cdemon12/'},]
     },
