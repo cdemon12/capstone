@@ -58,13 +58,13 @@
     <meta name="title" content="A case per minute: Missing persons by the numbers | Detour Investigates">
     <meta name="description" content="One person is reported missing every minute in the U.S. on average. Explore FBI data to understand the relative risks of demographic groups.">
     <meta name="author" content="Cole Schnell and Kristin Kuchno">
-    <meta property="og:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
+    <meta property="og:title" content="Lost in Buckeye: Searching for Daniel Robinson | DETOUR Investigates">
     <meta property="og:description" content="One person is reported missing every minute in the U.S. on average. Explore FBI data to understand the relative risks of demographic groups.">
     <meta property="og:url" content="https://lostinbuckeye.com/dashboard/">
     <meta property="og:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/dashboard.png">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://lostinbuckeye.com/dashboard/">
-    <meta property="twitter:title" content="Lost in Buckeye: Searching for David Robinson | DETOUR Investigates">
+    <meta property="twitter:title" content="Lost in Buckeye: Searching for Daniel Robinson | DETOUR Investigates">
     <meta property="twitter:description" content="One person is reported missing every minute in the U.S. on average. Explore FBI data to understand the relative risks of demographic groups.">
     <meta property="twitter:image" content="https://detourxp.com/wp-content/uploads/sites/2/2023/06/dashboard.png">
 </svelte:head>

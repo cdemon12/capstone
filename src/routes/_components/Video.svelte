@@ -10,7 +10,7 @@
 
     {#if video}
 
-    <iframe width="533" height="300" src="https://www.youtube.com/embed/oJedUsgeYYs?&autoplay=1" title="Lost in Buckeye: Searching for Daniel Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="533" height="300" src="https://www.youtube.com/embed/CFcaoQnXXHI?&autoplay=1" title="Lost in Buckeye: Searching for Daniel Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     {/if}
 

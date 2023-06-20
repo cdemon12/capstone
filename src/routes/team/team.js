@@ -50,7 +50,7 @@ export default [
     {
       "slug": "taylor",
       "name": "Taylor Schmitt",
-      "photo": "https://detourxp.com/wp-content/uploads/sites/2/2023/06/rylee.jpg",
+      "photo": "https://detourxp.com/wp-content/uploads/sites/2/2023/06/taylor-scaled.jpg",
       "bio": "Taylor has spent the last few years developing skills in digital journalism and video production. She began her career with Chicago Today for WMAQ, then she worked for EU Reporter in Brussels for a few months before transitioning to New York to work for Weekend Today at NBC. She is currently finishing her degrees at the University of Missouri and is excited to take the next steps of her journey!",
       "title": "Video Producer",
       "socials": [{icon: 'logo-twitter', link:'https://twitter.com/taylornbrussels'},{icon: 'logo-instagram', link:'https://www.instagram.com/tschmitt0209/?hl=en'},{icon: 'logo-linkedin', link:'https://www.linkedin.com/in/taylor-schmitt-2a2093197/'},]
