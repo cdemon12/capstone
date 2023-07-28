@@ -81,7 +81,7 @@
     According to police reports, the last person to see Daniel Robinson was a co-worker. The morning of Daniels disappearance offers a few clues to his out of character behavior that have been reported. On Wednesday, June 23rd Daniel arrived at work at 9:00 a.m. according to a co-worker. The morning brought rain according to the police report, and the coworker said Daniel was saying things that did not make sense, like asking various times if he wanted to go and rest. After only 15 minutes, Daniel left.  The coworker spoke with their supervisor, and noted Daniels' odd temperament but continued working. At 3:00 p.m. the coworker was made aware that Daniel had not been located, nor was he responding to repeated calls and texts so they started to search for him. The coworker said that Daniels tire marks lead into “the extremely large desert.” Daniel was reported missing by his father that night. 
 </p>
 <p>
-    Traversing the desert in his ATV, Robinson focused on mostly TK area, where Daniel had worked the day he disappeared. A bit more detail here. 
+    Traversing the desert in his ATV, Robinson focused on the well site area, where Daniel had worked the day he disappeared. While David sat in the front seat in the ATV, Safiyyah Johnson was right beside him, a member of David’s inner circle. Johnson was born and raised in south Phoenix. She noted the isolation of Buckeye for the Black community, mainly because there is not one. 
 </p>
 <p>
     “There are Black people who live here, there are areas and you see them but you don’t know them,” Johnson said.
